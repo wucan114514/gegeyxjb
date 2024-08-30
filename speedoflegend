@@ -188,7 +188,7 @@ Tab:TianJiaButton({
 	Name = "销毁UI"
 	Callback = function()
 	OrionLib:Destroy()
-	end  
+	 end  
 })
 
 local Tab = Window:CjLb({
