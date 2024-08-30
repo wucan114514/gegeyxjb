@@ -184,6 +184,14 @@ Tab:TianJiaButton({
   	end    
 })
 
+Tab:TianJiaButton({
+	Name = "销毁UI",
+	Default = false,
+	Callback = function()
+	OrionLib:Destroy()
+	end  
+})
+
 local Tab = Window:CjLb({
 	Name = "⚫️个人信息⚫️",
 	Icon = "rbxassetid://4483345998",
