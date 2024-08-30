@@ -1,0 +1,450 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/atoyayaya/wangzhan/main/xiba')))()
+
+local Window = OrionLib:MakeWindow({Name = "安•极速传奇脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local ScreenGui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local LBLG = Instance.new("ScreenGui", getParent)
+local LBL = Instance.new("TextLabel", getParent)
+local player = game.Players.LocalPlayer
+
+LBLG.Name = "LBLG"
+LBLG.Parent = game.CoreGui
+LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LBLG.Enabled = true
+LBL.Name = "LBL"
+LBL.Parent = LBLG
+LBL.BackgroundColor3 = Color3.new(1, 1, 1)
+LBL.BackgroundTransparency = 1
+LBL.BorderColor3 = Color3.new(0, 0, 0)
+LBL.Position = UDim2.new(0.75,0,0.010,0)
+LBL.Size = UDim2.new(0, 133, 0, 30)
+LBL.Font = Enum.Font.GothamSemibold
+LBL.Text = "TextLabel"
+LBL.TextColor3 = Color3.new(1, 1, 1)
+LBL.TextScaled = true
+LBL.TextSize = 25
+LBL.TextWrapped = true
+LBL.Visible = true
+LBL.Draggable = true
+
+local FpsLabel = LBL
+local Heartbeat = game:GetService("RunService").Heartbeat
+local LastIteration, Start
+local FrameUpdateTable = { }
+
+local function HeartbeatUpdate()
+	LastIteration = tick()
+	for Index = #FrameUpdateTable, 1, -1 do
+		FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
+	end
+	FrameUpdateTable[1] = LastIteration
+	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
+	CurrentFPS = CurrentFPS - CurrentFPS % 1
+	FpsLabel.Text = ("🇨🇳北京时间:"..os.date("%H").."时"..os.date("%M").."分"..os.date("%S")).."秒"
+end
+Start = tick()
+Heartbeat:Connect(HeartbeatUpdate)
+
+local ScreenGui = Instance.new("ScreenGui")
+local FpsLabel = Instance.new("TextLabel")
+
+ScreenGui.Name = "FPSGui"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+FpsLabel.Name = "FPSLabel"
+FpsLabel.Size = UDim2.new(0, 100, 0, 50)
+FpsLabel.Position = UDim2.new(0.75,20,0.075,20)
+FpsLabel.BackgroundTransparency = 1
+FpsLabel.Font = Enum.Font.SourceSansBold
+FpsLabel.Text = "FPS: 0"
+FpsLabel.TextSize = 25
+FpsLabel.TextColor3 = Color3.fromRGB(0, 0, 255) 
+FpsLabel.Parent = ScreenGui
+FpsLabel.Draggable = true
+
+local frameCounter = 0
+
+function updateFpsLabel()
+    frameCounter = frameCounter + 1
+    if frameCounter >= 20 then -- 20帧
+        local fps = math.floor(1 / game:GetService("RunService").RenderStepped:Wait())
+        FpsLabel.Text = "FPS: " .. fps
+        frameCounter = 0
+    end
+end
+
+game:GetService("RunService").RenderStepped:Connect(updateFpsLabel)
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+_G.auto1e = true
+
+function auto1e()
+	while _G.auto1e == true do
+		game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Red Crystal")
+	end
+end
+
+
+_G.auto2e = true
+
+function auto2e()
+	while _G.auto2e == true do
+			game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Purple Crystal")
+	end
+end
+
+_G.auto3e = true
+
+function auto3e()
+	while _G.auto3e == true do
+			game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Yellow Crystal")
+	end
+end
+
+_G.auto4e = true
+
+function auto4e()
+	while _G.auto4e == true do
+			game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Lightning Crystal")
+	end
+end
+
+_G.auto5e = true
+
+function auto5e()
+	while _G.auto5e == true do
+			game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Snow Crystal")
+	end
+end
+
+_G.auto6e = true
+
+function auto6e()
+	while _G.auto6e == true do
+			game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Inferno Crystal")
+	end
+end
+
+_G.auto7e = true
+
+function auto7e()
+	while _G.auto7e == true do
+		game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Electro Legends Crystal")	
+	end
+end
+
+_G.auto8e = true
+
+function auto8e()
+	while _G.auto8e == true do
+			game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Space Crystal")
+	end
+end
+
+_G.auto9e = true
+
+function auto9e()
+	while _G.auto9e == true do
+			game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Alien Crystal")
+	end
+end
+
+_G.auto10e = true
+
+function auto10e()
+	while _G.auto10e == true do
+			game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Desert Crystal")
+	end
+end
+
+_G.auto11e = true
+
+function auto11e()
+	while _G.auto11e == true do
+			game:GetService('ReplicatedStorage').rEvents.openCrystalRemote:InvokeServer("openCrystal", "Electro Crystal")
+	end
+end
+
+
+local Tab = Window:CjLb({
+	Name = "公告•销毁UI",
+	Icon = "rbxassetid://7733960981",
+	PremiumOnly = false
+})
+
+Tab:Lab("脚本永久免费，请勿相信倒卖，有时候部分按钮或勾选框可能按不到，滑动一下即可")
+
+Tab:TianJiaButton({
+	Name = "复制作者QQ号🐧",
+	Callback = function()
+	setclipboard("2134702438")
+  	end    
+})
+
+local Tab = Window:CjLb({
+	Name = "⚫️个人信息⚫️",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TS("步数",""..game:GetService("Players").LocalPlayer.leaderstats.Steps.Value.."")
+
+Tab:TS("重生",""..game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value.."")
+
+Tab:TS("宝石",""..game:GetService("Players").LocalPlayer.Gems.Value.."")
+
+local Tab = Window:CjLb({
+	Name = "⚡️自动功能⚡️",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaButton({
+	Name = "自动卡宠",
+	Callback = function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/atoyayaya/ui/main/jisukachong')))()  		
+  	end    
+})
+
+_G.autocs = true
+
+function autocs()
+	while _G.autocs == true do
+	wait()
+	local A_1 = "rebirthRequest"
+local Event = game:GetService("ReplicatedStorage").rEvents.rebirthEvent
+Event:FireServer(A_1)		
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动重生",
+	Default = false,
+	Callback = function(Value)
+	_G.autocs = Value
+		autocs()
+	end  
+})
+
+_G.autobushu = true
+
+function autobushu()
+	while _G.autobushu == true do
+wait()	
+for i=1, 7500 do
+     local A_1 = "collectOrb"
+local A_2 = "Red Orb"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end		
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动获取步数(易卡)",
+	Default = false,
+	Callback = function(Value)
+	_G.autobushu = Value
+		autobushu()
+	end  
+})
+
+_G.autobaoshi = true
+
+function autobaoshi()
+	while _G.autobaoshi == true do
+wait()	
+for i=1, 1000 do
+	local A_1 = "collectOrb"
+local A_2 = "Gem"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动获取宝石(易卡)",
+	Default = false,
+	Callback = function(Value)
+	_G.autobaoshi = Value
+		autobaoshi()
+	end  
+})
+
+local Tab = Window:CjLb({
+	Name = "🥚自动开蛋🥚",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaToggle({
+	Name = "红色水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto1e = Value
+		auto1e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "紫色水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto2e = Value
+		auto2e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "黄色水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto3e = Value
+		auto3e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "闪电水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto4e = Value
+		auto4e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "白雪水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto5e = Value
+		auto5e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "地狱水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto6e = Value
+		auto6e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "电子传奇水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto7e = Value
+		auto7e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "太空水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto8e = Value
+		auto8e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "外星水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto9e = Value
+		auto9e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "沙漠水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto10e = Value
+		auto10e()
+	end  
+})
+
+Tab:TianJiaToggle({
+	Name = "电子水晶",
+	Default = false,
+	Callback = function(Value)
+	_G.auto11e = Value
+		auto11e()
+	end  
+})
+
+local Tab = Window:CjLb({
+	Name = "⚡️传送功能⚡️",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaButton({
+	Name = "传送到城市",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9682.98828, 74.8522873, 3099.03394, 0.087131381, 0, 0.996196866, 0, 1, 0, -0.996196866, 0, 0.087131381)
+  	end    
+})
+
+Tab:TianJiaButton({
+	Name = "传送到白雪城",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-9676.13867, 74.8522873, 3782.69385, 0, 0, -1, 0, 1, 0, 1, 0, 0)
+  	end    
+})
+
+Tab:TianJiaButton({
+	Name = "传送到熔岩城",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-11054.9688, 232.791656, 4898.62842, -0.0872479677, 0.000158954252, -0.996186614, -0.00054083002, 0.999999821, 0.00020692969, 0.996186495, 0.000556821818, -0.0872478485)
+  	end    
+})
+
+Tab:TianJiaButton({
+	Name = "传送到传奇公路",
+	Callback = function()
+      		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-13098.8711, 232.791656, 5907.62793, -0.0872479677, 0.000158954252, -0.996186614, -0.00054083002, 0.999999821, 0.00020692969, 0.996186495, 0.000556821818, -0.0872478485)
+  	end    
+})
+
+local Tab = Window:CjLb({
+	Name = "🔴虚假修改数据🔴",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaShuru({
+	Name = "修改步数",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.leaderstats.Steps.Value = Value
+	end	  
+})
+
+Tab:TianJiaShuru({
+	Name = "修改重生",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value = Value
+	end	  
+})
+
+Tab:TianJiaShuru({
+	Name = "修改宝石",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.Gems.Value = Value
+	end	  
+})
