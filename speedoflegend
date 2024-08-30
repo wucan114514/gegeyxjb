@@ -185,8 +185,7 @@ Tab:TianJiaButton({
 })
 
 Tab:TianJiaButton({
-	Name = "销毁UI",
-	Default = false,
+	Name = "销毁UI"
 	Callback = function()
 	OrionLib:Destroy()
 	end  
