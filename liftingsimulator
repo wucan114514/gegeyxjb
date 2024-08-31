@@ -102,7 +102,7 @@ Tab:TianJiaButton({
 })
 
 local Tab = Window:CjLb({
-        Name = "列表",
+        Name = "⚡️自动功能⚡️",
         Icon = "rbxassetid://7733960981",
         PremiumOnly = false
 })
