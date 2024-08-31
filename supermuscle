@@ -500,10 +500,6 @@ game:GetService("ReplicatedStorage").Events.Quest:FireServer(unpack(args))
 	end
 end
 
-local Section = Tab:AddSection({
-	Name = "自动领取每周任务奖励"
-})
-
 Tab:TianJiaToggle({
 	Name = "自动领取力量每周任务奖励",
 	Default = false,
@@ -557,10 +553,6 @@ Tab:TianJiaToggle({
 	_G.lqylm = Value
 	    lqylm()		
 	end    
-})
-
-local Section = Tab:AddSection({
-	Name = "自动领取成就奖励"
 })
 
 _G.cj1 = true
