@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/atoyayaya/wangzhan/main/xiba')))()
 
-local Window = OrionLib:CH({Name = "安•极速传奇脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:CH({Name = "安•忍者传奇脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local ScreenGui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
