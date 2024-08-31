@@ -135,6 +135,48 @@ game:GetService("ReplicatedStorage").Functions.Multiplier:InvokeServer(unpack(ar
 	end
 end
 
+_G.streng = true
+
+function streng()
+	while _G.streng == true do
+	wait()
+local args = {
+    [1] = "Strength"
+}
+
+game:GetService("ReplicatedStorage").Events.Train:FireServer(unpack(args))
+
+	end
+end
+
+_G.fangy = true
+
+function fangy()
+	while _G.fangy == true do
+	wait()
+local args = {
+    [1] = "Endurance"
+}
+
+game:GetService("ReplicatedStorage").Events.Train:FireServer(unpack(args))
+
+	end
+end
+
+_G.lingmei = true
+
+function lingmei()
+	while _G.lingmei == true do
+	wait()
+local args = {
+    [1] = "Psychic"
+}
+
+game:GetService("ReplicatedStorage").Events.Train:FireServer(unpack(args))
+
+	end
+end
+
 local Tab = Window:CjLb({
         Name = "公告•销毁UI",
         Icon = "rbxassetid://7733960981",
