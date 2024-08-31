@@ -1,6 +1,6 @@
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/atoyayaya/wangzhan/main/xiba')))()
 
-local Window = OrionLib:CH({Name = "安•力量脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:CH({Name = "安•力量传奇脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
 local ScreenGui = Instance.new("ScreenGui")
 local frame = Instance.new("Frame")
@@ -78,3 +78,876 @@ end
 game:GetService("RunService").RenderStepped:Connect(updateFpsLabel)
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+local Tab = Window:CjLb({
+        Name = "公告•销毁UI",
+        Icon = "rbxassetid://7733960981",
+        PremiumOnly = false
+})
+
+Tab:Lab("脚本永久免费，请勿相信倒卖，有时候部分按钮或勾选框可能按不到，滑动一下即可")
+
+Tab:TianJiaButton({
+        Name = "复制作者QQ号🐧",
+        Callback = function()
+        setclipboard("2134702438")
+          end    
+})
+
+Tab:TianJiaButton({
+        Name = "销毁ui",
+        Callback = function()
+        OrionLib:Destroy()
+          end    
+})
+
+local Tab = Window:CjLb({
+	Name = "🔴虚假修改数据🔴",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaShuru({
+	Name = "修改重生",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value = Value
+	end	  
+})
+
+Tab:TianJiaShuru({
+	Name = "修改力量",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.leaderstats.Strength.Value = Value
+	end	  
+})
+
+Tab:TianJiaShuru({
+	Name = "修改耐力",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.Durability.Value = Value
+	end	  
+})
+
+Tab:TianJiaShuru({
+	Name = "修改敏捷",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.Agility.Value = Value
+	end	  
+})
+
+Tab:TianJiaShuru({
+	Name = "修改宝石",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.Gems.Value = Value
+	end	  
+})
+
+Tab:TianJiaShuru({
+	Name = "修改坏人业报",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.evilKarma.Value = Value
+	end	  
+})
+
+Tab:TianJiaShuru({
+	Name = "修改好人业报",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.goodKarma.Value = Value
+	end	  
+})
+
+Tab:TianJiaShuru({
+	Name = "修改总业报",
+	Default = "",
+	TextDisappear = true,
+	Callback = function(Value)
+	game:GetService("Players").LocalPlayer.leaderstats.Kills.Value = Value
+	end	  
+})
+
+local Tab = Window:CjLb({
+	Name = "⚫️个人信息⚫️",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TS("力量：",""..game:GetService("Players").LocalPlayer.leaderstats.Strength.Value.."")
+
+Tab:TS("耐力",""..game:GetService("Players").LocalPlayer.Durability.Value.."")
+
+Tab:TS("敏捷",""..game:GetService("Players").LocalPlayer.Agility.Value.."")
+
+Tab:TS("重生",""..game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value.."")
+
+Tab:TS("宝石",""..game:GetService("Players").LocalPlayer.Gems.Value.."")
+
+Tab:TS("坏人业报",""..game:GetService("Players").LocalPlayer.evilKarma.Value.."")
+
+Tab:TS("好人业报",""..game:GetService("Players").LocalPlayer.goodKarma.Value.."")
+
+Tab:TS("总业报",""..game:GetService("Players").LocalPlayer.leaderstats.Kills.Value.."")
+
+local Tab = Window:CjLb({
+	Name = "🥚自动开蛋🥚",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaButton({
+	Name = "蓝色水晶（1k水晶）",
+	Callback = function()
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Blue Crystal")
+	end    
+})
+
+Tab:TianJiaButton({
+	Name = "绿色水晶（3k钻石）",
+	Callback = function()
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Green Crystal")
+	end    
+})
+
+Tab:TianJiaButton({
+	Name = "冰霜水晶（5k钻石）",
+	Callback = function()
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Frost Crystal")
+	end    
+})
+
+Tab:TianJiaButton({
+	Name = "神话水晶（8k钻石）",
+	Callback = function()
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Mythical Crystal")
+	end    
+})
+
+Tab:TianJiaButton({
+	Name = "地狱水晶（15k钻石）",
+	Callback = function()
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Inferno Crystal")
+	end    
+})
+
+Tab:TianJiaButton({
+	Name = "传奇水晶1（300k钻石）",
+	Callback = function()
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Legends Crystal")
+	end    
+})
+
+Tab:TianJiaButton({
+	Name = "传奇水晶2（1m钻石）",
+	Callback = function()
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Muscle Elite Crystal")
+	end    
+})
+
+Tab:TianJiaButton({
+	Name = "肌肉之王水晶（1.5m钻石）",
+	Callback = function()
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Galaxy Oracle Crystal")
+	end    
+})
+
+local Tab = Window:CjLb({
+	Name = "🔄重生功能🔄",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+_G.llzdcs = true
+
+function llzdcs()
+	while _G.llzdcs == true do
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动重生(无限制)",
+	Default = false,
+	Callback = function(Value)
+	_G.llzdcs = Value
+	    llzdcs()	
+	end    
+})
+
+local Tab = Window:CjLb({
+	Name = "🔄绿石头卡宠重生🔄",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaButton({
+	Name = "重生到280",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 280 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到580",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到1480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 1480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到2080",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 2080 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到2780",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 2780 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到3580",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 3580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到4480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 4480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到5480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 5480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到6580",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 6580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到7780",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 7780 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到9080",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 9080 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到10480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 10480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到11980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 11980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到13580",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 13580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到15280",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到17080",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 17080 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到18980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 18980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+local Tab = Window:CjLb({
+	Name = "🔄白石头卡宠重生🔄",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaButton({
+	Name = "重生到1480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 1480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到2980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 2980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到4980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 4980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到7480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 7480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到10480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 10480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到13980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 13980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到17980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 17980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到22480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 22480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到27480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 27480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到32980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 32980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到38980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 38980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到45480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 45480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到52480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 52480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到59980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 59980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到67980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 67980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到76480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 76480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到85480",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 85480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
+
+Tab:TianJiaButton({
+	Name = "重生到94980",
+	Callback = function()
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 94980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end	
+	end  
+})
+
+local Tab = Window:CjLb({
+	Name = "⚡️自动锻炼⚡️",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+llzddl = false
+
+Tab:TianJiaToggle({
+	Name = "自动哑铃",
+	Default = false,
+	Callback = function(Value)
+		llzddl = Value
+		game:GetService("RunService").Stepped:connect(
+		function()
+			pcall(
+				function()
+					if llzddl then
+					local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+						if llzddl then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
+								game:GetService("Players").LocalPlayer.Backpack.Weight
+							)
+						end
+					end
+				end
+			)
+		end
+		)
+	end    
+})
+
+Tab:TianJiaToggle({
+	Name = "自动俯卧撑",
+	Default = false,
+	Callback = function(Value)
+		llzdfwc = Value
+		game:GetService("RunService").Stepped:connect(
+		function()
+			pcall(
+				function()
+					if llzdfwc then
+				        local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+						if llzdfwc then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
+								game:GetService("Players").LocalPlayer.Backpack.Pushups
+							)
+						end
+					end
+				end
+			)
+		end
+		)
+	end    
+})
+
+Tab:TianJiaToggle({
+	Name = "自动仰卧起坐",
+	Default = false,
+	Callback = function(Value)
+		llzdywqz = Value
+		game:GetService("RunService").Stepped:connect(
+		function()
+			pcall(
+				function()
+					if llzdywqz then
+				        local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+						if llzdywqz then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
+								game:GetService("Players").LocalPlayer.Backpack.Situps
+							)
+						end
+					end
+				end
+			)
+		end
+		)
+	end    
+})
+
+Tab:TianJiaButton({
+	Name = "传送到出生点",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-42.7, 3.7, 404.2)
+	end
+})
+
+Tab:TianJiaButton({
+	Name = "传送到小岛",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-37.636775970458984, 3.86960768699646, 1879.180908203125)
+	end
+})
+
+Tab:TianJiaButton({
+	Name = "传送到冰霜健身房",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2623.022216796875, 3.716249465942383, -409.0733337402344)
+	end
+})
+
+Tab:TianJiaButton({
+	Name = "传送到神话健身房",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2250.778076171875, 3.716248035430908, 1073.2266845703125)
+	end
+})
+
+Tab:TianJiaButton({
+	Name = "传送到永恒健身房",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6758.9638671875, 3.71626353263855, -1284.918701171875)
+	end
+})
+
+Tab:TianJiaButton({
+	Name = "传送到传奇健身房",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4603.28173828125, 987.869140625, -3897.86572265625)
+	end
+})
+
+Tab:TianJiaButton({
+	Name = "传送到肌肉之王健身房",
+	Callback = function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8625.9296875, 13.566278457641602, -5730.4736328125)
+	end
+})
+
+local Tab = Window:CjLb({
+	Name = "✊刷业报✊",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+_G.autokill = true
+
+function autokill()
+	while _G.autokill == true do
+			for i, player in ipairs(game.Players:GetChildren()) do
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
+			end
+			end
+wait(0.1)
+
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "刷业报(需自己挥拳）",
+	Default = false,
+	Callback = function(Value)
+		_G.autokill = Value
+		    autokill()
+	end    
+})
+
+local Tab = Window:CjLb({
+	Name = "⚪️杂项⚪️",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaButton({
+	Name = "挥拳无间隔",
+	Callback = function()
+	game:GetService("Players").LocalPlayer.Backpack.Punch:FindFirstChildOfClass("NumberValue").Value = 0
+  	end    
+})
+
+Tab:TianJiaButton({
+	Name = "收集所有宝箱",
+	Callback = function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/atoyayaya/ui/main/ninjashoujiallchest')))()
+  	end    
+})
