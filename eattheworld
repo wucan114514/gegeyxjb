@@ -79,6 +79,146 @@ game:GetService("RunService").RenderStepped:Connect(updateFpsLabel)
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
+_G.autona = true
+
+function autona()
+	while _G.autona == true do
+	wait()
+			local args = {
+    [1] = false,
+    [2] = false
+}
+
+game:GetService("Players").LocalPlayer.Character.Events.Grab:FireServer(unpack(args))
+	end
+end
+
+_G.autoci = true
+
+function autoci()
+	while _G.autoci == true do
+	wait()
+			game:GetService("Players").LocalPlayer.Character.Events.Eat:FireServer()
+	end
+end
+
+_G.chiq3 = true
+
+function chiq3()
+	while _G.chiq3 == true do
+	wait()
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.TimedRewards.LargeReward
+}
+
+game:GetService("ReplicatedStorage").Events.RewardEvent:FireServer(unpack(args))
+
+	end
+end
+
+_G.chiq2 = true
+
+function chiq2()
+	while _G.chiq2 == true do
+	wait()
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.TimedRewards.MediumReward
+}
+
+game:GetService("ReplicatedStorage").Events.RewardEvent:FireServer(unpack(args))
+
+	end
+end
+
+_G.chiq1 = true
+
+function chiq1()
+	while _G.chiq1 == true do
+	wait()
+local args = {
+    [1] = game:GetService("Players").LocalPlayer.TimedRewards.SmallReward
+}
+
+game:GetService("ReplicatedStorage").Events.RewardEvent:FireServer(unpack(args))
+
+	end
+end
+
+_G.chisu = true
+
+function chisu()
+	while _G.chisu == true do
+	wait()
+local args = {
+    [1] = "EatSpeed"
+}
+
+game:GetService("ReplicatedStorage").Events.PurchaseEvent:FireServer(unpack(args))
+
+	end
+end
+
+_G.chixd = true
+
+function chixd()
+	while _G.chixd == true do
+	wait()
+local args = {
+    [1] = "Multiplier"
+}
+
+game:GetService("ReplicatedStorage").Events.PurchaseEvent:FireServer(unpack(args))
+
+	end
+end
+
+_G.chiys = true
+
+function chiys()
+	while _G.chiys == true do
+	wait()
+local args = {
+    [1] = "Speed"
+}
+
+game:GetService("ReplicatedStorage").Events.PurchaseEvent:FireServer(unpack(args))
+
+	end
+end
+
+_G.chida = true
+
+function chida()
+	while _G.chida == true do
+	wait()
+local args = {
+    [1] = "MaxSize"
+}
+
+game:GetService("ReplicatedStorage").Events.PurchaseEvent:FireServer(unpack(args))
+
+	end
+end
+
+_G.chidiu = true
+
+function chidiu()
+	while _G.chidiu == true do
+	wait()
+game:GetService("Players").LocalPlayer.Character.Events.Throw:FireServer()
+
+	end
+end
+
+_G.chise = true
+
+function chise()
+	while _G.chise == true do
+	wait()
+game:GetService("Players").LocalPlayer.Character.Events.Sell:FireServer()
+	end
+end
+
 local Tab = Window:CjLb({
         Name = "公告•销毁UI",
         Icon = "rbxassetid://7733960981",
