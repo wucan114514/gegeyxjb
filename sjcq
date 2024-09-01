@@ -201,6 +201,12 @@ Tab:TianJiaToggle({
 	end    
 })
 
+local Tab = Window:CjLb({
+	Name = "🔄重生功能🔄",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
 _G.sjcscs = true
 
 function sjcscs()
@@ -223,3 +229,21 @@ Tab:TianJiaToggle({
 		sjcscs()		
 	end    
 })
+
+local Tab = Window:CjLb({
+	Name = "🔄定制重生🔄",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+Tab:TianJiaButton({
+        Name = "重生到280",
+        Callback = function()
+                if game:GetService("Players").LocalPlayer.leaderstats.Experience.Value == 280 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").Events.Experiance:InvokeServer(unpack(args))
+        end  
+})
+
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
