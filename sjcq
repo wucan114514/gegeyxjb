@@ -242,8 +242,12 @@ Tab:TianJiaButton({
                 if game:GetService("Players").LocalPlayer.leaderstats.Experience.Value == 280 then
     game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService("ReplicatedStorage").Events.Experiance:InvokeServer(unpack(args))
-        end  
+    local args = {
+    [1] = game:GetService("Players").LocalPlayer
+}
+
+game:GetService("ReplicatedStorage").Events.Experiance:InvokeServer(unpack(args))
+        end
 })
 
 Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
