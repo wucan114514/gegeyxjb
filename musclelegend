@@ -334,6 +334,30 @@ Tab:TianJiaToggle({
 	end    
 })
 
+_G.sd = true
+
+function sd()
+	while _G.sd == true do
+	wait(3)
+   local args = {
+    [1] = "changeSize",
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage").rEvents.changeSpeedSizeRemote:InvokeServer(unpack(args))
+
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动设置大小为2",
+	Default = false,
+	Callback = function(Value)
+		_G.sd = Value
+		sd()
+	end    
+})
+
 _G.qx = true
 
 function qx()
