@@ -274,7 +274,7 @@ _G.qzcs = true
 function qzcs()
 	while _G.qzcs == true do
 	wait()
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8753.064453125, 56.43069839477539, -6035.1181640625)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8772.8193359375, 51.19826889038086, -5659.826171875)
 	end
 end
 
@@ -294,7 +294,7 @@ function gdqc()
     wait()
     local args = {
     [1] = "useMachine",
-    [2] = workspace.machinesFolder:FindFirstChild("Muscle King Squat").interactSeat
+    [2] = workspace.machinesFolder:FindFirstChild("Muscle King Lift").interactSeat
 }
 
 game:GetService("ReplicatedStorage").rEvents.machineInteractRemote:InvokeServer(unpack(args))
@@ -317,7 +317,7 @@ function cs()
 	wait()
 	local args = {
     [1] = "rep",
-    [2] = workspace.machinesFolder:FindFirstChild("Muscle King Squat").interactSeat
+    [2] = workspace.machinesFolder:FindFirstChild("Muscle King Lift").interactSeat
 }
 
 game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
