@@ -264,17 +264,33 @@ Tab:TianJiaButton({
 })
 
 local Tab = Window:CjLb({
-	Name = "💪自动肌肉之王器材锻炼💪",
+	Name = "💪快速刷重生💪",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+_G.qzcs = true
+
+function qzcs()
+	while _G.qzcs == true do
+	wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8753.064453125, 56.43069839477539, -6035.1181640625)
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动传送到硬拉",
+	Default = false,
+	Callback = function(Value)
+		_G.qzcs = Value
+		qzcs()
+	end    
 })
 
 _G.gdqc = true
 
 function gdqc()
 	while _G.gdqc == true do
-	wait()
-	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8753.064453125, 56.43069839477539, -6035.1181640625)
     wait()
     local args = {
     [1] = "useMachine",
@@ -282,8 +298,24 @@ function gdqc()
 }
 
 game:GetService("ReplicatedStorage").rEvents.machineInteractRemote:InvokeServer(unpack(args))
-    wait()
-    local args = {
+    end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动使用硬拉",
+	Default = false,
+	Callback = function(Value)
+	_G.gdqc = Value
+	    gdqc()	
+	end    
+})
+
+_G.cs = true
+
+function cs()
+	while _G.cs == true do
+	wait()
+	local args = {
     [1] = "rep",
     [2] = workspace.machinesFolder:FindFirstChild("Muscle King Squat").interactSeat
 }
@@ -294,14 +326,31 @@ game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
 end
 
 Tab:TianJiaToggle({
-	Name = "自动肌肉之王锻炼",
+	Name = "自动锻炼硬拉",
 	Default = false,
 	Callback = function(Value)
-	_G.gdqc = Value
-	    gdqc()	
+		_G.cs = Value
+		cs()
 	end    
 })
 
+_G.qx = true
+
+function qx()
+	while _G.qx == true do
+	wait(3)
+   game:GetService("Players").LocalPlayer.Character.Humanoid.Jump = true
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动取消装备",
+	Default = false,
+	Callback = function(Value)
+		_G.qx = Value
+		qx()
+	end    
+})
 
 local Tab = Window:CjLb({
 	Name = "🔄重生功能🔄",
