@@ -264,6 +264,46 @@ Tab:TianJiaButton({
 })
 
 local Tab = Window:CjLb({
+	Name = "💪自动肌肉之王器材锻炼💪",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+_G.gdqc = true
+
+function gdqc()
+	while _G.gdqc == true do
+	wait()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8753.064453125, 56.43069839477539, -6035.1181640625)
+    wait()
+    local args = {
+    [1] = "useMachine",
+    [2] = workspace.machinesFolder:FindFirstChild("Muscle King Squat").interactSeat
+}
+
+game:GetService("ReplicatedStorage").rEvents.machineInteractRemote:InvokeServer(unpack(args))
+    wait()
+    local args = {
+    [1] = "rep",
+    [2] = workspace.machinesFolder:FindFirstChild("Muscle King Squat").interactSeat
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+ 
+    end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动肌肉之王锻炼",
+	Default = false,
+	Callback = function(Value)
+	_G.gdqc = Value
+	    gdqc()	
+	end    
+})
+
+
+local Tab = Window:CjLb({
 	Name = "🔄重生功能🔄",
 	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
@@ -293,7 +333,7 @@ local Tab = Window:CjLb({
 })
 
 Tab:TianJiaButton({
-	Name = "重生到280",
+	Name = "重生到",
 	Callback = function()
 		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 280 then
     game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
