@@ -362,7 +362,7 @@ _G.qx = true
 
 function qx()
 	while _G.qx == true do
-	wait(1)
+	wait(5)
    game:GetService("Players").LocalPlayer.Character.Humanoid.Jump = true
 	end
 end
