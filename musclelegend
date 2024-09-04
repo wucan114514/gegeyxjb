@@ -85,7 +85,7 @@ local Tab = Window:CjLb({
         PremiumOnly = false
 })
 
-Tab:Lab("脚本永久免费，请勿相信倒卖，有时候部分按钮或勾选框可能按不到，滑动一下即可")
+Tab:Lab("9.4更新。脚本永久免费，请勿相信倒卖，有时候部分按钮或勾选框可能按不到，滑动一下即可")
 
 Tab:TianJiaButton({
         Name = "复制作者QQ号🐧",
