@@ -1,203 +1,349 @@
-local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/atoyayaya/wangzhan/main/xiba')))()
 
-data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+local Window = OrionLib:CH({Name = "安•力量传奇脚本", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
 
+local ScreenGui = Instance.new("ScreenGui")
+local frame = Instance.new("Frame")
+local LBLG = Instance.new("ScreenGui", getParent)
+local LBL = Instance.new("TextLabel", getParent)
+local player = game.Players.LocalPlayer
 
- 
+LBLG.Name = "LBLG"
+LBLG.Parent = game.CoreGui
+LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+LBLG.Enabled = true
+LBL.Name = "LBL"
+LBL.Parent = LBLG
+LBL.BackgroundColor3 = Color3.new(1, 1, 1)
+LBL.BackgroundTransparency = 1
+LBL.BorderColor3 = Color3.new(0, 0, 0)
+LBL.Position = UDim2.new(0.75,0,0.010,0)
+LBL.Size = UDim2.new(0, 133, 0, 30)
+LBL.Font = Enum.Font.GothamSemibold
+LBL.Text = "TextLabel"
+LBL.TextColor3 = Color3.new(1, 1, 1)
+LBL.TextScaled = true
+LBL.TextSize = 25
+LBL.TextWrapped = true
+LBL.Visible = true
+LBL.Draggable = true
 
+local FpsLabel = LBL
+local Heartbeat = game:GetService("RunService").Heartbeat
+local LastIteration, Start
+local FrameUpdateTable = { }
 
-local OrionLib = loadstring(game:HttpGet((glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('piBarDbQNptvZrTQQylCMlYbxujsSAHCnKDbrkmEEYBTetclvMwOGigaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS93YW5nemhhbi9tYWluL3hpYmE='))))()
+local function HeartbeatUpdate()
+	LastIteration = tick()
+	for Index = #FrameUpdateTable, 1, -1 do
+		FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
+	end
+	FrameUpdateTable[1] = LastIteration
+	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
+	CurrentFPS = CurrentFPS - CurrentFPS % 1
+	FpsLabel.Text = ("🇨🇳北京时间:"..os.date("%H").."时"..os.date("%M").."分"..os.date("%S")).."秒"
+end
+Start = tick()
+Heartbeat:Connect(HeartbeatUpdate)
 
-local Window = OrionLib:CH({Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pXooCNkOPkfYMaTzahriEQcfszzXcwmSwVIiQnqypiuNpbBhtycXlbe5a6J4oCi5Yqb6YeP5Lyg5aWH6ISa5pys'), HidePremium = false, SaveConfig = true, ConfigFolder = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OGVTHgKpUKfenNjyKJgNIIdAFEaTwWXQxgWIpOUFUgUCdabYAmGAOrTT3Jpb25UZXN0')})
+local ScreenGui = Instance.new("ScreenGui")
+local FpsLabel = Instance.new("TextLabel")
+
+ScreenGui.Name = "FPSGui"
+ScreenGui.ResetOnSpawn = false
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+FpsLabel.Name = "FPSLabel"
+FpsLabel.Size = UDim2.new(0, 100, 0, 50)
+FpsLabel.Position = UDim2.new(0.75,20,0.075,20)
+FpsLabel.BackgroundTransparency = 1
+FpsLabel.Font = Enum.Font.SourceSansBold
+FpsLabel.Text = "FPS: 0"
+FpsLabel.TextSize = 25
+FpsLabel.TextColor3 = Color3.fromRGB(0, 0, 255) 
+FpsLabel.Parent = ScreenGui
+FpsLabel.Draggable = true
+
+local frameCounter = 0
+
+function updateFpsLabel()
+    frameCounter = frameCounter + 1
+    if frameCounter >= 20 then -- 20帧
+        local fps = math.floor(1 / game:GetService("RunService").RenderStepped:Wait())
+        FpsLabel.Text = "FPS: " .. fps
+        frameCounter = 0
+    end
+end
+
+game:GetService("RunService").RenderStepped:Connect(updateFpsLabel)
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
 local Tab = Window:CjLb({
-        Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('oRqdkRVxMLdMTgCQPmkRDhEgPUrbeTkSKEwkIAIePwISuGghFcDtyUZ5YWs5ZGK4oCi6ZSA5q+BVUk='),
-        Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('jRiAgKxNoCtmYeykXTvJJwsaneAUlbRwiDNuGFjuRsOEAfxXpibZrdNcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
+        Name = "公告•销毁UI",
+        Icon = "rbxassetid://7733960981",
         PremiumOnly = false
 })
 
-Tab:Lab(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rGrPglSOnlClcCJFbmvWiTpIMYwXhkVJrsroDWSLzbQDSaqpUQrpNVE6ISa5pys5rC45LmF5YWN6LS577yM6K+35Yu/55u45L+h5YCS5Y2W77yM5pyJ5pe25YCZ6YOo5YiG5oyJ6ZKu5oiW5Yu+6YCJ5qGG5Y+v6IO95oyJ5LiN5Yiw77yM5ruR5Yqo5LiA5LiL5Y2z5Y+v'))
+Tab:Lab("脚本永久免费，请勿相信倒卖，有时候部分按钮或勾选框可能按不到，滑动一下即可")
 
 Tab:TianJiaButton({
-        Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ibtvygUslkflSVyRHtNOXIQbGDUVdcwHPWXirKxUkjZOmCcsoXprZsE5aSN5Yi25L2c6ICFUVHlj7fwn5Cn'),
+        Name = "复制作者QQ号🐧",
         Callback = function()
-        setclipboard(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FdaerfgWkzWlvCAEbFLhGfsLaxHwpjqItwuffvdYzlmcnleLminFcMsMjEzNDcwMjQzOA=='))
+        setclipboard("2134702438")
           end    
 })
 
 Tab:TianJiaButton({
-        Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FpipgZcWcJlGQQRousNJQQOnrtvvJzpGFcNYfuYYajcXGGexMMtGOpm6ZSA5q+BdWk='),
+        Name = "销毁ui",
         Callback = function()
         OrionLib:Destroy()
           end    
 })
 
 local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('evjOLXJxASWDOOWNXZJJQMMFMBAYIAnjuIwNaVJKBrGIDAagFrElywh8J+UtOiZmuWBh+S/ruaUueaVsOaNrvCflLQ='),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('eqyclMCACBVdKoVKNlydpekHabTlTSIlVUfIsGtYMUAlkVrQpSxAICRcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = "🔴虚假修改数据🔴",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Tab:TianJiaShuru({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rJtcRwhTSiVoeDrEGOMdUDNDqGSDZtauMEzbXnKKyqwNamnxSJwdPcB5L+u5pS56YeN55Sf'),
-	Default = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('eFDYCctxmSuqXWRbAjyLKTCdMbmTZRqtngBqwncjVxBoXdwDZkEtTcH'),
+	Name = "修改重生",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DTAEVFYiqzkaDIQjibKKJjBMipTvTAtykWZPYabvQYuAUWbteVURGWmUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value = Value
+	game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('trkJAkZEhrcWJfqQCNcVqTdrHhxNysiPsvodEqcZJnrejizYxqOmBmy5L+u5pS55Yqb6YeP'),
-	Default = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ATGGLYKbNliXmlXANAHjaGSQFJygTgjtWQOGLaBbNPVspEKueeWYIfh'),
+	Name = "修改力量",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('fzSpbgNYawIiHaXYOoAwDFFwKyNkyaucUvRIKyraohFgUrTZEltpgnxUGxheWVycw==')).LocalPlayer.leaderstats.Strength.Value = Value
+	game:GetService("Players").LocalPlayer.leaderstats.Strength.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DkkgwGsxckMkrNblqIrYZBaFNudvddXcUsPYtlNhfBGDQcJblajlbPs5L+u5pS56ICQ5Yqb'),
-	Default = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('HWvuRqXbBGvftAHLaCvlffLOfGSehxZPtrLaqTBjHdJVNKlZOCuMbFT'),
+	Name = "修改耐力",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('MOeKkLmZyIJovualRFfAsQyOiIkggamGjtZHLMSLZWqsiOLMFwFxOLGUGxheWVycw==')).LocalPlayer.Durability.Value = Value
+	game:GetService("Players").LocalPlayer.Durability.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('TKgrXYwZfkeiXwuZEXRwuKVPUmWaeCUBCcOiifgnTQBQAxHFkuLzPAb5L+u5pS55pWP5o23'),
-	Default = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xentNOTKZihRpWgOEivACPYjgLiSDbOvoTnOYVAtqrbbwPUEwevmvUA'),
+	Name = "修改敏捷",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('gMXhCdgyPBSSqwPKUIVVxfyQsHeZoLCpyhuRplEzvIGkhtzEfbvxvdLUGxheWVycw==')).LocalPlayer.Agility.Value = Value
+	game:GetService("Players").LocalPlayer.Agility.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('JiQkKlpcFiawJtBHdFiWrLzRCfaDQewkbpBqFjZCqOcpzxWpYBzzwPf5L+u5pS55a6d55+z'),
-	Default = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('TYhnxRnOySMTTtNzjpsAIKjCyufkOPhpRWPgRZQegusWHnpzPnqXbaK'),
+	Name = "修改宝石",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rcvLBUKFNjdVXRQtoaefZJZoSpifWIBbiuUHSVKCYTxXRVyXyNLoOcfUGxheWVycw==')).LocalPlayer.Gems.Value = Value
+	game:GetService("Players").LocalPlayer.Gems.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OFBxFWaqzNPslgLesISVgZaqIZQAIRTGobWswgmIcOxcVuwrOtElXtx5L+u5pS55Z2P5Lq65Lia5oql'),
-	Default = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('KGmggtLFpvkBBfzhLyyrIlSTexOAxmZxQxUCcfIQbGUfRbLgvCgzhlX'),
+	Name = "修改坏人业报",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('bzDbNlxmwVwHlGeAfWdiImqGXqJnHOhXQAQDcjnczifxZeoyKDFvBubUGxheWVycw==')).LocalPlayer.evilKarma.Value = Value
+	game:GetService("Players").LocalPlayer.evilKarma.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CGRMxpvIchVcSmAxXibtmytGohxSkAZBURVKhDqAwyvZreJRsNuHoAX5L+u5pS55aW95Lq65Lia5oql'),
-	Default = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('unJGyVqABepTArQsOXsYPAdFQaNCJCFshLpJpULILOJXPVlxKQVJXFp'),
+	Name = "修改好人业报",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rXoYikEsHcfWqSLyllGWuSkAlGoVnTRBMkLZJCOcDuSTCEPXJQfCkTPUGxheWVycw==')).LocalPlayer.goodKarma.Value = Value
+	game:GetService("Players").LocalPlayer.goodKarma.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('tMdrflFLlSZctAoZApmklXBNdpDARPbsiIosHTrVkBnMmAHteNPlusg5L+u5pS55oC75Lia5oql'),
-	Default = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('GeCyhwlJgkeWVRfrjiqTOflMqGhUislNKcnrWcoPTpZOGTfUDLDxRYt'),
+	Name = "修改总业报",
+	Default = "",
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('klHwPzieTEzIjsjOgUqEsyoXViBfEVrSIuXcfDCvfcrAgErRXPhIijcUGxheWVycw==')).LocalPlayer.leaderstats.Kills.Value = Value
+	game:GetService("Players").LocalPlayer.leaderstats.Kills.Value = Value
 	end	  
 })
 
 local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('zcyodqPzgQPyMxOoVcTrlCtNVOpGXxQuPpYXZlGXvTgCGYAbxPtfhRy4pqr77iP5Liq5Lq65L+h5oGv4pqr77iP'),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xEWBBNRMUmdXkZSZopWrMPXxXDqJTOtJFoprxuDgggqQSarZDqYZDDrcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = "⚫️个人信息⚫️",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('moHZbFJpglpdfNrFwNovbEVEFTkbZfuBoQtNrLVMycJcXSPRfVANGqg5Yqb6YeP'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('AcBQLyuVXITQltICsFeDDZjvvROexeWflvlVHhodzeVkrmcDOsDqnvM')..game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pRzsFbCHoKpBMSmOMjnpsJoUnkTpJDdoExbECuhaDJTROKxFJVbStMOUGxheWVycw==')).LocalPlayer.leaderstats.Strength.Value..glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('KThyDTuTWafIUWMPZXBHkMrcwtvHLZazSzDMZEHuFMWHYfGNjvRKhzC'))
+Tab:TS("力量：",""..game:GetService("Players").LocalPlayer.leaderstats.Strength.Value.."")
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CvGuBgpfkQWiSaplxwzDSxgyKzVqOkquhjfXwYedbJpGbMoAElkuKmj6ICQ5Yqb'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('XIqwJDkMmNUazRMguJKayWdUSXRvGDnwArPNxUsVRItKAGGWwyeYYkn')..game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('nFUYdeLSftPGVWmhXWUKAYszkdOixreRLwrNGVXztwAvTyylMeESaINUGxheWVycw==')).LocalPlayer.Durability.Value..glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('GsVyJvMwtXABvsDHfxAxLtNtywzqWVnSwsFtIFumHpATVnkYCbyOjvU'))
+Tab:TS("耐力",""..game:GetService("Players").LocalPlayer.Durability.Value.."")
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('SkNpuIWcNXMYQmkRlYIAUVZVBvhZenHNCtLCAHxaGfptqLkmVgwRqnB5pWP5o23'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('MFmnUOxnrjpeXEerRbZPyXKNErxWnkBaWoUFzqzYEIgarlCqnDGyONA')..game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CDipywyKEEqCHusxjzPCEmGjpDbnOfrYEadvEYZYstlpISjUBeWVDStUGxheWVycw==')).LocalPlayer.Agility.Value..glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('GiVmwsOKoVIlQBFpIuoCkTNCVAHsIzzxMqhHvEZeosqniKoruIUbfCN'))
+Tab:TS("敏捷",""..game:GetService("Players").LocalPlayer.Agility.Value.."")
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('wkviXsqXTtFQgCIfGlnqHLnnkSDDfthLhDQQGhKiiuLTZEnlaXDmKPx6YeN55Sf'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PzhKqCQilDYshexmLKnkhtRmcezXZovxcXugNChisOgCRRDCwkAZilz')..game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('blIMBFEddiCBFrmzYKcTvTSQPAecBthcGdBNBeosEuZvFaLKDdaitRMUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value..glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PMGlWNOBxzpajMjTavcHatOynnWBnGXfLTxqKdpNSiVsiUbrEgAzBJD'))
+Tab:TS("重生",""..game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value.."")
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('UcEvNpeyPLRiDZtqYdLGXZPPaZCekyRpqNyDvRDHhMLojUvFdRvbLsB5a6d55+z'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CeeqnwuptxFIYbYSbtScmRTxImXZTcmLmVvNjnwXMsOgLXElcuJLItM')..game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('SfbvbEuAsndIsAMgUNuvVZxSOPXhYcgWYoApyrQqniNMTyXwdbgyzUkUGxheWVycw==')).LocalPlayer.Gems.Value..glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('hAzzzGZEiopHRMfdbfcrBViKKDfzVNtxlOZVoyhBnRCJsllyPxiAlNp'))
+Tab:TS("宝石",""..game:GetService("Players").LocalPlayer.Gems.Value.."")
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('yQztdRwLuAIymrDbSZmFXqqIDPVMEgoORWSyPEZZVXiBiwkLModnFwL5Z2P5Lq65Lia5oql'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('RIDxVAbaOGujFFxLtmgPAcBBdGjvOVzyrQsnhPOSxFikHPpVpWaBqki')..game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ULatELSLIiViBsGiqGxCSErxvOvnVTxEbCkssBTOCgKgrKZumhbpWJoUGxheWVycw==')).LocalPlayer.evilKarma.Value..glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rQwTCMsifLOisDIwmUpqXDplEfOwUAujkvUCtJlJZyCwokpWEJHkzkp'))
+Tab:TS("坏人业报",""..game:GetService("Players").LocalPlayer.evilKarma.Value.."")
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('jdfOiHeQhvBfKaAfQrCJKorZfVQlrtRGHpBKNRzwbNbcGiseRAjqrWm5aW95Lq65Lia5oql'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('mLgFBALChHMuzWeKkdAMpvfCMBOKOCgqGJChCEJxZACpREnPWXCCzRY')..game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('XtzJiGdTQcBaepPJMdFiYFgHYAaloDqqfOPgbCjZOgnorpROaYSmHQjUGxheWVycw==')).LocalPlayer.goodKarma.Value..glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('iWrgLpPybTiZzdwsFISwiSccTxafpGPUETzezqFBjTzVSdWgsJWZvZn'))
+Tab:TS("好人业报",""..game:GetService("Players").LocalPlayer.goodKarma.Value.."")
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xNGnESkepVaPBTfndlCiVPwPdCeGjivEJizyYOgrxOLQPGZNOcJkUyo5oC75Lia5oql'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('tjiSNJzkpPjZwiOncsbbQPdjQlBrBYbuZfLWguapXOSFirGOYDKhLyN')..game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('uXmDfnjXBdQNsmnWAbkDsgKnpmtDOcyHiqLaxUEHkntgFOumWBwlZvQUGxheWVycw==')).LocalPlayer.leaderstats.Kills.Value..glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('losZzJGcPLTyaFbbBsrjHcjaxVFGYEjJBcMjXgjICndtVzdXHRlSxGG'))
+Tab:TS("总业报",""..game:GetService("Players").LocalPlayer.leaderstats.Kills.Value.."")
 
 local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('BygvFlalEQMqHwZCTvJqKYnuHFjdshgwDBgReNqajlsLzcgxueTcdWD8J+lmuiHquWKqOW8gOibi/CfpZo='),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('sXtlfFVXvAxCQGMeTvVgwPFYAZvVNtsIdybzIWOplhRHcNhZbQNmWfccmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = "🥚自动开蛋🥚",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('gsrXlPKVnJqlgknDdVdPNHCItsWMFEtVIbMSWJUYVIqjoiXKMxtRPHd6JOd6Imy5rC05pm277yIMWvmsLTmmbbvvIk='),
+	Name = "蓝色水晶（1k水晶）",
 	Callback = function()
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('aDRJWJvjbELktgnYCurQCvINgOKgGBrvlzjtQYUSTcHxtWYHfwyUaakUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ehyBZSIAVCmqpzTGKbsUbAMxaaXdUEffYgNimbTwPEncGRRMNPgCIgSb3BlbkNyeXN0YWw='), glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OtTugotjavUrFCNmevKKFOetNUGUtAHtHOpfdWtVVbNGWivfOAZQEYUQmx1ZSBDcnlzdGFs'))
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Blue Crystal")
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('BlvKSpmXUmLzXZfWnoAIPeAUSNNRaJRlzrBloSsaicQigLaPolrweDx57u/6Imy5rC05pm277yIM2vpkrvnn7PvvIk='),
+	Name = "绿色水晶（3k钻石）",
 	Callback = function()
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('AFWwzLaoaKVzwuYWybReeWztMDKYopUncvsGtdMhrWhEYtWXsUfKllhUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('TaFXnCuNhdupfUoOOiyWizgCtsttADuWjFxWSwslDuuuGhikuUoLliAb3BlbkNyeXN0YWw='), glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('iPsHieqOYPTKwhljcjykoTzjDKUrRPbRHWNykdwkxXiKMBlDxXPljSrR3JlZW4gQ3J5c3RhbA=='))
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Green Crystal")
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rsAjVoqSqlOPCiWVtrkwhUfnfLiCnyhRKQZTEITsdxsVaOEckHxxpAD5Yaw6Zyc5rC05pm277yINWvpkrvnn7PvvIk='),
+	Name = "冰霜水晶（5k钻石）",
 	Callback = function()
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('nDRjyoTzupAPrlIFydTMdhrgqGGVPdkggdBVanwWNvfjtWUhuWkqmeCUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CxEzvAHGGyHWitjXmassvmYOVRZmvlnkeorNhRLRQzJMhnKUplvmtxjb3BlbkNyeXN0YWw='), glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DDmqfLijNGLASDoeIUGfXgcmKNaWOcBbOJcCYXSzhVqFCoMRtMKUaeoRnJvc3QgQ3J5c3RhbA=='))
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Frost Crystal")
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('iJyAzLHNaPuSlGsYdmtSorHEQKKHyzZuDQfUqSIdZUlhWywztptQVEO56We6K+d5rC05pm277yIOGvpkrvnn7PvvIk='),
+	Name = "神话水晶（8k钻石）",
 	Callback = function()
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('TFjDhmCwrXpgudDLWyQtkSWLFAkzNMTUoSYplxCRQOXOSPIlLeFjPhAUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CmKNrukpremwjKduQoCYzFiXuROHtlnEtmrZapxAkhFmawkPHIBRfgvb3BlbkNyeXN0YWw='), glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('fQhOaTBlQHttiGAFpZZdRDdAqHLEENoyFUveGhLPlMzfVWkLhzuUwapTXl0aGljYWwgQ3J5c3RhbA=='))
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Mythical Crystal")
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('skTiofXwVcVXrhuzKlKSdDapsiSoBQQfXbsAXXGoBctelwkxWfALaSI5Zyw54ux5rC05pm277yIMTVr6ZK755+z77yJ'),
+	Name = "地狱水晶（15k钻石）",
 	Callback = function()
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('GpCTlkxfYAdaJQpzFdCmjhNkAjwaRkHKcfZUnfbFReTSBleKrkRpdVuUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ZtHtMgHXAQAHWvzDXkSSfmrBrCysPcWoBtTljGQioXnYKjQvPTWIzpkb3BlbkNyeXN0YWw='), glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('TrQOGwbVKPMfRzFuoJjTUKBJLKHTPPiSecjHJtFjRVHEcFjidDObeZXSW5mZXJubyBDcnlzdGFs'))
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Inferno Crystal")
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ZaZQARePEzrjwjqwlLOKYSswgPnizEpjLNKqJDKQWVfHtdAlnttUeIe5Lyg5aWH5rC05pm2Me+8iDMwMGvpkrvnn7PvvIk='),
+	Name = "传奇水晶1（300k钻石）",
 	Callback = function()
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('giHJxUtqtaWkoibcluFOKMTJMbwupqwxfUoIEZCzKDGLZtCaNehmQtGUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('HdrqQxRnNwmxVsPapRAgMwtUNxjhAUsGtidSymgHSDZrKmVnewRNzoQb3BlbkNyeXN0YWw='), glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('lwWxLZYTQzHnKlEqDlqWyVmezshHPOmhoyYBmuRtXIZhnSGmSAMnrNsTGVnZW5kcyBDcnlzdGFs'))
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Legends Crystal")
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('RBPQslgCyTSWfLptTgUIKtktUpgVwPUGJeHkBOBQNWqTCLBDQtExiYR5Lyg5aWH5rC05pm2Mu+8iDFt6ZK755+z77yJ'),
+	Name = "传奇水晶2（1m钻石）",
 	Callback = function()
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('oCrFgamxgWORSFQFyxWtkNkJxFMLzgmyjxnBLrTFxDgUJXZxktUQGPMUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('GxMElSqbYTHePCSYAOqNJvGNZPYgwMPIrzfOmTCwTNKTndEGzkjGgRQb3BlbkNyeXN0YWw='), glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('EQumjgYCAJmTptQwbsQXZMzJCOviiwIHfTwAseqOJLDDVATvtSPRsSBTXVzY2xlIEVsaXRlIENyeXN0YWw='))
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Muscle Elite Crystal")
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ruozEQjZWQCgDPepIJkaoZFCVpHWsczEsnKGYCtGoQdWvpIkIQhajMj6IKM6IKJ5LmL546L5rC05pm277yIMS41bemSu+efs++8iQ=='),
+	Name = "肌肉之王水晶（1.5m钻石）",
 	Callback = function()
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('mWzDUyWoqwAtUCAiOOGLJNJNtDDBBUNiAslfdFkNDVHnokBvWgAGItMUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('WUXRCQGXdLOgcVJvPvGlQDhbXggmckCJIXsKxEilwMqhHNYwQcZBluZb3BlbkNyeXN0YWw='), glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DFzOydANHcExUbyzGmJmMkZIHFHiBhWkuVCSuVJYDeTyDvfzgaPSoJoR2FsYXh5IE9yYWNsZSBDcnlzdGFs'))
+		game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Galaxy Oracle Crystal")
 	end    
 })
 
 local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OtZDbNpIcSrCPUwNNpnmNIyOMHaBlwXrUmNNQqOEBJIncamQLuTAnrr8J+UhOmHjeeUn+WKn+iDvfCflIQ='),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DpATzLpeRAMLsIJHwWulkFAXvFnWTkOdMJJPWtYyyUYqvAmyzwehTqFcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = "💪快速刷重生💪",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+_G.qzcs = true
+
+function qzcs()
+	while _G.qzcs == true do
+	wait()
+    	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8625.9296875, 13.566278457641602, -5730.4736328125)
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动传送到肌肉之王",
+	Default = false,
+	Callback = function(Value)
+		_G.qzcs = Value
+		qzcs()
+	end    
+})
+
+yldll = false
+
+Tab:TianJiaToggle({
+	Name = "自动锻炼",
+	Default = false,
+	Callback = function(Value)
+	yldll = Value
+		game:GetService("RunService").Stepped:connect(
+		function()
+			pcall(
+				function()
+					if yldll then
+					local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+						if yldll then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
+								game:GetService("Players").LocalPlayer.Backpack.Weight
+							)
+						end
+					end
+				end
+			)
+		end
+		)
+	end    
+})
+
+_G.sd = true
+
+function sd()
+	while _G.sd == true do
+	wait(3)
+   local args = {
+    [1] = "changeSize",
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage").rEvents.changeSpeedSizeRemote:InvokeServer(unpack(args))
+
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "自动设置大小为2",
+	Default = false,
+	Callback = function(Value)
+		_G.sd = Value
+		sd()
+	end    
+})
+
+local Tab = Window:CjLb({
+	Name = "🔄重生功能🔄",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
@@ -205,12 +351,12 @@ _G.llzdcs = true
 
 function llzdcs()
 	while _G.llzdcs == true do
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('TrThfXuWidrQgSmfDogYoYAKopilEwUqxBNycAwMXbMsjDcbzIRpRPsUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pxWhJrNjPukdFteqBWyVEaZcvOyYbgHiplndrBWXPHSEYTZeijTAuwScmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PjQKGfaMGAQZyDEKDMSTghpxgJkiMTqAchVYcCvLdoZfcPbTTQspWfJ6Ieq5Yqo6YeN55SfKOaXoOmZkOWItik='),
+	Name = "自动重生(无限制)",
 	Default = false,
 	Callback = function(Value)
 	_G.llzdcs = Value
@@ -219,507 +365,507 @@ Tab:TianJiaToggle({
 })
 
 local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pdLqAdjZAKUHHIIctgrdtUGmGHrxAaPlqofFQDpOuecFgLAxFAGLaNP8J+UhOe7v+efs+WktOWNoeWuoOmHjeeUn/CflIQ='),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FfuPYjxfLmhaGrkVVKXoiBIHWTFmPrhyOYXPlaPzJGEDhBaKTsHNXkzcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = "🔄绿石头卡宠重生🔄",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CQdIHQuhCrQWrEhQdCTSkgaOPfAVgCToueUAErnZlfziJKwSuvIkERs6YeN55Sf5YiwMjgw'),
+	Name = "重生到",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('IEkpfFEUqGfiRgBZIWbeCrduRIDKVbuRQXYOCvMZexzwrZdcOeZEqDOUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 280 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('EYDWOCcOxfTGBFKwZkFODSHscJzTKjkUApnYFukmQVFXEVpKKmvwDbq5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 280 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('sudzWURZuLmwWTPpTvJFhNTmKacYKiBkyzBspGPqQCMNeOLagzIsroFUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('QyJnLxAuWmtFfjVcQwYcrdYtHKYbqpgZEpwZiuthQyaUGQqNHzTjclxcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('iYQlhCJNemuMNpOAEznzLaOXbUNeUmVsIvHoFuzdwtnKgUZsheAkRZA5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('jFASnchWxmFAKVmlMZaiHlVVNOtLSnuyjoSsZXufYzDHvnpvvtQyggZ6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OFPJjVUoGjJwvPhuAFluVAaYzWaSQvdsDSFNfHsWWcpkdwtyweCAhvQ6YeN55Sf5YiwNTgw'),
+	Name = "重生到580",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('itngOmRkLvmvqfrRmEcDRUHNpbcyDuVvBGyHGGKpJZdELNYGTBEgEDvUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 580 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('sXKDyuUdotNpFisDFgCldVeVgKLyVeBYOJyvsbRBMoJAdlFUJlKTBDg5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('jwrEjCtOnUmKScGWGCLellBnQgjBRJtaRxXTbVUpakqLShZdgZkrUqlUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xvsQWMfIsAhodAhqBlGbhwuGLXFqeAZjTLRNbdwlJviycVfdHMxxMOVcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DmmnUuycCbFGEjrbPySDXyuRPPtqIcRpNLeelXUvODZuSdupZYxWARy5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('YnCiWoKmeVmUJeRIlXNsAikJDYkUPnyjEagPOnhPKxvpnkZxrpAiBqh6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('tfOfLfzkHEFmhUWXFoMnZWdUYxtOXhlBzcFKTTRhXEYKyifcpryXFtT6YeN55Sf5YiwOTgw'),
+	Name = "重生到980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('fmGUuqScFKzFJhishkKrmXgqHFKGZElwBuGfMtLwrIkUFCeCRUyNlTfUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('SswetEAAyVEVfmxRzGGhnNyZyuzuqohAFvyBIdRUsMHToFSQrewjPdJ5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('lFXpqiieudoZazMOOWphyNZxhlDMzuUPBQqZIGKCeYOWkTtrGmfmrcjUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('WkYcPnuzmqNqVzTUFVGhWNKHLnRUxkCosohVdNvvdVIzGPqxQIaMKjZcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('YpkyPvgIVEPOjONjnXJWQTyyJvTYDIBNbBonQUNXjZFLQzRljrBXyXL5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('UUPFeUXtbeAShSUqSKAWCAMfKEoZBhiFbwKjsYhPLVfECApxQxFIoLK6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DcwyHGDqdrnVjwJAhZinbpwTNZBwgfoVCSoYtPgDRGEulqpbZJlNhjt6YeN55Sf5YiwMTQ4MA=='),
+	Name = "重生到1480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('cMBOHncJXAuQJcOpuxNjkCpPrrYMAnnJLPXTGUDcqowMDDRRddvVgAcUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 1480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('MrrlhzdrPSodGEEwcFVcokLoFXEpiJWOMmZGTZDSwnUlAALhBgSpLVX5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 1480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('IahSFNfhftoWDUQHKJIYMXtJnwkaeXJjjjaGkfgcejvuuvWgAmTWmwgUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('KildGemjurpPLiDUDZkhWfuwYiouAPvSuNKsTxoclrgNqEeDDsjvDJmcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('NGsCOuDeedceJmunarBUPjaKsxLEEOsTKYzljiZmSJCvstxEAeUpCZw5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('hMdoqkixKeGFEtaFcRqUSyLQCMotUKoGwjrbAvVqmQKKHXZqWWFVDhq6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('RnsdoIkLDPSRgklXTjFNjMwdZzYHpbwgQirNTZrGGJNRcUrFyNRQqTA6YeN55Sf5YiwMjA4MA=='),
+	Name = "重生到2080",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PCZIBYricGTptkgxflPGDrPERendchmRxbohBtKhNZxrLsdYckkbaaIUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 2080 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('nLRWtAEuhsGNnJKrkNvgjWOKBngBqRIHuDZYCZqoOvcgkFUARzloRtf5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 2080 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FsPlmkrfJDamjNayCkxHoJOyGgfPXlPPDtFCaPPsBhPLhbVXixCLvdEUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('qBPpCbgRrwLZfcjtVYBooCnhqGTwZKBABkEaQaswynRyOOBJXrGyzSicmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('dYPncdzQRUbjOUhRgZUdDNReWkGpfQyuSziMSFuyqKRrCfaKSfaFzSj5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('VncsDAJSLPZVOUMpKVHdmCIPsHPJTLQfyfinuEetpccRrFrlIDQJoTY6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('gFGFtuSaeJDdqFBSoCCCtRvDPeFDrZyRLXuXHHHGPHGuCWYoSvqXVmo6YeN55Sf5YiwMjc4MA=='),
+	Name = "重生到2780",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('HgzvmuonVPMFBdENjeazPWRLcyQwotSztEkpdbvIGivMvxAPodAJdRnUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 2780 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('owZyPdsnsMiSsurmGYWqiyEkZQXwGXMknLGWCkObhrLEjJkbvtDCIGt5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 2780 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('GkoTfYaFfofIPZZnpjqFMvTAPTfinyYStZgZgJgIyHzRfEvkMhJqmUXUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('RJPNuSzcYTzkmLRlLdtZFZqUHWlUOZzLFeuVzoJvtLeHyyLXCgbYjWscmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('qXZoVRzSdCWosgpPgWiCeNTuSFeBEsEuPNIjmXyTfJBSkZshsKewkaO5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PTXviJClnTwQmUPnnuGuJdVNdUAQPYMjYCBHaKZKcwVkTZKzmQnjKpH6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('vSFYQhZryJlKFOgEWhkdMITNKrSccbIuWlIZvgZamsrmatZMvEzHprM6YeN55Sf5YiwMzU4MA=='),
+	Name = "重生到3580",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FRkWWPrxLjVzltQZzJUrpgIbLxudrOpQXSHUZvfzfmjDOcBYvLVEDYXUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 3580 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('InrsOGzZKEaGKmOymGUgNPXocPgYLnVWMqCAGAJrwltpSToGztcvovx5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 3580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OdCYWnRcJKwPBuZfhxrrSkmFqKqmlpOfzqWmhsyupFwrXFxDQeDGsmhUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xbpljAFeSBGatUrVnPDZrnIITZFhQBpOytjKfSICKGgjoLmTVbFQjlpcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('tiezJYBcjvNyMhhrDmoYiIiZALBYuTdjjFIxZITlhgCGjeUVYQbaFot5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CpbTpEtdZWySmQJqXnhvSNvZlfKhyufPdWcHvMEkzCzrGJbFnjaTEtq6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ojZaRXOawTCwkuJqzXKGoHAIzPfqeGuEecvHQFOZtVoQyhKBDICkzkf6YeN55Sf5YiwNDQ4MA=='),
+	Name = "重生到4480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('KQUVfCOAEZnaqGtGEqKLbMTWKfefFBpegbxaFeCLfebdpxPHgPZSELjUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 4480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('qcRwBDtxyHqhyEVtbqSvmqkqjeJBYbZVzYZScYVoXucFFVEKpFuDfWL5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 4480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xMSViwvfcPkpiYyGMAkLiyRLmqcXVvlVQgHqOQSiWPDgFrondluyNpPUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('uqkPRDdyAMGeRKaFUYDOrxIslBsxZsEKqIBscGoTJQEePUpGlnfRvzfcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('JxRZKBkpsDmeOmFmlFNdfGpqXWVzaCuBCflJJuTnzxkuVowBptPTric5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('dWlUpxEovvecufPwjLRxQcEFXRrTVZyOIkDGWlzlVzAosmDTesOOton6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('EpxFKxcuvVizwgMJCfuUwtNZAZPFmLkkLUaTxiOUkenyPGZHcwzWctk6YeN55Sf5YiwNTQ4MA=='),
+	Name = "重生到5480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('SdKUhDFMvKfGlsqelKsEahryfQKWYmtrMPoaFNfjHDDFBYnmwBBAYkWUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 5480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('yVuJhSpvPFLccCEWSQZcYEBIGnPIanHXHitwIiKlbwUXcadmfQmHFht5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 5480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('JHEEpRjcMSWuCBJIZPQeZdsyHKBhHjgcafyYahmvonsUdKbsCYbHcbcUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('GrydGJxEBBAfXwvqNcgyoOAMBvDIbmLAgFkggXBUvvBIGWRblhkFEJYcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OFobjhHURxkwAqOCUNIlKcoJsxAHwEWhPGVWtOwjKdvpvZYiykCbDEe5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('QaSXPjodEiPgmsWXWSvlkrRMYaBMfFVAXrkvEmSwSIqmPhCnGnrZsNL6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('nWbzFxdOVEUsYvxUHqQQQjfrAoaQCyOKdsKaeLFWiROAbiTarOIWtLy6YeN55Sf5YiwNjU4MA=='),
+	Name = "重生到6580",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FFiWYQSLNkncZqjVDRVMyJTCcmGWmzwNCmNPETlTuxXyCQTmAfePgtLUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 6580 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pNmpWTFaLkhYLEyYYXzNTsgTsjUzQDWCEGbQUvPFtzcyfNjrbEfAiAo5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 6580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('NEzHBZSeZlJHgwHsbtODvHXqpURkorfOecegnTjilvLQCeGtlRTOJhFUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('jyunlGyAUkvpWpjKJkKENWJrrjfybrOUcXSJavsavMMkaAHVbvbHWwicmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rNoTUTEtyjPctCIWfgREEnQegknSoMsXQjMSZnxtUUFAQHDeTPAWxcp5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('jxhUuHojEatddegfgriERVIiiyhcaQKIzZMcxCdvRaJqTYRinDAiOZc6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('NxVSxGNDzSqOfpYgXCkPeJilTkIrtPjYPKhxtrTdhhDgeAvrrcTuxlS6YeN55Sf5YiwNzc4MA=='),
+	Name = "重生到7780",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('alSZbHCBxkURLHmGrnkjhPzmxxJOuOIhrmqHJAYweyOTeJlGxFnBLxgUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 7780 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CYVfnXsLMugEHnPmkZdKxycxsTTuJpjJfueRkAiRuOdDWQLeZFTuPoK5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 7780 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('RCIaBqUmFdBuyRSIetPSXATzgAmSurunHUEZuaTiBlOanhCozqtPsORUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('sxfMUkHzUTGLFvnvjojjzOmvsWPNAPmsqFsgdrWsrlhDWrmjHNnIpGxcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OCDHXxrpqwtaFMsxyUMczfpLGCnoPPGuBZllpNpAavShKPBfZeNuofz5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('LPEfXvJErvAyJPywGNptMCJwhSytEYaHczBOXFRDhOCVIvjMjIqISuE6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('BcmmDRyKEUCzVrUrMjxKJoljxQrecAmzstnBufMuZrYrPOwyLcDzisy6YeN55Sf5YiwOTA4MA=='),
+	Name = "重生到9080",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('YGqfImFdOLwZdBnyZiAOlFroiaKiyNgaMdnCqoQTGauMFUAMUCSFUsPUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 9080 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('RHGrWponsCckwuBPzUMmyxKyyWjobGrLCKuRiJLHxYVZPASOSBzHjsS5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 9080 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FvlRYIvOzsBOZecVRcZRTtrHxaUZtzFLGOXVtPEWMpXHWehUbBaNdTsUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PgwzjmeycSrtVEGsyGMNziTgtNFKRQnVjlWhBOBddDhNpFBzSpNeRmvcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('jAdOXbQSspCHkgyhMoqwIsSMcDcIweTKiaotntEEjcrNbzXZpcPNjEE5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('AcbBplxQmQkQptAStjgoRrVlcYBuCabHxYcATYnbsyrvldDeSYlfjGD6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('WgIiQoWuBAGdSnEZHnCBjstqIlzpSybhbyZEFsXdMMjCupkqEfgfhUa6YeN55Sf5YiwMTA0ODA='),
+	Name = "重生到10480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('QwxNjOxZmhZJoSWfrzJnhvuvfHmysEyeayMWLacSEPtAofUhCAzcsTWUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 10480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ncnqbHWDBEkUMpKysLUEqMXAzlmubuFbrjrbDOspIyLYCKZhjKBjbIY5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 10480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('hhgMfXyQVTVnvhjAjcvxbEtgdbDLzwadGNPstrERdJUCEJMhrEcpsfhUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('aSLJxlDpZgbHFkBrdKEFhynUJspwCFwbkaUmrfqcMedIMayxGCwiKNEcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('sggnwsVuPBulcWBMLvLOeeaoPQFctPrDHLiDrhTwhFRUhqROGDKNvgh5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('YrFdAfpfNPTNEUFWuZifZkLfTQIFNLEocSQlpNzqMIXQpUWkimZYvPo6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('NiIczeIAxnZNllqykmOaEbVarPeqvPbwtndEZbOjaTTEMQoXXFlFTTA6YeN55Sf5YiwMTE5ODA='),
+	Name = "重生到11980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ZsruGdFlKAGmiFqdVUlXuNeWbiNWXRjtczyVauimQJuSLvoeJWCjLAEUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 11980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xbImquJdzYFbkWTAWUpivGewKiYqcqpdVpFyNaAvYQXcIpLMSgDJXPm5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 11980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('zaFiFinxzkzyMGPeEStkgxuNpKEaQNQXYkguyKqnsSVKjhusnveOIJsUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rwptwJtUMPEaPxGHeUXjcuWrSpETUmEBehpfDYCivviCnpsvvKfpzqqcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('fPCFKsfRClPhQdmCnVfbbbhgfNzEgjpKtAvRjdsZSUeSCRkIAqHVphD5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('aHllkubwPEcwMujMdDUnFbiYvCaxCBenwkaygSaVpqoUhMdfpqVtPpG6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('RtNJzgcGGEaOHimryyIovdfzAVwOqNEdwnWSYIcDIfaPCcaslDuJJnF6YeN55Sf5YiwMTM1ODA='),
+	Name = "重生到13580",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PkuSEvVOuajkYwvuAgkLeUmipooZbjnmfYLUnhFCytvqiyiERxzXYjxUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 13580 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('MSYmfmIiYhxJCjUVnbeLHgTCCBhMvSZIoUwawMyotWgPoUBSAPdfXDt5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 13580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ZPsGXHzoElgmWbjYZYRJGCDkdChDpCwNDpnSgxJTKdqCzoiEweJjYzVUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DkGHEdYWsPCkCxAvAzUdBPZkLnaHnStnxOsuuOosoVOtpCbrNAFvoyRcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('KLkhjXWjECQHHovleZABOzZKrZwqgXjXQaArGaKVVvnUBsVdeYrLGxI5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OdZeYRsyyBRRCqHSzHaUHgsUFOLDtoeOJfeLQJTCfZNCykOnhfeTSmk6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('UdnHZzPTZaDkSVpffHPRHiGmRsvYhuugcameSmtFimBHvLMIxhLRiTM6YeN55Sf5YiwMTUyODA='),
+	Name = "重生到15280",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('nDCPTUDTdgyKtmkLZhIqcsJwiqPkLAtFyVGOaMoRmnmXINyEoGWTGXtUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 580 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('BoaWRICQQshBaZMnwHZCeTWfPuUYzzQWRmgjdZAacCCgMyhTFsrKiyZ5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 580 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xtUfvtRXYtJKEUZlbAXEsknyTXlCvSQDWiwgRcjLUwIHSubOgWYAVjMUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('QqmQraZXrOhWPBMxijybgJYIFSvjPPaplfKqQnofnwvysYHWUmSnMNBcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('seVBvBcYgoSQbTMTJUJnPQVLGFXhwoIylsaOnKaOfHRrAGpMsTsMRJV5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('hiVunLWJtONsnmBlzCSLtDdueLKHdVkXVoIMhtyVmEcbqakToMJbleb6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('lDzMTebovZWDBEAYuApSmNKiqcySjIYFtQfygcRUnTKEpoltUTvHbDg6YeN55Sf5YiwMTcwODA='),
+	Name = "重生到17080",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pIruTHOUnhKNJOnIpCSinKXYuLXjTVgdRFNGdVxrTZXWWjCjTRltZvRUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 17080 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('QYPRBFttYjETNjCAiqTcvWRxrGmiMVwEPrlqBytLJOeyByccyRXcmoJ5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 17080 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pMsLtCAeZEfVwWgRunNxOlqGxcTAxuAKmFPoGCaSBNVfScEYPXhJtkgUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('XpeDsnkKqMFGbzUGmIgvAtuOooJtQHrgVLrrxvEVOyMmhMLLtJUjWECcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('cGWabKguwMOEveTjQYrRkmAuPYDcqVeRTRdVuWqdWcdCeLwOprzPfLO5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('LXMOycFbynzTjTSOxeiUgFuGLtWzazvGRWtvapIquUcGremGzYzWRqK6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('vfLnyboVuXSvBjOXEyVnHtWNibLiHujxkwgTkbbNWHjnjKrhvUKWZQH6YeN55Sf5YiwMTg5ODA='),
+	Name = "重生到18980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('fdFWuCDpmkQduWTQeOqwOmcnJNkaNIXNDfHGStdglOYRoJsgcDinbfoUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 18980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ZoccmXEgaZMPibjjQpCUrpbaDUqVyfWaSTftSMzUKPYQEUkLEFpohbi5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 18980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ANeWOFjIbQxIAFXorXEccIibKgOLZJiXnUYDkPEZmIbyQOQmoUekClKUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OypbLcRtioqDyNPLrfXkDTvDWHgaimxnJYTcvLzQtHbduMLespLHTaocmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
 local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('HMtNsQlxaCmVsfDfNyBEqdnUcOIZSuakigxYtXYSzClKLFyqsqgCrlT8J+UhOeZveefs+WktOWNoeWuoOmHjeeUn/CflIQ='),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('THCFXpyMGXMLCUGSXaXxvBBEkqTPXcZPmsTedbPtQxdzPAOZBnSmksMcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = "🔄白石头卡宠重生🔄",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('fPLaSPbdwOpHiaYfpAOHbDFAUaeMlxilBwOeklLECuiJgzTkvDluSex6YeN55Sf5YiwMTQ4MA=='),
+	Name = "重生到1480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('AToXpgLVFNZbCDNAOnHfUvKtExdBKtneHDkOuOlhbbxuuiWljriYVQgUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 1480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('HdNHxFvbOBGcFShtEMRjaUWlYTNGsuwQDufrrCkyWPLskRzoHwcfQTT5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 1480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PLcWUlehIweIthDBCtIxsqaoUYikDcMTTgCXWLTGmqnuSbxkwYppbhlUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PDYHgbwwXBMeHcruWOnELFmYuaOeGiPmIMnaMRxtmdkdblZqGVwZhGZcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('vOAkDpSAmkwYemvOyKWMhvYxQkQnfArzKLlLBrrsrqUnJdhzTSxNdxw5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('wsgNMUZpMlbSYSQhxZGPoczeDAeKzxAEnPKGQdiiiAGULpKIdBFfPQW6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('gFZUmZxtzCWzMrVSDrwuJMaBDCmorGRsDLrdjGONsUWDdSfBcwBjfkK6YeN55Sf5YiwMjk4MA=='),
+	Name = "重生到2980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ikaiAECRRyReVBAHIgRQlnjHopVdUnEuQPuHaSbJgDeeHQQVCyhOSOHUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 2980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('showHwmHdCfYaBQqcKcVWXwhYXCexSmKlDpUcHEMjEPyhiBHLVxZbqG5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 2980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('AULgRXPuTiUbKVQDqmohwAyZlXIPXsmmcNVYYviwXsDDiTROTvcycmFUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('mPbilEFAiOAjJpFYgPtNzSPrcObmQMwDUbDXSGGwJIzHYgYFZNMyNfDcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('qdQUgyYOwpDslbuGVsSQsCtKThdvbRgylIQzlVkLBbBQSloyRnHdrhn5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OgWHplvHmnsNYjBFcMJKmXFPZHiOgPrQeOzJSHQFFUhBJFbiNJcuLcS6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('lpsrgCZFAYNhVcLExAAwpxzKunwnhSXoxWrgmXFYYFKObZBobfdluZp6YeN55Sf5YiwNDk4MA=='),
+	Name = "重生到4980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ckGdzdPqPUKnXlBfQqjNdUhICOZFcPOfTPYBPIKVVVswIFBnQeBCOCBUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 4980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('IdJrrssEBbaKXrafsnkxciVrWQwpWCxrBFOJuaAUtyXMugEyqcDAcqz5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 4980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('mLaDcyOFufttmePuxxvefzIuVkpGTpiugOJwQSAnJxXMCPKRqzYKMnQUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FAZNkcUJsjaVMLjWhHSrjHzAPttuAXftgbalAgNcfSBBxkmeENKCTTCcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('iFJsiebFGwFHkRczvccjIGLdtpNsDSVrbfJVsLKMWilznfGABexPHVW5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pKpwzPFNwKzxUgMQjZvbTyeLZPxAcowRwRaVbyISqiibAhFnQWWrFRe6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xKEpJseBUkDMFXCmnQUuwGVBPzxAMliwRRwRaMPOvwAOBLanIEkMtNk6YeN55Sf5YiwNzQ4MA=='),
+	Name = "重生到7480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('iQJZolihHcpYsfmzfTgKqMAcKlBlMMzRmjNHoyGuLvegSbZfmBrNMQNUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 7480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('RXnFEVzFiAubAMsPwpNQEEyNieZDqgRvJpMLcSgSpXSxhsrcaVOfAir5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 7480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('fHSbntyfOtIcGIgMQZmHTxQmQAuhLNMOGynlokAEPaepizwzzCLKtNaUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('zIIHECQUHyryAdSJIokJlbYsWAlvvgjKtLAPtrroQYHRnBJJAdPeXbucmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('aaCWpsxHJHaOIWhhBwTEWodBmOBXDIBiaMHJLstJiIQTPkxvBBbXaSW5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('kILCTfVXCnYRHYtyeqwqrJHlRBRHYGUYWNxhYcWKuMssIkhFwLttIRp6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('gMJHktAHTjuCNxIGpsDrcRhsZZJDZQPIhOTqnGyQFNJtTLWxVYqUstc6YeN55Sf5YiwMTA0ODA='),
+	Name = "重生到10480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('kxdpyRrFsCDbvZqJGbgTeWCnQEcTxRHQIZUzSzprzFNcHXdIgQuJvQkUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 10480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('yitdmvYadNFblEmMjbStWWbQFDThjqLLQJoMkNKvKjRYvPigOSZUiGW5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 10480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('vZzgSmdVIzjASqbLMrsrqKREiadStVMLQsRkfAVkjfavLMmtZyyQqvsUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('hVWzVzbHzZpnlPXaNoFnfqrXcOiajWgCyIMdvkMerRGsGmgfiLlgdJpcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('frNzxsmXBcuwJwCPLDunAVoUxhwIDmwSJoKnJixgukUWSykjGWzWXTq5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('loSPzguMsNNPKkjlMvaVMpgGHSPUsIcGcTDHNhwNGRzAFbeTLiIAKaM6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('dGCzpKAVVRcjnqAZmWEUGcwlvxUVPpaZFwmgjXXNyXfaCfxnTMmNLFb6YeN55Sf5YiwMTM5ODA='),
+	Name = "重生到13980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('dMgHZlJuJodRrrIRvYBifzhRBBjbyrDfFNPQIxIBLzbpaBBmiWJsRGXUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 13980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('hpAhfIbPgtmZoRDXaRrMbmbLHKAAcJlnSsRodkanuwCwpWjiVMzTnxI5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 13980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('cVyiiUwGDZwTEUNOitxTNLTKmMLsTpjHonUGxabDsdZrukDVbGeClGSUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('XIPkHnEeaCMZryntenbTmJknBZavwZplMMxtFmXCOeAVdFFRUzcxDuacmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('IjlrKCiAuuJlUJZSxnnnSaFVEnZkvOCuIWwzoXcrJHZrWzidyxnmwgg5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('kqiXAwolpTWpDtuJThVKWRwPkDziGAKPPnmHhsQIlGMEnJOxMUayawq6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('JLdSJDbtVbCmOtAPAbvmkHHpJndsZHvjjYMQrARUyOYKThXsCysvkBo6YeN55Sf5YiwMTc5ODA='),
+	Name = "重生到17980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('oHEiMeNYasqMyhdhuylkSVoXZgAKgKeWDjTWvDhmiolphciQzCOIiSHUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 17980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PJmKLmqgixCrCzdjYSISylmbcFCCdkTnucSnAKpPWkGlInddKzfXvwg5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 17980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rooZOgtPsweyYUgcbeUnKECwHlzuEBCHUsKsGlxgAymJgOFcwdmXNLuUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('AIDRdsyGGnabLbMARqfdbnHnAqQJdSyZSbFnzuwggYDUiWQXIineWZkcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('txBDipMnNtHZMLbjGgBhmTkIZjDYUTmXRbVIXQDsQoGFjosZfhuDpXh5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OdxlAOvZjLSgVpSyTDAwsXXnWiZSkHZyvsoidmKdzVQLgLrACBrbOeO6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('zsgpIZbTcPSuRVLMymMaXUJDvfcBYvkpWUXVyXLexlnUEIwxbvrlBDy6YeN55Sf5YiwMjI0ODA='),
+	Name = "重生到22480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('EciaPBVQOGfrjDKCKWfOBttOVQspdGIaygkRbftdzllTsYmbldDXhlzUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 22480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('tvniVTYdRBIVTHMuTzhWveTKijyYpEvUvPrqWTdVKXwQEctLNjcztwe5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 22480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('djbnfneCmszUaozAtwHuHbUEtfSivsHsqZvtFPsPjwnKJBoTMfxIKQqUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('dXFXFnSxHqywoKgwKFzZaMEeatumCQRQcgQvHqZbccgJagSQpwNhfeocmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ZIzdNIQOUVtPNUxWOjJGNQWmjdctDJfWyesWAToZfoawRBjTQeDcltw5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('SVoqsWRGdNsJqWcesuAcmjeDKepHEvjdtmMhlnSICPnEDSdbdIyZWYO6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('gHLPpqnofQvuLCeUxfJzHhBliGnjRgEbXgNFsgNehskmboNqulheQNf6YeN55Sf5YiwMjc0ODA='),
+	Name = "重生到27480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('EFVkRyEFIvzHYaFFOrlOxapTlNhnrIDbIsPCVTKTLXdlOZpYACyBwuqUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 27480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('PBwRMsGswZHsFJOAdgMzobrMSjDMnPaxXuGqUktsKxCPqUFXZmWfkXD5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 27480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('gwbmIqBwFmdxKDjnDUMQEGjlMxFIAEumwuIfzKyoWDrPMlVKwKtAwBSUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('HmWgsfPjKOOJHaENvLivvJvNMVIvjAYfOqefXRCArnHtxEwHbLkwbXEcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xqaDAobeMwzGZTzxSwUwqfAqNkDHeuePBucujRiwFvZAgiQhxZQDmzG5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('uxUBEJKStrguiiJmWGrdXpNxZfHUowrsvlzZJtgnKjvtECivtteXefv6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('gXhVGJNgfzmbUXXKzXjRSnjYnWxdSTHvrWQWPHfJSLlanZnWWfNWiZo6YeN55Sf5YiwMzI5ODA='),
+	Name = "重生到32980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rVjxaWkFfjWpuSmIoTHhycUtOGOExMmIMGWUZORplmAOXCTlfQHIkXcUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 32980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DwuELzxknEpyjqjjcvDfhBlTrUJQBuTqLTpnbTlwysaKggsEioUReuQ5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 32980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('AsJOYcabWCjpZwPDOgvVcclmvBsmXfIxMQpdqFsOHwKhXzEfNsxHIgAUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('eanGQbxWkNvJchuUUMTMfnrSIdvaHGiVIwtSfXkkhYMiVRiqzVQcpfXcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('RcDNBtpCGUzwhDcmIfmiHdQZFhpwQFuLBiogCSXKZHGeXqQiEYVUtSX5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('lgZViZwIBaHVPmMznjNetFVrkMwNgxaxLJFgBWBhqsQZXzKezkLcDOO6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('MwjZdlovGvqiiCZBEVRUFVbvTdAOfqzlBnnjiNKPSCbrCCnEAAByuEH6YeN55Sf5YiwMzg5ODA='),
+	Name = "重生到38980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('VaNGgkWvoUpVqCXBcQYKibzHpZrJWIjHhWFgOdJibjndbVKlhYWQdMyUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 38980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('kRgQIDUTSjyPSkOArwmNdcgmgODJxOtbDQsYeFbnIHVpsVsDGpoKtnq5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 38980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ExQZDxkkiMWfebcCcaIvngeCGLCspGneHjrXhWBoGejYimTpJZGYlRLUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('VuFQkQdaDnDRlwwZGzSBkUIMoMskdkbqwgHoGrkivnSIEsfLUrpsfWjcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('SfXKPUYjiklhdKDKaztgiKbhSOnYIZkexUImeViteJGbdfliteMADhz5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('qxhkuGpNCVbdueQTcWnFAaRBQetGbHiIjyAbHpeSUyRljMbvkgBYzXO6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('VuFxzBSIFvZzFUfHOqncMjmiIvmlDnwPAuuiGARgLmOtlscWTJTRHzO6YeN55Sf5YiwNDU0ODA='),
+	Name = "重生到45480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OrkbGkZWcqxechcqnWKgvjxsrJvkpPIQOXsiTFeKmtaQiFhknacDOCHUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 45480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('doMmixxtvwIFeqQJbzElUUBrrfKJVRCKmfPUhrvhZtDDulEPnvQNkhn5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 45480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('fWtXllKvuLPWnxTWIJEmFGCwNXNPUDhssvKoZyiZtdQkHqNisqKdQmoUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('wWXvMEmwrbcYyEDfcQzErivTowzdiYUGjOnpjJrnWIOeUooLXxcKlqDcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DVfZjkGiZIWiplMEotXknYngkSDOYSEPZYItJPZNQmIysmfVhgRVuCG5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('czCLAkQMSseRgMroHooJCLqGfUIVTPtAEOXZnyQYjtoHNCiMSZpyief6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('TiSwinIpzkXBroYnbcrWsHYCkYKOzhbhSEjEzfPhCzVuUymtuEPPvWA6YeN55Sf5YiwNTI0ODA='),
+	Name = "重生到52480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('IAxNRBtBsYXKXzNrlDWAhpgEaWVOmtixNDWBISOevHpqOiGiNdrSxNQUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 52480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('kgdHGzXBOjLGSHkcqXuGYLKgQpwnkobprtemZehywfNAOLaCkVvkWbu5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 52480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('iAjQdauCPvoEGQlHAFXhMvUbQVWyMIaLLHZaALOovTkIQsWrOzRCuyyUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('cHCdaOIQSBPgNGeHbPaFIDNCAIvEBEGcOepZydtTEReWAditidpAWbacmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ksESnMasMAYaUbZRlBEHajOPzBmduSXPKFugeqWlklMeEJETgaGvtoT5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ZCbKvAgyGzrxMhzQXlvcxSFwZXiXoVWffsPlLLgcaIdjWCSnsCWkYWG6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FcRPpoDhTkMPPygMSzKjeSrvDEYiokSTaIRBYMrKNuKbspXirWGyqDJ6YeN55Sf5YiwNTk5ODA='),
+	Name = "重生到59980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('yUXPWeeeGHJEEGDDMYYlxLpcVyGNwGRBvzHHubTJrZSdwDxfUDvWKPbUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 59980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('EEyqmeQexmTygrKyUFyxfVBTeeFFWzZhNTgZjIwWcicwrLONgbAeHRy5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 59980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('QZwtGpvFLIHibPhXUlbFIAzExVVUbDTnUHxDSmTxtsOinnPuDZRCnxxUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('XmJVvsShExGIWVlYOqpcvLEmhtZqPPNVMHvVwuVotltfDsKpueRrExAcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('OXXMGlfDRhGUTGobOcokpjDHQVLHAutDsysSdXbjwANEDsxqeiGGuJA5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('lgxTsvoYaklycmYYWCMXaVmwSgcolzVnJpAVBCqMNcGZnCvPWgPUppm6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rRXJeadwkrvaiAtggBHEwrzQxHEFESEUDPOlyemelwHLdoqxhDNRbUQ6YeN55Sf5YiwNjc5ODA='),
+	Name = "重生到67980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('DBIHrFUTltkUFvTczoVIkXtKobuzVgoShggcgLtCJribrzhFrqewmSSUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 67980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('UuBhTuOwfjQhaimGfxoUCCpGPoBaIZyFaEvrJTEzDgJjzBolMGpjytH5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 67980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('aKnQSSWFdOsQreoHoXKArCiNRwchUxLYbZXneyUImQAttonladlkyLxUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('mfEPhGdvswGuDEjArwEIcLaQhvpTknscdcKymKbyXqLnfhsfMWkVvMCcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('MEgodHcNbNJAodPEwvSKbmtPrBOqUzIIWwhrSxbJsRDsnfzxdpGDQEy5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('NANLMwHKPLfzwahDPbjDKezbeOchiqAwbhdIzXHjgNaudayMATwQNNH6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('vKMdVevBFghBRwHiFOTTvhgPlWWteQnVLkTurMyiBNaQWmGfmWHXPxh6YeN55Sf5YiwNzY0ODA='),
+	Name = "重生到76480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('VLpIhbiGstzbJzuvOhzivrPUxdJMUBkDleTavhhYqmwKayZLqOWrzEoUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 76480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('sclaBSrYJFTRPFPpmZpwyaWOmhBoCTKnHUShcmeyQXGwxFhwIjiKgCf5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 76480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ttCgBdlSWErjrKvagNCypiyshKuMJNtoCTXplQMHgPLzZgZyVBUDEdEUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('AFxJFRjmwLbUgddQiBNFZGGCyuYVWLSFYWUPaMUNuGLGxyITSGstXPWcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ApXwQSrukXkbJJoxFrrpPvOiLjJvscumPQtHrxdzDaYcrNHyrrvatrX5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('IaYwuMexaFcYXZADoyjrzVSbPtdWkpYpuecXsvzPCMxXjqebzblEZkJ6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('WzcySxHDlBstBMfjdEKWfLFKoDXydGndwMqXrmJlaqkffGmZMKeIuvL6YeN55Sf5YiwODU0ODA='),
+	Name = "重生到85480",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('mFttqAAHxkdTEUAWHZGlYvfvoDENnXGzKqDEBDcaJHkBhuJVYXnKIvcUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 85480 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('sIHkJFipqPSBhPHuxwGMaZJzSLLKOjngsxJqLVejqdrqOAknyCPWqpy5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 85480 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('MsrcQYwWAjdMebkAjRXyqRcNfgqsitFRwFXmWFLjmNByGwTwRgTMaWPUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pxWbWecQQlgZKbrWiNLjOwTgrcCkIZVWNEaTckNvetRqxzJwgRWYydDcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
-Tab:TS(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('CdYmUjUkRWAmyCUGuuBDFMVoYLtWrOElmOfVUTSgoFPryFpwAeUvzGP5ouW5Yqo5Yy6'),glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('eEtPxWOmrcJOZqPmKbLrpNRvHoeRZbHStykplHwmprGFXdVrWIQFoup6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6KemXG7pmLLmraLor6/op6ZcbumYsuatouivr+inplxu6Ziy5q2i6K+v6Kem'))
+Tab:TS("拖动区","防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触\n防止误触")
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xymLnIXtOzExlYHgSuGOVTuAErHJwTdBfajUKGOjaNOQfDszkSPApZI6YeN55Sf5YiwOTQ5ODA='),
+	Name = "重生到94980",
 	Callback = function()
-		if game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('GKECODOnqRZCRVChoAhSTJUQMpxhNrKnoYthMPmzQPvqnwUKdJVUEXfUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value == 94980 then
-    game.Players.LocalPlayer:Kick(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('srQefbjbRVkhdrnrcCQIQkDhklqjgNaYPnDbxQGQLBlkGaBOjplXbiy5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value == 94980 then
+    game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
-    game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('doMpWWHeedxTakZAaMbtdfpmaZkXClzPTmPPyjAvozwseqbkyDWcMsPUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('vkHcRaCBsSogZSVAEDOWjFCKDSMffipXFhIgUHOTgDNyFNdpvjzPScDcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
 end	
 	end  
 })
 
 local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('xlNrPYwahlrGgAOFaqJBYKnPOpPfOHeBgpNdszFgLBMYmFkzmpsbdQn4pqh77iP6Ieq5Yqo6ZS754K84pqh77iP'),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('FXsPFrmvQonyGqxqmfBFNpnOiWPJyslKfVfQwQVMtEXGCqZdhylwKkKcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = "⚡️自动锻炼⚡️",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 llzddl = false
 
 Tab:TianJiaToggle({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('yBldTOgZiTrseWcOOAqDakofhPOzpUTTHVonIUgdcQuRSMguEYmXGJN6Ieq5Yqo5ZOR6ZOD'),
+	Name = "自动哑铃",
 	Default = false,
 	Callback = function(Value)
 		llzddl = Value
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('IoJdRKreWxxpUSZdgGcEuPdWIXPsgYUNelEFSyoypMhpppgGytKpcCpUnVuU2VydmljZQ==')).Stepped:connect(
+		game:GetService("RunService").Stepped:connect(
 		function()
 			pcall(
 				function()
 					if llzddl then
 					local args = {
-    [1] = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('dSbAOmyDQMaqIatokscuegXsRcDHvuFBKJFXOSQyJShefvlINTgYWgOcmVw')
+    [1] = "rep"
 }
 
-game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('oHeFegBrcgrUevbFqCcIGaMHKEUpEwvLMQQoIfTlEJbCjvHvhYiIQLSUGxheWVycw==')).LocalPlayer.muscleEvent:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
 						if llzddl then
 							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
-								game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('YPEeMSIRSBYanXQgNJqxnYdQWtgBTrbvCuQffQccPqOPSHIDbUEkNXDUGxheWVycw==')).LocalPlayer.Backpack.Weight
+								game:GetService("Players").LocalPlayer.Backpack.Weight
 							)
 						end
 					end
@@ -730,26 +876,24 @@ game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVa
 	end    
 })
 
-llzdzfwc = false
-
 Tab:TianJiaToggle({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('mUccfLJKZTvKGkzBhBrJIRymuKnjgCFYEtCCHGjQXgaCAYpLcnhAZsl6Ieq5Yqo5L+v5Y2n5pKR'),
+	Name = "自动俯卧撑",
 	Default = false,
 	Callback = function(Value)
 		llzdfwc = Value
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('prMVBBQlctLYcPGxIrVOSFIEbpSXoBMVMPfSkoxQslAJjuVlKoNbubQUnVuU2VydmljZQ==')).Stepped:connect(
+		game:GetService("RunService").Stepped:connect(
 		function()
 			pcall(
 				function()
 					if llzdfwc then
 				        local args = {
-    [1] = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ZuADQgWLuhBzPKyJROXzCGEFpsaGvZAgnIVXJdMPzDLGkvkIqeksDdccmVw')
+    [1] = "rep"
 }
 
-game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rXzybSpCUiMndLEROTwyLODqQxsXgNLtjpBuzmpfOJxeffNllmWohAeUGxheWVycw==')).LocalPlayer.muscleEvent:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
 						if llzdfwc then
 							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
-								game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('ORFEjFzyKLprfRaItTEHYVLnAFJqZdFPKDnfEGQtmddhhbnClEcLxBeUGxheWVycw==')).LocalPlayer.Backpack.Pushups
+								game:GetService("Players").LocalPlayer.Backpack.Pushups
 							)
 						end
 					end
@@ -760,26 +904,24 @@ game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVa
 	end    
 })
 
-llzdywqz = false
-
 Tab:TianJiaToggle({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('KSxEsQTwWUsNwTVUXiIALjEoVJavtljeuyObbHboRxtWRgvSqGVwflX6Ieq5Yqo5Luw5Y2n6LW35Z2Q'),
+	Name = "自动仰卧起坐",
 	Default = false,
 	Callback = function(Value)
 		llzdywqz = Value
-		game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('rozqtDLQbwjoUGZKHzSYZcXNNvnkJjGOZDUfEppFPwDMSjQdzgTggLRUnVuU2VydmljZQ==')).Stepped:connect(
+		game:GetService("RunService").Stepped:connect(
 		function()
 			pcall(
 				function()
 					if llzdywqz then
 				        local args = {
-    [1] = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('mtNpbnWwiifUBvpYdXADEktWQLgUFLLARHVkwcmZzYLwzuCwrgmqMlCcmVw')
+    [1] = "rep"
 }
 
-game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('vmzPiKunucwyFkrTXfuBUmfbqYsaJHHZgTBdZGQuDZQdKjwLFNZxAHpUGxheWVycw==')).LocalPlayer.muscleEvent:FireServer(unpack(args))
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
 						if llzdywqz then
 							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
-								game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('eYtbsAdbvFiytCZHMBIpvXduxPETIseaqXTKrRwFmpJbpcGjyxeNrRhUGxheWVycw==')).LocalPlayer.Backpack.Situps
+								game:GetService("Players").LocalPlayer.Backpack.Situps
 							)
 						end
 					end
@@ -790,83 +932,100 @@ game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVa
 	end    
 })
 
-local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('opGhCLFQeFcRhfvexOvGgIQmjYalAhbWvjrRzHRrSwVdrhhvNOKzRKG8J+aquS8oOmAgfCfmqo='),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('XRdHNWinHkaiBbnSuIqTsjgsMZgTakaqjFoonbxocQNJoVlLwqLmmNMcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
-	PremiumOnly = false
-})
-
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('bgZbwGfmjneryJFDYlufpIjRFYhOuwtWzXbsAsiQahpolKhOQCoUjJY5Lyg6YCB5Yiw5Ye655Sf54K5'),
+	Name = "传送到出生点",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-42.7, 3.7, 404.2)
 	end
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('pvrIVCofuvAsziMdoJSTBLIZEaWbtkTTRGrWegShMCxxCbxGVbscvBd5Lyg6YCB5Yiw5bCP5bKb'),
+	Name = "传送到小岛",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-37.636775970458984, 3.86960768699646, 1879.180908203125)
 	end
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('irogSlyuCREusZUMFkkHlyHyUoxSsAqdcTAWentksVVRKtdAgxyfGvr5Lyg6YCB5Yiw5Yaw6Zyc5YGl6Lqr5oi/'),
+	Name = "传送到冰霜健身房",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2623.022216796875, 3.716249465942383, -409.0733337402344)
 	end
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('wGgKqNusyilAHKWVJhZAuwMPuLYivrNOEEYzhArIPFSvPPkpSCghIPJ5Lyg6YCB5Yiw56We6K+d5YGl6Lqr5oi/'),
+	Name = "传送到神话健身房",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2250.778076171875, 3.716248035430908, 1073.2266845703125)
 	end
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('GTBqbmDuDdiWkvMUheClBYIoWDbsuWFmvIgKkzUpJORJNvWYgefPibg5Lyg6YCB5Yiw5rC45oGS5YGl6Lqr5oi/'),
+	Name = "传送到永恒健身房",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6758.9638671875, 3.71626353263855, -1284.918701171875)
 	end
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('wlvPxChzKqgSMcVCQCKzFODvmwBcyxkaiFFGZarwZkdDKUThRKhUnxm5Lyg6YCB5Yiw5Lyg5aWH5YGl6Lqr5oi/'),
+	Name = "传送到传奇健身房",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4603.28173828125, 987.869140625, -3897.86572265625)
 	end
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('wGoXmFPRqOQyjfJjUbVJLVozPevuQKUGGjxuRzWdAuBjDlNmSLqFuYK5Lyg6YCB5Yiw6IKM6IKJ5LmL546L5YGl6Lqr5oi/'),
+	Name = "传送到肌肉之王健身房",
 	Callback = function()
 		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8625.9296875, 13.566278457641602, -5730.4736328125)
 	end
 })
 
 local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('nmMOCubjulfwfSSytYfGreUqOsAwMAPxPzESzOrYgGZEdlkgDxDeIWs4pyK5Yi35Lia5oql4pyK'),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('BEXcIwyXMnnIKLVDVaVfSrpYfjZsCbaLQZCSjWZeRlRTPgNsKxIZiVEcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = "✊刷业报✊",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
+})
+
+_G.autokill = true
+
+function autokill()
+	while _G.autokill == true do
+			for i, player in ipairs(game.Players:GetChildren()) do
+			if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+			player.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame + game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 1
+			end
+			end
+wait(0.1)
+
+	end
+end
+
+Tab:TianJiaToggle({
+	Name = "刷业报(需自己挥拳）",
+	Default = false,
+	Callback = function(Value)
+		_G.autokill = Value
+		    autokill()
+	end    
 })
 
 local Tab = Window:CjLb({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('yyTlKZRPXAmmvkFmmWOiyMbRnotrrKCfZJguRXkZoXVJmDaqAxyqAkM4pqq77iP5p2C6aG54pqq77iP'),
-	Icon = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('kqsUAHDPuWpIONuidvdnNNkVPrTEtMMwYqtLSUzlaSrdkPHALyEXKkRcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = "⚪️杂项⚪️",
+	Icon = "rbxassetid://4483345998",
 	PremiumOnly = false
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('tsjyKWvFEeqCXSfZztRxdQMZbHhNVMBgtfcNuKYufypVrVmrUDmjfKV5oyl5ouz5peg6Ze06ZqU'),
+	Name = "挥拳无间隔",
 	Callback = function()
-	game:GetService(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('mTLWJwdZacxQSovAZNyCRdDYqaAbjRSFbmvNkPjmCHchpxYhWqAYMxNUGxheWVycw==')).LocalPlayer.Backpack.Punch:FindFirstChildOfClass(glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('LOWIxbOVaAZjYxhpDcMgppSGauFSkzvlqgsDPLgglLuIpqXNGcghRurTnVtYmVyVmFsdWU=')).Value = 0
+	game:GetService("Players").LocalPlayer.Backpack.Punch:FindFirstChildOfClass("NumberValue").Value = 0
   	end    
 })
 
 Tab:TianJiaButton({
-	Name = glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('zaMmGuxWraMdNCpQNiuoIsXcBXfjrqPvmvwUiWIZQSvGobvFtHlmnBC5pS26ZuG5omA5pyJ5a6d566x'),
+	Name = "收集所有宝箱",
 	Callback = function()
-        loadstring(game:HttpGet((glByCfhvvZyFVcnaBzJhMOjQXptrbkqFgYRxvCTSvuZeRnPWRSqgLiWhZHrlTYVaLSeOwokGg('JPeyNDxDDEKkpOuDqBAteMAAReQvQxeaDUWIVJLbsdrpjHPJKwohKEsaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS91aS9tYWluL25pbmphc2hvdWppYWxsY2hlc3Q='))))()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/atoyayaya/ui/main/ninjashoujiallchest')))()
   	end    
-})    
+})
