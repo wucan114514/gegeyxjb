@@ -79,10 +79,6 @@ local name = {
 	[6488212742] = "升降传奇",																		
 }
 
-YtPr()
-CreateSupportList({"极速传奇","力量传奇","忍者传奇","健身联盟","超级力量格斗模拟器","跳跃模拟器","动物进化模拟器","吃掉世界","举重模拟器","举重传说模拟器","超级大力士模拟器",
-	"强壮传奇","健身房王国","健身模拟器","升降传奇"
-})
 _G.HoHoLoaded = true
 if getgenv().Key and listPre[game.GameId] ~= nil then
 	getgenv().messagebox = function()end
