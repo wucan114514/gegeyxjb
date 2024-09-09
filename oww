@@ -505,7 +505,7 @@ function CreateSupportList(list_game)
 		TextLabel.BackgroundTransparency = 1.000
 		TextLabel.Size = UDim2.new(0, 353, 0, 24)
 		TextLabel.Font = Enum.Font.Highway
-		TextLabel.Text = "		+ " .. v
+		TextLabel.Text = "		😎 " .. v
 		TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 		TextLabel.TextScaled = true
 		TextLabel.TextSize = 14.000
@@ -566,6 +566,9 @@ local list = {
     --升降传奇
     [6488212742] = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/sjcq')))()",
 
+    --超级食肉者模拟器
+    [3136631809] = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/srz')))()",
+
 }
 
 local name = {
@@ -598,12 +601,15 @@ local name = {
 	
 	[5677613211] = "健身模拟器",
 	
-	[6488212742] = "升降传奇",																		
+	[6488212742] = "升降传奇",	
+	
+	[3136631809] = "超级食肉者模拟器",	
+																																				
 }
 
 YtPr()
 CreateSupportList({"极速传奇","力量传奇","忍者传奇","健身联盟","超级力量格斗模拟器","跳跃模拟器","动物进化模拟器","吃掉世界","举重模拟器","举重传说模拟器","超级大力士模拟器",
-	"强壮传奇","健身房王国","健身模拟器","升降传奇"
+	"强壮传奇","健身房王国","健身模拟器","升降传奇","超级食肉者模拟器"
 })
 _G.HoHoLoaded = true
 if getgenv().Key and listPre[game.GameId] ~= nil then
