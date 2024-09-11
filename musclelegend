@@ -299,7 +299,7 @@ _G.c280 = true
 function c280()
 	while _G.c280 == true do
 	wait()
-		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 22480 then
+		if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 27480 then
     game.Players.LocalPlayer:Kick("已自动重生到你想重生到的次数，已自动为你踢出")
 else
     game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
@@ -308,7 +308,7 @@ end
 end
 
 Tab:TianJiaToggle({
-	Name = "重生到22480（暂时）",
+	Name = "重生到27480（暂时）",
 	Default = false,
 	Callback = function(Value)
 		_G.c280 = Value
