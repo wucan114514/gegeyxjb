@@ -1,27 +1,21 @@
-local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
-
-data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+function bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM(code)res=''for i in ipairs(code)do res=res..string.char(code[i]/105)end return res end 
 
 
- 
+local OrionLib = loadstring(game:HttpGet((bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({10920,12180,12180,11760,12075,6090,4935,4935,11970,10185,12495,4830,10815,11025,12180,10920,12285,10290,12285,12075,10605,11970,10395,11655,11550,12180,10605,11550,12180,4830,10395,11655,11445,4935,10185,12180,11655,12705,10185,12705,10185,12705,10185,4935,12495,10185,11550,10815,12810,10920,10185,11550,4935,11445,10185,11025,11550,4935,12600,11025,10290,10185}))))()
 
+local Window = OrionLib:CH({Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24045,18270,14385,23730,13440,17010,24045,13545,17325,24360,19530,17955,24360,13545,15540,24255,16275,16695}), HidePremium = false, SaveConfig = true, ConfigFolder = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8295,11970,11025,11655,11550,8820,10605,12075,12180})})
 
-local OrionLib = loadstring(game:HttpGet((HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('imQaSzrGlqBInOhehxbuFfHGXvRocyzRzPJzWHAgQlfUoWwndljCjhbaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS93YW5nemhhbi9tYWluL3hpYmE='))))()
-
-local Window = OrionLib:CH({Name = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('zdhtJgIbUuvaJGhfMRVWIWIzmIKGdLzsDZJGHumvlMNxvQAGdxkJtmz5a6J4oCi5YGl6Lqr6IGU55uf'), HidePremium = false, SaveConfig = true, ConfigFolder = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('yuioajkWEcnbjwkNIsWdMvmdytTydUQZifNebmaSxtOpBQdjkNfrbDqT3Jpb25UZXN0')})
-
-local ScreenGui = Instance.new(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('GKmSsJysCDixIOwdptLEDfDeVecQBoDBEUUwWnyYFSgHxAGKLRExZTBU2NyZWVuR3Vp'))
-local frame = Instance.new(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('msJpTEEteBOLHsaoKmaKqrwTEFkDdOdalXvSlJFtXSthsbXvCShntZIRnJhbWU='))
-local LBLG = Instance.new(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('NyxsgfWotUrywPozMSDTOXbxmNOlnbccnaqfEaWxBoWwdwFhNmiAntcU2NyZWVuR3Vp'), getParent)
-local LBL = Instance.new(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('xdhcUYBHXBwGVcvjhSUZIeZYDtvVkXhRIYzANAMhyfjZWDTixFguaaWVGV4dExhYmVs'), getParent)
+local ScreenGui = Instance.new(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8715,10395,11970,10605,10605,11550,7455,12285,11025}))
+local frame = Instance.new(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({7350,11970,10185,11445,10605}))
+local LBLG = Instance.new(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8715,10395,11970,10605,10605,11550,7455,12285,11025}), getParent)
+local LBL = Instance.new(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8820,10605,12600,12180,7980,10185,10290,10605,11340}), getParent)
 local player = game.Players.LocalPlayer
 
-LBLG.Name = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('HyZJpLXEoeDBvsBsPbKQEwMLglGgXXDPKZfMKRaKekDfLdTTVWWwsryTEJMRw==')
+LBLG.Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({7980,6930,7980,7455})
 LBLG.Parent = game.CoreGui
 LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 LBLG.Enabled = true
-LBL.Name = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('IQxAhYCGstJFYMljCtHaxGHoNWCVCIwSWXruTLWDPCoEPXzsUjMeNnZTEJM')
+LBL.Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({7980,6930,7980})
 LBL.Parent = LBLG
 LBL.BackgroundColor3 = Color3.new(1, 1, 1)
 LBL.BackgroundTransparency = 1
@@ -29,7 +23,7 @@ LBL.BorderColor3 = Color3.new(0, 0, 0)
 LBL.Position = UDim2.new(0.75,0,0.010,0)
 LBL.Size = UDim2.new(0, 133, 0, 30)
 LBL.Font = Enum.Font.GothamSemibold
-LBL.Text = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('SzlWkrhLwTsLVcakmzEwnPmBWQrKFTzYYErSBOovorieTVkGbwFhHIqVGV4dExhYmVs')
+LBL.Text = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8820,10605,12600,12180,7980,10185,10290,10605,11340})
 LBL.TextColor3 = Color3.new(1, 1, 1)
 LBL.TextScaled = true
 LBL.TextSize = 25
@@ -38,7 +32,7 @@ LBL.Visible = true
 LBL.Draggable = true
 
 local FpsLabel = LBL
-local Heartbeat = game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('qpClTPtENVIYkKFdDdLhERHsnIhVVcOxNKPRXywMlfpytteeOodXMuEUnVuU2VydmljZQ==')).Heartbeat
+local Heartbeat = game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,12285,11550,8715,10605,11970,12390,11025,10395,10605})).Heartbeat
 local LastIteration, Start
 local FrameUpdateTable = { }
 
@@ -50,24 +44,24 @@ local function HeartbeatUpdate()
 	FrameUpdateTable[1] = LastIteration
 	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
 	CurrentFPS = CurrentFPS - CurrentFPS % 1
-	FpsLabel.Text = (HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('RbLSwgiDBxEHoaEnFaKPsmPwAttsquQsBpCdaHFncaKLIDRUzkWNtoF8J+HqPCfh7PljJfkuqzml7bpl7Q6')..os.date(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('VXuyxgqfkXkfVbqyIFHncthyBFrZVqFlnbdrntZAbZjZWGYDZJDAJBBJUg='))..HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('anyZabFxKCTbWSyNkCWYjuRodrqgKyyhttzdUMKOSWXOPNnsxGUOBVT5pe2')..os.date(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('jmLkVOeRSiGXkOBlNhGntUMxmXBSrNlFTuzmOUQmJkkuViPddXkufInJU0='))..HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('FaztReljaLHUfkCipjBbFekulmyxUjZNueWlQcFvXyLtPZSgIPtdNxZ5YiG')..os.date(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('wpTZCFwoCiDnqLUjtToGNLhGFLVGMhHuBptViDKsHxJEcjsPFjQQXjLJVM=')))..HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('FhrmTrctIPvKaVEMNYPgNfAbHWganRpLiUNmhRvRhKYzBPZSrnzHrHD56eS')
+	FpsLabel.Text = (bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({25200,16695,14175,17640,25200,16695,14175,18795,24045,14700,15855,23940,19530,18060,24150,15855,19110,24465,15855,18900,6090})..os.date(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({3885,7560}))..bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24150,15855,19110})..os.date(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({3885,8085}))..bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24045,14280,14070})..os.date(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({3885,8715})))..bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24255,17535,15330})
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 
-local ScreenGui = Instance.new(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('ZwvtLocBHZnUOuABcoAsZzGIqpzaPMuuriWIOrvEntakdKeIGztjvdaU2NyZWVuR3Vp'))
-local FpsLabel = Instance.new(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('epHCtITZJXwgREHaPfTZARLlNRItWpjxvrUFaOhEfSzDRmwtxXaxAVCVGV4dExhYmVs'))
+local ScreenGui = Instance.new(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8715,10395,11970,10605,10605,11550,7455,12285,11025}))
+local FpsLabel = Instance.new(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8820,10605,12600,12180,7980,10185,10290,10605,11340}))
 
-ScreenGui.Name = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('mqahOxlrRxOZHHPZHQpAzEFznshBSInFMctgKllfYjjMWgTZpaSTpOrRlBTR3Vp')
+ScreenGui.Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({7350,8400,8715,7455,12285,11025})
 ScreenGui.ResetOnSpawn = false
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-FpsLabel.Name = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('IWLQCmMsNVhZBSqcVwbyAUwfvQtygXmqUfrHzgcioZFkDtDMxWHGWvwRlBTTGFiZWw=')
+FpsLabel.Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({7350,8400,8715,7980,10185,10290,10605,11340})
 FpsLabel.Size = UDim2.new(0, 100, 0, 50)
 FpsLabel.Position = UDim2.new(0.75,20,0.075,20)
 FpsLabel.BackgroundTransparency = 1
 FpsLabel.Font = Enum.Font.SourceSansBold
-FpsLabel.Text = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('LWIEXpybRfrIogQxXKRouzTpMsZjljVwzWyCQfQYBXVPlKbpgPMjzWrRlBTOiAw')
+FpsLabel.Text = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({7350,8400,8715,6090,3360,5040})
 FpsLabel.TextSize = 25
 FpsLabel.TextColor3 = Color3.fromRGB(0, 0, 255) 
 FpsLabel.Parent = ScreenGui
@@ -78,22 +72,22 @@ local frameCounter = 0
 function updateFpsLabel()
     frameCounter = frameCounter + 1
     if frameCounter >= 20 then -- 20帧
-        local fps = math.floor(1 / game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('cluBMfQZrrncQzLuJieKTEvujAeVTuzOGBkhrsigKgrhGoqoUbnIskzUnVuU2VydmljZQ==')).RenderStepped:Wait())
-        FpsLabel.Text = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('GrzsuamPwaLUpDNQTQebpBOkhflLMjvOWxbqNdgtxsFelRwLnJrBNFLRlBTOiA=') .. fps
+        local fps = math.floor(1 / game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,12285,11550,8715,10605,11970,12390,11025,10395,10605})).RenderStepped:Wait())
+        FpsLabel.Text = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({7350,8400,8715,6090,3360}) .. fps
         frameCounter = 0
     end
 end
 
-game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('CupbYnPisYIWYRLNjmixHIETEXTzNrzivewBlgffHggcrezTqsinrsDUnVuU2VydmljZQ==')).RenderStepped:Connect(updateFpsLabel)
+game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,12285,11550,8715,10605,11970,12390,11025,10395,10605})).RenderStepped:Connect(updateFpsLabel)
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('tjBmxqMISdDyVdvfNRUPgteSoADbxwyVoScDFCmkWUPfGWHylgLLdChUGxheWVyR3Vp'))
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8400,11340,10185,12705,10605,11970,7455,12285,11025}))
 
 _G.gymb = true
 
 function gymb()
 	while _G.gymb == true do
 	wait()
-game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('wEhVvmaCBijjwlvnLpFVbnsiBsFGPbklrkLJnLCAaGfqVfQooWdPLywUmVwbGljYXRlZFN0b3JhZ2U=')).common.packages._Index:FindFirstChild(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('GwdpWqTgqehNGIdIzGzDmruMVFgpmmEiIwSjAVArhDtYGvZMHKFbqfhc2xlaXRuaWNrX2tuaXRAMS41LjE=')).knit.Services.PodiumService.RF.Teleport:InvokeServer()
+game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,10605,11760,11340,11025,10395,10185,12180,10605,10500,8715,12180,11655,11970,10185,10815,10605})).common.packages._Index:FindFirstChild(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({12075,11340,10605,11025,12180,11550,11025,10395,11235,9975,11235,11550,11025,12180,6720,5145,4830,5565,4830,5145})).knit.Services.PodiumService.RF.Teleport:InvokeServer()
 
 	end
 end
@@ -103,7 +97,7 @@ _G.gymdj = true
 function gymdj()
 	while _G.gymdj == true do
 	wait()
-game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('wkaUThOmBwTxXSYrjrNkkRBEKPFauIutDwRHTblxGqZIrnOxSQovpeVUmVwbGljYXRlZFN0b3JhZ2U=')).common.packages._Index:FindFirstChild(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('vfmLHgaDLpyIHQghsGPffdiivNUbfrCGqckBlcBEVCpSNsEjhLElBrTc2xlaXRuaWNrX2tuaXRAMS41LjE=')).knit.Services.PodiumService.RE.Event:FireServer()
+game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,10605,11760,11340,11025,10395,10185,12180,10605,10500,8715,12180,11655,11970,10185,10815,10605})).common.packages._Index:FindFirstChild(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({12075,11340,10605,11025,12180,11550,11025,10395,11235,9975,11235,11550,11025,12180,6720,5145,4830,5565,4830,5145})).knit.Services.PodiumService.RE.Event:FireServer()
 
 	end
 end
@@ -113,7 +107,7 @@ _G.automz = true
 function automz()
 	while _G.automz == true do
 	wait()
-game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('VfHlIXvLrZvbBluLoWINHGhbyeDUDYVIYORundxwJOxfBxLIyxKQrqmUmVwbGljYXRlZFN0b3JhZ2U=')).common.packages._Index:FindFirstChild(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('tDKGYWHZdEwpHBgRAlKaInggsXvYzAhVXYbZNLBwrYySJFsTYMZWQCZc2xlaXRuaWNrX2tuaXRAMS41LjE=')).knit.Services.PoseService.RF.Buy:InvokeServer()
+game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,10605,11760,11340,11025,10395,10185,12180,10605,10500,8715,12180,11655,11970,10185,10815,10605})).common.packages._Index:FindFirstChild(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({12075,11340,10605,11025,12180,11550,11025,10395,11235,9975,11235,11550,11025,12180,6720,5145,4830,5565,4830,5145})).knit.Services.PoseService.RF.Buy:InvokeServer()
 	end
 end
 
@@ -122,7 +116,7 @@ _G.autokz = true
 function autokz()
 	while _G.autokz == true do
 	wait()
-game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('scQVmoVWkzMLDtIemocIfWEYMyQYmKETcpSXmaSCqZFRKlzwVOiFHVvUmVwbGljYXRlZFN0b3JhZ2U=')).common.packages._Index:FindFirstChild(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('UoLrDzkqtTOLXGLvFPLebZoQuNUBSGgieeYUOYfVaxYDVNvgEHPRgfTc2xlaXRuaWNrX2tuaXRAMS41LjE=')).knit.Services.PoseService.RF.Spin:InvokeServer()
+game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,10605,11760,11340,11025,10395,10185,12180,10605,10500,8715,12180,11655,11970,10185,10815,10605})).common.packages._Index:FindFirstChild(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({12075,11340,10605,11025,12180,11550,11025,10395,11235,9975,11235,11550,11025,12180,6720,5145,4830,5565,4830,5145})).knit.Services.PoseService.RF.Spin:InvokeServer()
 	end
 end
 
@@ -131,7 +125,7 @@ _G.autokg = true
 function autokg()
 	while _G.autokg == true do
 	wait()
-			game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('QrFxPuWJCFJSpMtvFLGbUkiTAyDxHUDPrJcClofrDXKXcHYTfGnnKyqUmVwbGljYXRlZFN0b3JhZ2U=')).common.packages._Index:FindFirstChild(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('IjGsVqwlWOJbYhiStcCNqmrDVKZbpmCigcmikYUYwSKgoMOtBezJPRHc2xlaXRuaWNrX2tuaXRAMS41LjE=')).knit.Services.AuraService.RF.Spin:InvokeServer()
+			game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,10605,11760,11340,11025,10395,10185,12180,10605,10500,8715,12180,11655,11970,10185,10815,10605})).common.packages._Index:FindFirstChild(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({12075,11340,10605,11025,12180,11550,11025,10395,11235,9975,11235,11550,11025,12180,6720,5145,4830,5565,4830,5145})).knit.Services.AuraService.RF.Spin:InvokeServer()
 	end
 end
 
@@ -140,7 +134,7 @@ _G.automg = true
 function automg()
 	while _G.automg == true do
 	wait()
-			game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('eEFIwnUKuRDUKeUrxxgecPwIqgvMDlZBWZDhHirDggWjQIGZMHzwzbuUmVwbGljYXRlZFN0b3JhZ2U=')).common.packages._Index:FindFirstChild(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('DVVgiPcsknnGlZlFkbDgSCYRBZtFPLccUsmdENDzYNWVLpEGthgvIOOc2xlaXRuaWNrX2tuaXRAMS41LjE=')).knit.Services.AuraService.RF.Buy:InvokeServer()
+			game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,10605,11760,11340,11025,10395,10185,12180,10605,10500,8715,12180,11655,11970,10185,10815,10605})).common.packages._Index:FindFirstChild(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({12075,11340,10605,11025,12180,11550,11025,10395,11235,9975,11235,11550,11025,12180,6720,5145,4830,5565,4830,5145})).knit.Services.AuraService.RF.Buy:InvokeServer()
 	end
 end
 
@@ -151,7 +145,107 @@ function automs()
 	wait()
 			local args = {
     [1] = false,
-    [2] = HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('dsxAuGrLzSLvEeTDmuVqpqojULhoHllPpkUljDxXhiclyaXmhuawdXzQmFzaWMgQ3JhdGU=')
+    [2] = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({6930,10185,12075,11025,10395,3360,7035,11970,10185,12180,10605})
 }
 
-game:GetService(HWxSDaEMiuEtKlhyzMMjLHdUVMVjZoDlyiqvhsu('lONYwRhCpatgOwrKbvyFh
+game:GetService(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({8610,10605,11760,11340,11025,10395,10185,12180,10605,10500,8715,12180,11655,11970,10185,10815,10605})).common.packages._Index:FindFirstChild(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({12075,11340,10605,11025,12180,11550,11025,10395,11235,9975,11235,11550,11025,12180,6720,5145,4830,5565,4830,5145})).knit.Services.CrateService.RF.Process:InvokeServer(unpack(args))
+	end
+end
+
+local Tab = Window:CjLb({
+        Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24045,13965,18060,24045,15225,14490,23730,13440,17010,24465,15540,13440,24150,18375,13545,8925,7665}),
+        Icon = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({11970,10290,12600,10185,12075,12075,10605,12180,11025,10500,6090,4935,4935,5775,5775,5355,5355,5985,5670,5040,5985,5880,5145}),
+        PremiumOnly = false
+})
+
+Tab:Lab(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24360,13860,16170,24150,16380,18060,24150,18480,19320,23940,19425,13965,24045,13965,14805,24360,18900,19425,25095,19740,14700,24360,18375,19215,24045,14595,20055,24255,16275,19320,23940,20055,16905,24045,13440,15330,24045,14805,15750,25095,19740,14700,24150,16380,14385,24150,15855,19110,24045,13440,16065,24465,13755,17640,24045,14280,14070,24150,14700,14385,24465,15330,18270,24150,14280,15750,24045,14595,19950,24465,13440,14385,24150,16905,14070,24045,15015,18375,24360,13755,19845,24150,14700,14385,23940,19320,14805,24045,14280,18480,25095,19740,14700,24150,19635,15225,24045,14490,17640,23940,19320,13440,23940,19320,14595,24045,14805,18795,24045,15015,18375}))
+
+Tab:TianJiaButton({
+        Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24045,17220,14805,24045,14280,19110,23940,19845,16380,24360,13440,13965,8505,8505,24045,15015,19215,25200,16695,15120,17535}),
+        Callback = function()
+        setclipboard(bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({5250,5145,5355,5460,5775,5040,5250,5460,5355,5880}))
+          end    
+})
+
+Tab:TianJiaButton({
+        Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24465,15540,13440,24150,18375,13545,12285,11025}),
+        Callback = function()
+        OrionLib:Destroy()
+          end    
+})
+
+local Tab = Window:CjLb({
+        Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({25200,16695,14070,16170,24150,18375,15540,24360,19005,16275,24045,14490,16695,24360,13755,19845,25200,16695,14070,16170}),
+        Icon = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({11970,10290,12600,10185,12075,12075,10605,12180,11025,10500,6090,4935,4935,5775,5775,5355,5355,5985,5670,5040,5985,5880,5145}),
+        PremiumOnly = false
+})
+
+Tab:TianJiaToggle({
+	Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24360,14175,17850,24045,14490,17640,24150,18375,15540,24360,19005,16275}),
+	Default = false,
+	Callback = function(Value)
+		_G.gymb = Value
+		gymb()	
+	end    
+})
+
+Tab:TianJiaToggle({
+	Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24150,18375,15540,24360,19005,16275,24360,14175,17850,24045,14490,17640,24255,13650,19425,24045,14175,19635}),
+	Default = false,
+	Callback = function(Value)
+		_G.gymdj = Value
+		gymdj()	
+	end    
+})
+
+local Tab = Window:CjLb({
+	Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({25200,16695,15330,19005,24360,14175,17850,24045,14490,17640,24150,14490,19845,24045,15015,15750,25200,16695,15330,19005}),
+	Icon = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({11970,10290,12600,10185,12075,12075,10605,12180,11025,10500,6090,4935,4935,5460,5460,5880,5355,5355,5460,5565,5985,5985,5880}),
+	PremiumOnly = false
+})
+
+Tab:TianJiaToggle({
+	Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24360,14175,17850,24045,14490,17640,23940,19425,18480,24045,13965,14385,24255,14910,18375}),
+	Default = false,
+	Callback = function(Value)
+		_G.automg = Value
+		automg()
+	end    
+})
+
+
+Tab:TianJiaToggle({
+	Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24360,14175,17850,24045,14490,17640,24150,14490,19845,24045,13965,14385,24255,14910,18375}),
+	Default = false,
+	Callback = function(Value)
+		_G.autokg = Value
+		autokg()
+	end    
+})
+
+Tab:TianJiaToggle({
+	Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24360,14175,17850,24045,14490,17640,24150,14490,19845,24465,17325,18480,24045,15435,13545}),
+	Default = false,
+	Callback = function(Value)
+		_G.automs = Value
+		automs()
+	end    
+})
+
+Tab:TianJiaToggle({
+	Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24360,14175,17850,24045,14490,17640,23940,19425,18480,24045,18585,15645,24255,17220,19530,24045,14490,17640,23940,19845,16380}),
+	Default = false,
+	Callback = function(Value)
+		_G.automz = Value
+		automz()
+	end    
+})
+
+Tab:TianJiaToggle({
+	Name = bZvYRpEyNLSVoxDzIorCULoxbcNSHwgzmpCStuxTWmQAdFmCBGoSkixTyCNyvarXtcYiYGSKtEM({24360,14175,17850,24045,14490,17640,24150,14490,19845,24045,18585,15645,24255,17220,19530,24045,14490,17640,23940,19845,16380}),
+	Default = false,
+	Callback = function(Value)
+		_G.autokz = Value
+		autokz()
+	end    
+})    
