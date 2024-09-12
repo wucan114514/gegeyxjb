@@ -555,7 +555,7 @@ local list = {
     [940024091] = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/supermuscle')))()",
 
     --强壮传奇
-    [940024091] = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/qz')))()",
+    [147235689] = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/qz')))()",
 
     --健身房王国
     [1315353562] = "loadstring(game:HttpGet(('https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/gymwg')))()",
@@ -595,7 +595,7 @@ local name = {
 
 	[940024091] = "超级力量格斗模拟器",
 	
-	[5677613211] = "强壮传奇",
+	[147235689] = "强壮传奇",
 	
 	[1315353562] = "健身房王国",
 	
