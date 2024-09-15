@@ -1,5 +1,5 @@
 local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+function YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
 
 data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
 
@@ -7,197 +7,197 @@ data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) i
  
 
 
-local OrionLib = loadstring(game:HttpGet((nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('BbKszXnkUSqFVcclXbzMKiRriWWrGpwbRlCwlsLHKdrLAcWLGOyTNttaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS93YW5nemhhbi9tYWluL3hpYmE='))))()
+local OrionLib = loadstring(game:HttpGet((YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('OVsJbhFsmoKUfMJjkEZWlpOBWuQkOrveIIZeuLCVfrdIKuQOCuLqlKhaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS93YW5nemhhbi9tYWluL3hpYmE='))))()
 
-local Window = OrionLib:CH({Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qbbdAPIfuZYJSkjtSjLFukxnDzOZNXGmkSTWYpqWFIDoGSqjWckADMD5a6J4oCi5Yqb6YeP5Lyg5aWH6ISa5pys'), HidePremium = false, SaveConfig = true, ConfigFolder = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('LJHJbAAejrVKJkMkLuSbmxcdwGWIYMjinfCzaVBlOMeoITOKhmLqmrgT3Jpb25UZXN0')})
+local Window = OrionLib:CH({Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('muUiRXhjbJbzVnWtOuShYNwFCROhofRZzEdEbefcrunrriwBNSNBiPj5a6J4oCi5Yqb6YeP5Lyg5aWH6ISa5pys'), HidePremium = false, SaveConfig = true, ConfigFolder = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('mOgBjPhmCdLsZoibfaHoYZLzjLCBQwwYuzhUPGuRnHtjvGIAvALfaZYT3Jpb25UZXN0')})
 
 local Tab = Window:CjLb({
-        Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('QAPJXLaPzamTwWBurGcUVyAtbVOKVmZIruZIHIwgcRDadcFnuAHhawK5YWs5ZGK4oCi6ZSA5q+BVUk='),
-        Icon = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('jZHXIedqQBFpQiYOhMLglvtpJeLwPomkPKclIxmtMUFvDDebNKsITilcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
+        Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('poLTZldbYqqNsOjXpWKLbZinygoDhaSDBJSUJlmhlbyLHclWzGhlIWr5YWs5ZGK4oCi6ZSA5q+BVUk='),
+        Icon = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('dJgnYsgUrBMbbfhKAOFahPTzBtUuesmeJOXEgrrDKVYYEGRzDGIEQMGcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
         PremiumOnly = false
 })
 
-Tab:Lab(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('soRTArjJTcGUUAIBmlXtVLcwtsYZgnRNAqvLCGgUMeVBfsxDRzqtslD6ISa5pys5rC45LmF5YWN6LS577yM6K+35Yu/55u45L+h5YCS5Y2W77yM5pyJ5pe25YCZ6YOo5YiG5oyJ6ZKu5oiW5Yu+6YCJ5qGG5Y+v6IO95oyJ5LiN5Yiw77yM5ruR5Yqo5LiA5LiL5Y2z5Y+v'))
+Tab:Lab(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('FgHGmpyiToSqmEYptCEDVTTyXiTxGorxRGVJMDKvGxTmzshkLZbZbnw6ISa5pys5rC45LmF5YWN6LS577yM6K+35Yu/55u45L+h5YCS5Y2W77yM5pyJ5pe25YCZ6YOo5YiG5oyJ6ZKu5oiW5Yu+6YCJ5qGG5Y+v6IO95oyJ5LiN5Yiw77yM5ruR5Yqo5LiA5LiL5Y2z5Y+v'))
 
 Tab:TianJiaButton({
-        Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('yYSWZVhNIVcKILAtmXkuLMKYcRvelcpClpRDiyoGnCKPtdriCjFtIHK5aSN5Yi25L2c6ICFUVHlj7fwn5Cn'),
+        Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('agGXCPoodOuvRDbQhpeYEWjCqUnuiPyCIJsKRDwHVZXyvohEqwRJsjR5aSN5Yi25L2c6ICFUVHlj7fwn5Cn'),
         Callback = function()
-        setclipboard(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('seSYzZJbBakiBmyZFmWuqtuxyykethIMeeigcRtbXTBPFFrwrJtePVNMjEzNDcwMjQzOA=='))
+        setclipboard(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('jPXffptjnbKiSomsyuzwUPlkMxwWxgedioNUYMTzlVkEnWNruzaoRkZMjEzNDcwMjQzOA=='))
           end    
 })
 
 Tab:TianJiaButton({
-        Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('jaTadozBrbRgFMIunnENEzuKquRhvBuVyExgarAFDojHCaLcuaUYMbk6ZSA5q+BdWk='),
+        Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('PjwkoHLaYYuHQNcPTgZEsamFDgPrTrIkRgrLVsoeGmEKFgTYafmKnjv6ZSA5q+BdWk='),
         Callback = function()
         OrionLib:Destroy()
           end    
 })
 
 local Tab = Window:CjLb({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('JXXSYSGLNtScjgxdDMNKukuHlmAyzeNyvLtWPcqhRpvlTSGaralFKRf8J+UtOiZmuWBh+S/ruaUueaVsOaNrvCflLQ='),
-	Icon = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('SeFUxPtjSZmgtdmymJyMIqQZuGiOlwxEiHztSgTfhJTfmORjHQoqpppcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('veyNwIpJDmZKkVnMRyQEJMOqkazzFmkmLlAkNQNtnmceloAybbRjODb8J+UtOiZmuWBh+S/ruaUueaVsOaNrvCflLQ='),
+	Icon = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('SEJEazKwRWxjFyVuLMNpEyBcjLesbaQmMWMnvXYhAAeMEKiwOtPNEeJcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
 	PremiumOnly = false
 })
 
 Tab:TianJiaShuru({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('YQXWjcmBONcvnNfMfBspvbpalnBBlwHKBKxeDqywICgccrnIKFAESzN5L+u5pS56YeN55Sf'),
-	Default = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('EGGSspaPMBIfFJltwTRTakbAqtSbYKUyVaaMzRlIkJcWSaKgLFiqlNb'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('QTSmosbNMocYXxLaYkFljKwtIJiddPunKqPKrsGjZeZfCreIcHZtySD5L+u5pS56YeN55Sf'),
+	Default = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('xwvMosIaJZGnzhrHtCWhgMisrOxSvuIdiUPijkHmSFAekzlSyVBzMyM'),
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('WxbyxMqfypsoReqnTInPmeerjbUMJzQuoKYhwncUlXTgxLFeFRatIlLUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value = Value
+	game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('dJVnGVoPfUtNwBmyDPUxwMIsHiQGHbZpvszcMLYDKdrIyjdPACOrNtjUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('cACKLNbDtqOTgXMuLUFuiYkMijLTiqQeylQImkROWbygwXiQCreLbyX5L+u5pS55Yqb6YeP'),
-	Default = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ErTkEWWVrBGQstZbFcwNHOEPOUJsUuhlqQmJqrIjNqErGKmgfksURbf'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('QNJHFfUfLHHEwmliCTEOQyYfqRbwKDkOOtcHrALkCeJOapjmFLNPHin5L+u5pS55Yqb6YeP'),
+	Default = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('WmEqaDFZIQYVzmLdjvVICwUzfHyyMcDOHJjfissCZpyZezLdwerrTuN'),
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('SphgKDvEDjFjBrgoywSmPLEUIqWVOezkhBBVsLaRHNklHxHHjaJspNiUGxheWVycw==')).LocalPlayer.leaderstats.Strength.Value = Value
+	game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('EOqUKIGjVqNbXnnbUBrvIVcsnShQkXogYVlwAJxZsJbWufnKqKGJxMUUGxheWVycw==')).LocalPlayer.leaderstats.Strength.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('SjtYZbaXbQxTGYukYMnfGfOazafwkyqEUwlEVDwHDlMBUFsBakGUSRl5L+u5pS56ICQ5Yqb'),
-	Default = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('gTZCdTSXbfqrTqdcRUHIvmEOCmUhlMxMSCBhxgwsjtjpxbWSTrRuVSY'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('szuZetvOYJusHJtUEBtLuXmvdppqikytZrJxdDwLFuxjgvrniXDPjYg5L+u5pS56ICQ5Yqb'),
+	Default = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('qRncJVTjDRhJFiHorQbwiaTCsbaiUgUtenpfCQJeiaFxDXnckPFGXkQ'),
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('JJmbwTdmmOolzpqUmgssBouWZLhdOYAtpYgVmbSKyKJEpcpFQpHEdiXUGxheWVycw==')).LocalPlayer.Durability.Value = Value
+	game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ofFftLplPbUtLdymvFcDLbuEWaOcumqxJNJvQvkckrrCQXlSLlUQFdKUGxheWVycw==')).LocalPlayer.Durability.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('tVhmHDrqPmpLNFvLEdjRybzdZmirfnXHsSIUVTPyoaRlmAwjMgwLZZR5L+u5pS55pWP5o23'),
-	Default = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('BlvKthrOWZDaPUdnmHFzofIaqjVQPWTWUeIkBrupgLwdbGygGEExmYA'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('EXkGdQoLGNJfzLoxJquArJZCveaZlfqvliyVZoDborjDgxcqAMutucv5L+u5pS55pWP5o23'),
+	Default = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('omkYuiiNnqawcSasVcbxMYrLtJGZLjLUkmLSeYWPgniTHUWFOFaIiFN'),
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qmJLrskNomQrmCdfSHsVVBtpZbACxXHKrxQhVHXiruJZUdODtRFZVFUUGxheWVycw==')).LocalPlayer.Agility.Value = Value
+	game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('HrvuqGPmgzVrXBXDspWUWEnMTXXxdzJkAWhooqCWqUOQjgKdsaUAMnwUGxheWVycw==')).LocalPlayer.Agility.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('wqBoavLQwmDrtRqONjdFeDsTFtofsHFaKxjmPchMAoRVqrgXRFNYETv5L+u5pS55a6d55+z'),
-	Default = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('BDWWmvfUbTgLFDSeNDwMhkLhvIKFXvcqBKNhTDbObzalczJTtSpcuqu'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('xTHSScztFtTEUCfBCHjuEzYhvvqKcEfMbIVOFHipYwXdWKLtiDLowbU5L+u5pS55a6d55+z'),
+	Default = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('AlnFbecvAaSIcnIfHDiGPvkTzMvuSsNPyHvfkXtvWTdvTuckXdUDMYW'),
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('cWkTmJDgwrmCbOahdYPOwSxHZbyHYlAHOmPQuNWUNzdyvxuFpCIXXIzUGxheWVycw==')).LocalPlayer.Gems.Value = Value
+	game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('qvMiQlvGRwaaneZMEmTzrWKkgZfGtixvtdWgdDMOSWTJAwmyVLBLgbMUGxheWVycw==')).LocalPlayer.Gems.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('YwtwutXVvjjzaUvxAdBYVjhZbjgCGmpShxzlOPAFKOyiCvLjCioSQZj5L+u5pS55Z2P5Lq65Lia5oql'),
-	Default = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('sNUJNIamXOqNoDaKyRhoNAZpzbbpaQZRXFXPfgoSikthbUsizvtecvR'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('LAVRapDgrzfUkDakbSAtMGmFUIcwhCKgcaBvUcMTUnRAVErgivDYHrg5L+u5pS55Z2P5Lq65Lia5oql'),
+	Default = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('BDwKBFwBXHTEtFPuCcPdBCPBIOOzuMEXZRJTqUhokTpUWTUJDsTOSNC'),
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('oTZtYiOQADUhDbLgKMCerNEctMbreOkOVLBcVfHvdNcCQcRfOappIwxUGxheWVycw==')).LocalPlayer.evilKarma.Value = Value
+	game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('oCYjBfDWuwEpBYbdIUEGcFHBHAwtliwrOyabiCRAFqjcfLOyeJLFAsVUGxheWVycw==')).LocalPlayer.evilKarma.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ZKnpZFBqQfDSmxnCmWupRToeWUNWohZWeLFpqSjHIOPxqXHNpQvUaCi5L+u5pS55aW95Lq65Lia5oql'),
-	Default = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('eweXahFJRFyQnhErAoeFvHfcMXCJfzTNstkDoRvxnbzYbYJNLmFTXcG'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('bzazhMkuQbFLaSJOwqzBzNYZYAqdxGWBwDCgOdFTOXISDErxubllbFp5L+u5pS55aW95Lq65Lia5oql'),
+	Default = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('OHJCCFyuMdtOHTIBaJDLFGDovTdQcElwoQHVFzkaGXQGxQfozjNjNFs'),
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('tNzhZTAQszRUTBRdhoEywNcUmMFMHoBBQAaWwjyuWQAGTfeUibiCnrPUGxheWVycw==')).LocalPlayer.goodKarma.Value = Value
+	game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('pSyycIkbzIfwPdJaoxFtALMpTPJZOnMzijCPfsTWSlCXhukemzFpAcUUGxheWVycw==')).LocalPlayer.goodKarma.Value = Value
 	end	  
 })
 
 Tab:TianJiaShuru({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('DENPAffAVPAznazlgRarHdpYbDvTzbeQkiDEJDynjMsXzqbXxodYUxM5L+u5pS55oC75Lia5oql'),
-	Default = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('hyJSSYCIJmJyECngXhrehflChTQOEhDynLqfyVjgSXUeiZlmOEIpHUT'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('xAnOUbbNjLdIJYsABPSejlYXnAtdgUdsRdmNTFzpRgLrKCQgqAqiOdA5L+u5pS55oC75Lia5oql'),
+	Default = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('EyBfEdrPtEFetoIjKKqbVuPMMMetENFMFHZWewqbHIAHcCwSPjhuVUs'),
 	TextDisappear = true,
 	Callback = function(Value)
-	game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('eSevaHLuDTTrkpNYudXZstTPhnARmfyWACTMgLwEWQvjHXScNczzBmcUGxheWVycw==')).LocalPlayer.leaderstats.Kills.Value = Value
+	game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('qUtQQlDbMdibmwxLhPYQdpYHIcIHfPlqORXRKwCAqSlxjeFyLgGiFqrUGxheWVycw==')).LocalPlayer.leaderstats.Kills.Value = Value
 	end	  
 })
 
 local Tab = Window:CjLb({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('oVgtLexoFwLDWdYwCwOScRSjLwOOPDCfAwwtgyrbTYLvDiYHHvEZvLy4pqr77iP5Liq5Lq65L+h5oGv4pqr77iP'),
-	Icon = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('bRdYXqVpsDsEFFZWXVZgZsiYKfJURfZCuBGbwEzNCHQVIQoQqpoiYeGcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('MnkCKmCmjMlYMyYzULauUhDkPZNoWoGNNcfnMAPSbDODhhEmumJhNem4pqr77iP5Liq5Lq65L+h5oGv4pqr77iP'),
+	Icon = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('rJefbfVYUvqxjOXMhfBLJKfSTyPepAAPcVSwmXHIArETQeTIhazuArhcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
 	PremiumOnly = false
 })
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('yLlGIrmbvDFGNyMhOdNcBWzOHimHWVoRViPFyZTNCHIRVokTrlFuzqi5Yqb6YeP77ya'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('NpDlrQKIGBwVpZuKVPRswJrFRHddIynalvHozBZvKrAiNXUXKMJUMjZ')..game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('mgvdrOfuvhNhgUviCYwlsdTTBcaPTWcSBkWzcEBvpBycHeNkmzUCYPVUGxheWVycw==')).LocalPlayer.leaderstats.Strength.Value..nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('CxlaNtEooMPsObYIPUhUMXUYqehIisEtciAZLTBuSccseWizLnbafZi'))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('mbCszhsjTymcLVdMqaEgeTJHoBBXjzlPJZOljgIGoTESNdmLWOxTxhP5Yqb6YeP77ya'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('RnaWsZfqXReDuMBRXCsHQejvjTpiOsBcrDRoXZnlZsPpezVDWTnIAot')..game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('lndwKxQgwviGWRMhUgJbfPdVTnXvVnbfoJrVtYUiClCHDHrrSUlDYCoUGxheWVycw==')).LocalPlayer.leaderstats.Strength.Value..YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('srkBcEXZTiJmZOSruFifwOOKAzPBTXPxhtVTCLAELorWdUzGIcraGhO'))
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('RbhauSWPwiEaQaRFpLLkBLTvGREhbYjxZGdCwrVmNbnFHXjoJuCjAEX6ICQ5Yqb'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qyylYRYdzEmGhWRxZVoerzfPSSWVIAOAZeMcpYbLthkYcTZtReunccP')..game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('eiLBHWQTrmZwnqbVabZKyZNUYvkUALTRwvRNKzbOQxzNOGIyWLcETxoUGxheWVycw==')).LocalPlayer.Durability.Value..nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('SrYeTouuLURYaOxePZkUIPIPNPLhsTUOeYdFtZylhbzgpkSHntQCvAq'))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('GuxBHrUWDzebwZHruOiBAvRylzyXQrVKtwcDjnvnHePayYvuDtXOsAt6ICQ5Yqb'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('tpBZBbqViVyqMppxliQCUHHHfSBLLtOVnHbZSiSrWtaPaIoNvcDjZQM')..game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ixSedlFftepmBSYAQHQfuUqTADQVfOgeWzynICatjnwsNITQtCKxlGFUGxheWVycw==')).LocalPlayer.Durability.Value..YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('FmTfljlXZWHmEZYwBjnlaGtSYGAxjFcUsqjtERlrTUPvEmOSbuEypcC'))
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('LzgIoiMaDjTiGcTURrGErHZKOujnPxhZFhBtEEFVYOYTPlRXQGjjkyb5pWP5o23'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('gmaSyzJmEHZjarWFpCqqWZxeIghGMOjhbnNxxzPRYZmncFGouYbzMJN')..game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('pmlBhFtTOKHPINWfzOOzZmGwGxQSXCkEXHpEjJYASkOOhjuQGSKILgvUGxheWVycw==')).LocalPlayer.Agility.Value..nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('YlyaThbcaOEsMDbvIhCmqYQXDCWgXIThrQXzotVqGEaxyepGfgouynx'))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('BoPPltoSodTowQtyJEpHOHSokanmTrxiczmXXeejwuyouSsuThOPHMJ5pWP5o23'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('jyspYTrJDeiSusnvHeziFshUuodViDuUdFwDnDbvCpMcARgnSeSkhQO')..game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('YtZvNOZYCXGJSNbfLiCNiAwkQNwyvQrZIrecfzVVeqrFTdvIhNwjyiCUGxheWVycw==')).LocalPlayer.Agility.Value..YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('RelLaJRyLMQqfFqFrUJWRXFTcQzOOYROWqGuTxcdxAOXPAYWFaqKVOA'))
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('SdcSarFRPBciMrBOVFvSHiJzJmYEbdewhGOiYkVQuyhRmmOiodSouaB6YeN55Sf'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('iANInoVjtOnLvZxThdhBJndtYHdlDNHaboAqWWvygOSzrcyTiDGuOvW')..game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('RCvTHqOPGwxBDIrZjKWXNcqkOglcUNRHPZVjcESgdvCuuCjrelxLYmeUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value..nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('vPRMKuSWkEICmJuZsrrQjYorVjiCdWsVhFKpMatdkEAaytJDyRczdZK'))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('icjhjcNIxmWouixUjPyCyaxIrSNVYgZpunstTWamHalJRqLYEmmTQcS6YeN55Sf'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('afSQvJqfEfyDYsfUMzivqZXzhODsHSPMKWprPxYOZxfjAcipprAYgOg')..game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ZLOcAnyHqnAvBavXjRRbkMkNljJnVLDpOPTxxopBsLWEujCwVKejdsrUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value..YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('FjdSRoNJDgBxjrIrOKmkbNkRAlfWdyVCniyzclBsJRfilFpCdnpPwSW'))
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('noUjGkHslnupKIGIvvlFFgYMPCzacJzUpgItbNezBySiOONcaidNyVD5a6d55+z'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('wDhUZQbpCxeOobLSpvzxMtNnvMjQtWpKOleajVTIwaeBqjvlUMZbVYX')..game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('oFuQzcEhSjapQPvThYmlaiVBjOYbZtTrZFfxiTIcSPlhrkTqJsiCLJVUGxheWVycw==')).LocalPlayer.Gems.Value..nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('cTZfiSFAWhIYEPtjFqvzjNATdxAcrTPvKNAgyERDSWhGJHNFqduTYTs'))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ZsuyZhqPeuCbDBZrSMOVzYFkawoCketkWpONjVzUIhGseasZWwagLZC5a6d55+z'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('gpmSWcIkVHAiRAtCyBOKtYJjTDYVFRdylDdjeCxxwdMorEPxzHaQVqr')..game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('fDCOmXDVshTTmBZhjhvXVXisbRkEDREvZKVcPgcJAzZqxWWHGKIRMHxUGxheWVycw==')).LocalPlayer.Gems.Value..YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('OYjcvvfeesYpVooJVrIsCKjVqRnuWNDLpoTQTfjADOySUlseUrAQvnp'))
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('RGSIrbttmbfUjlwktpuSKeIaLvrZnwXymZjMNPkHSDDkGjBkAYbxnbR5Z2P5Lq65Lia5oql'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('fojvrXtQJSjRltJNUMLNsMhdTALqFFmEBCvTZlbYkjjRHEZcKbkbWFf')..game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('fRtXcqMHioQDPENOrLmVFnnQWzUmRxErcMJULMDcmkALUTbTRHUCKlOUGxheWVycw==')).LocalPlayer.evilKarma.Value..nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qYbuIyhkqDuVGXhITkpaSMGLbZkNcJKGYWBWTnOjsvudShuhcTyOfDZ'))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('GlEVrfbgGvxIFOHpBwGiOYcOKcbpXOdcttvHKAMeOZDvvWbyHxsWgqb5Z2P5Lq65Lia5oql'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('XilKmwuuflyLngrvGvSyeBKPZPLRyjwiPWQOmtFvObRKbXYmergXysE')..game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('BECTrUmaPBMqkDjxKyUaXOyXnTgSoNXIGusJcQTpkSGEFLgnKtIZUNuUGxheWVycw==')).LocalPlayer.evilKarma.Value..YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('NkImlmGPpAeRdLbiTLEpfnSADnNHphEzJoKxZIJfPheWPJFMapYwrOc'))
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('anWWcmQMVtjEikrOlmnhCLnkREuBHDoMGNDlDdqtMhLtuuUygbLQSnF5aW95Lq65Lia5oql'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('UrXefLoEHlpTwySBUxPeyXQsVmScRYAKjVXinfxpiqeTTgghqMHNvKA')..game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('hnwiuSpWmOnLCWUFNoIdfFFYnymhyseiadCXDGlUccbuthnRlpxnQMMUGxheWVycw==')).LocalPlayer.goodKarma.Value..nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('FDHnraoZNOnkuQviqKywJAkzmVNcEJKDELGYjeHyrLInfrBJKxAJvEZ'))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('drKPGKhDUFfQQoKhklPjAmvjTzeDYoahPyIvzioZleMJswdvzXWOQUb5aW95Lq65Lia5oql'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('HLpBSoaxOTrIPfwpynbGatBXmeRbMiUCvKMWuRLVSLIXHFZnFlsSWBp')..game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('hEcQydFtqjhzAYYTOgKNieXBpKBEZTLqXTxzOmCwFdvYuTaqaRbDNioUGxheWVycw==')).LocalPlayer.goodKarma.Value..YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('kMwrHnQhsRvjECXZsWYIutApSpOjjCmNXnyOytZylQWPzTEqYDIIMvy'))
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('EckSOVlloMgsCWlAUFThLkspIbFHBINGptiztFYNmFyCABUwLykZLzG5oC75Lia5oql'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('aHxiUXUMwufMdAfYaotmqUNrYvKdyCyEpuVZpVuKzfSvBBeNPIMRyLn')..game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('taPuwsHZtniiRbcjocSJJRejQNqcilpDjztLRxLsnHnLmkGwrEZTzSjUGxheWVycw==')).LocalPlayer.leaderstats.Kills.Value..nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('VFwDCGoGzjhEbKiwWBzJkpRHSZpwfeUGGuFnxYCmVzbrgdgSmPQzcuN'))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('GAluIigTkOIVBvvTmAOoSAgpYwbwcZvdEMOlSWfrmeYnqxcLGPThyQj5oC75Lia5oql'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('oZALJufKLUkVGxCfYBTHhhIGlRWsVDiMqNvgcBTfcNUTRsFyOIwRPib')..game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('OZhRVQnOaBzviYxgDgIDNfFTAMcgTZQysHyUsTXHLaxWANunWoKJkiSUGxheWVycw==')).LocalPlayer.leaderstats.Kills.Value..YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ghCCJANHeLBMcFkdWymQPJrjCAbfbGwMgXtfKcEtplBtXMFdevdGGEJ'))
 
 local Tab = Window:CjLb({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('kKkWzceoLTlACIWnoXnxBvdTccFodNMZaTEnVwRMsrqaGRxOqTnpaQg8J+lmuiHquWKqOW8gOibi/CfpZo='),
-	Icon = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('pnbaOmVjDstKFMdEJyTvyrFEqyfVIxQauGdpnejHSRqyuGVgNwYAicicmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('MMHHKolvTHqaLQtSsddjvSCfeAjFhUcwuQIEjiMQOqozJDTWhNYYiMq8J+lmuiHquWKqOW8gOibi/CfpZo='),
+	Icon = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('pjvQGSqolTkRCyfUbjHHWoCfJZnnNQsUyLQrtbyrkAbSpxGEibdzrohcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
 	PremiumOnly = false
 })
 
 Tab:TianJiaButton({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('aOCiTMdZOiUKMpPyVeRzBqRgnczJJcTYiQStbtKEvaXEdedpKTacrkA6JOd6Imy5rC05pm277yIMWvmsLTmmbbvvIk='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('sIVFPFAscqRlBjbgWsdfqfreayQfcxUQrwvRbLQcQUSViPtnZWKSORD6JOd6Imy5rC05pm277yIMWvmsLTmmbbvvIk='),
 	Callback = function()
-		game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('VraQTMoVCNpRIFlaEimebFtsMkavDJQprZxYzBEExZhzKRKPLlHsYydUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('avrlNkivDpyoIxorCEQiYAGDMrUJCHfeOcMFbreNPQLVNWBldKoeEwbb3BlbkNyeXN0YWw='), nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('CvhlflQbwfdsRftKOTBWzZCJtSGwCGzsjcAYaltBtfynFVQcHmzJlsbQmx1ZSBDcnlzdGFs'))
+		game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('GkyMjhflUBfhhBOnTuZTbXNdwAgZInSkwVpGNpNnsYpFHmwUffpKOSeUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('RWNhYHcorFscWbiJeZwpewRRUujPCGWiBBrBmGugRPyKynJCPrdCvqtb3BlbkNyeXN0YWw='), YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('XWTKpdoevWDgjdhqMqpOvchOWUMcAKwpxbHrfJkyxZtWfOFlIDYxlRkQmx1ZSBDcnlzdGFs'))
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('oOSiqsmrcOSefyJtoQjLhgzLmWKrXqSjPXbsavHyVWVFaPjYqsrkapq57u/6Imy5rC05pm277yIM2vpkrvnn7PvvIk='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('WciVgwwSnJbSbBdDkjwTFQLVOQHDPXUjVgZnXadKDKToSmBpVPUUGBR57u/6Imy5rC05pm277yIM2vpkrvnn7PvvIk='),
 	Callback = function()
-		game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('xEPoOyUFfzqptgznkcIcPiRNQXrxocAUcsyhVhUkaiUTQaZfJExMwCvUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('LtRxlMnwefCQEYIKzTlhPPjuBxaTFeEUwCGmKHieOFoowcEMWzXxoIOb3BlbkNyeXN0YWw='), nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('YfEEwDiVMoOWJRVRnkNgMIuSfLtbVIGnAqJpcCLCuqbQNnPNuRknFMIR3JlZW4gQ3J5c3RhbA=='))
+		game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('GvdjnxXwDlFlQRcsnvlxTMeJZOdGirsSDWQJWEVPjDYjTozRNjozqBrUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('sOGjpXCYVLXpdvqUsSSBvFgELPAQyTXwsHWaRjRiIQIfDLKAxuTaKzsb3BlbkNyeXN0YWw='), YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('GQIQdBKRVmrmkLVxAoDQuuwVpJBcLMAoWybxkcfWBkJgvSpsgDFzCbsR3JlZW4gQ3J5c3RhbA=='))
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('TJxHgOIdGtsMiKUEmPClapARBAxKvMgRMoTVKJZnUeZDvVyyGhukypr5Yaw6Zyc5rC05pm277yINWvpkrvnn7PvvIk='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('frVnmXnNZTuIEBLobLguIXqcXgIWellinIAvPdwqPobVDFFUbbiZUxb5Yaw6Zyc5rC05pm277yINWvpkrvnn7PvvIk='),
 	Callback = function()
-		game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('uOiFynnoNzfgTOFwnEZiICACDWcLZZUVdTGskVPwlLTDWuqLybfHBONUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('IBICqfDywZSFlVARSMBIusqrapoTOXQlSlLSzynyDYpZNhjjKkSkZSqb3BlbkNyeXN0YWw='), nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ZmMBtygzsAJXIqCHJXXipiXEXGkCwaxabyFnMetoOqgDAgotIhgWSgQRnJvc3QgQ3J5c3RhbA=='))
+		game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('OAMEbyppYCSXzdCYrKFEkuTHRqqkuOPKNXRhRpGprPkWCiMbBdszGJTUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('CdFMLfLElSLlKEwBzAMnjAdtclNMmwzOTrjUcgTUoYKKZbkAxPnTqnib3BlbkNyeXN0YWw='), YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('xMTbeaAxhYjwnXyhobmiLfnwCOXFoOchjWbHkPpSRyNmyuqMDXutviWRnJvc3QgQ3J5c3RhbA=='))
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('gniBYFjkreMRzKqSUEWceLVOobpcLJHPdBVDYRUgmzeHwaLYSYeRCua56We6K+d5rC05pm277yIOGvpkrvnn7PvvIk='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('SvaCwtdbKUBRfXNmUcKZzUIJqyFHLfCAJqzetWbpMWijFFopXyLWkeA56We6K+d5rC05pm277yIOGvpkrvnn7PvvIk='),
 	Callback = function()
-		game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('jCfAkFbTHLxAtMPTFplArwEMHNLMOFKGTwHboqOnownDAsgnkxMtGQXUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('lPVjrFeKnQzPXgXpuOqgYFzheqQAmzPVWlKQEsKmCYhyyFLcxqwMiQTb3BlbkNyeXN0YWw='), nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('beMVAZBWWiWosDhhrAclZZvlSYtiHBjDQOxdvkQslmvceBjSUmpJLaaTXl0aGljYWwgQ3J5c3RhbA=='))
+		game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('MwgbcEsDSYXRfaYadHnHmqVQuyhNFtaKwkHVhCwmCEpgTVBeWdOBKEzUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('vFpzDnHsvBINFpebigkJFIbvKmWmaryVoJKONTGerDnbgZchKohcrEMb3BlbkNyeXN0YWw='), YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('iHBaUXgmfAcAuSpBDzYuvXCvcfDGrpyvSTpPsVmwFtJPZTschVWpKkNTXl0aGljYWwgQ3J5c3RhbA=='))
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('UugwKpnGJDmftXNQPKNdohvNrLnVqgAbfjDTSRdmXdGGgQsJVyqVFJK5Zyw54ux5rC05pm277yIMTVr6ZK755+z77yJ'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('lKGSrMiqTesgjzrNYVJMQVEVIzpkfOziNYtyIJhXDXqrJTjWxFvYPAO5Zyw54ux5rC05pm277yIMTVr6ZK755+z77yJ'),
 	Callback = function()
-		game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ggUoQqCdumbAyTWDwexpAVyQhfxTGuvRjXgDEielMvWfwPqAgmOwWFGUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('SbxZFcJLvtEBArAlSzYDQNFQFyWYuJddIwIDUeZigeknpBsggQfZIPSb3BlbkNyeXN0YWw='), nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qYOaJiqfIYPQOAMfcEZWIkCIOfihdkBWxISMVytFdIduZjqjsqAFyeWSW5mZXJubyBDcnlzdGFs'))
+		game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('XeflNTRBMAWfaMoEtDlELNXrvrvIURqkYunOxxuYzhsXmqLFCLFAFTrUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('DHxefeTyPmfCnYvqHpkQsYkjbZGHCJaxdMTIDkFVxbcFTMAJIutTHhVb3BlbkNyeXN0YWw='), YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ZrIbWVEexKWkVOKvkbykzCRGABHrgAnfYojnoXMtzombcJbRyZYZoQqSW5mZXJubyBDcnlzdGFs'))
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ULlxmhRZPznwNprsgdGKiodyUPsqjZNMKtywABScsnBmYlLqeJKYBAk5Lyg5aWH5rC05pm2Me+8iDMwMGvpkrvnn7PvvIk='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('IGOnctjKionccNJlygOiIJxkNgAgmWQLeqRcuvgTDETLtyoSXmTBMCT5Lyg5aWH5rC05pm2Me+8iDMwMGvpkrvnn7PvvIk='),
 	Callback = function()
-		game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('rkKEyWRhHnoHEEyysFpAZMzdlwKMzmTGOLlhCGZwIeRMNLwgqmbzAvCUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('bkpUAgXbBTRlthjzhvSdIFglbiLioDzfTFoijMDbOmhODztcbdaUMJbb3BlbkNyeXN0YWw='), nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('okOovHEXseWvRcvDXcXmchbxwujjrmqHfslgBppeWnTRZEeFxawPyPNTGVnZW5kcyBDcnlzdGFs'))
+		game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('PIrSvZJMrTnBKKrTycpJXUhJYOKhMGeRGeLmbKTdioJzZjXpwOfPXCnUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('JXVOfGkQltuLVMubWboSnZaoVJPFXNOqZCVGlGAvyamyBPCLwXUreZeb3BlbkNyeXN0YWw='), YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('lZpvnlEQxfPqBxfWButVNbOjEycsevnZSuTIIVmJTivdGHtAEYcjswDTGVnZW5kcyBDcnlzdGFs'))
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('oDMjdPbeyJxtcXCFcNodGePVEMwyQykoqpwxAmkwKepoFCbnnftoaDu5Lyg5aWH5rC05pm2Mu+8iDFt6ZK755+z77yJ'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('rBxEmUpMLkMGDjTytDWcbebXGXWgkbVMAYXSLaNgoqXHSMguvKDltew5Lyg5aWH5rC05pm2Mu+8iDFt6ZK755+z77yJ'),
 	Callback = function()
-		game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('YEXBVyKDJyLGphBnujzfwgvhJyULpdPPQoaaAqujFFlGXQlulhepdtSUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('KyBbbfxDuQyEmTtRkqTgDbkJCMLZVSOEzNmCNqlnXrCyXoNxtZDhuAGb3BlbkNyeXN0YWw='), nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('NIVavrDTqicIKbwZSVsEcRwplzYZEnZMLpITiTLMzWMPHeDUbQhGiQcTXVzY2xlIEVsaXRlIENyeXN0YWw='))
+		game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('RuZTuGRgcLAqEuSQzHGFLJrjWbIUhZosZvdBrCSvKJtGFvyhvQGCMSBUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('jrYruWVmIWiIgOVEQFzOuZPJpGbHtIufNCaXqBbUhWbtFVHMCfwRdclb3BlbkNyeXN0YWw='), YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('MfczjWVJygUBKtbNuPwhEGVGiTXRXWxTdeUOLuFYrHhXfrgjtEIunafTXVzY2xlIEVsaXRlIENyeXN0YWw='))
 	end    
 })
 
 Tab:TianJiaButton({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('kQAPzMtIvgrQYyovKrCVuvDaiQeVqoKjnxGsEUGAHkETMRmUTPXfKkg6IKM6IKJ5LmL546L5rC05pm277yIMS41bemSu+efs++8iQ=='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('LLzwPpyzQytglbGErSsvbbYMeHjkZaSWWTPnfHepmKqNXPEQHLXizSS6IKM6IKJ5LmL546L5rC05pm277yIMS41bemSu+efs++8iQ=='),
 	Callback = function()
-		game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('NPpZtMXdGkdIfRTbtvWgOcjZiNZUdBqvCXkPIiqVTlVjhyJExkINMUxUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ESdTzRhmQwTIyhVBcnwjLDXDjjxZHxosexUcdpWOtlisrvTWPBhjtogb3BlbkNyeXN0YWw='), nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('PYkfQdFasisqkMNANPgFYVCxmejhfFoiQKxiHAAwKxCsWRPLkFOfZJiR2FsYXh5IE9yYWNsZSBDcnlzdGFs'))
+		game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('AviuwTiWnWfzIrAqwVxZDUCFLKoyDbxOyqGhVwWyrLoRiiWEnmMsLkNUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.openCrystalRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('MJXAlIWeGVzKtmuUSlAKxiMEGJBoozUhXygNxqbYEgDTGZWJFDvbLkpb3BlbkNyeXN0YWw='), YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('iypsaaVDppCACBtHwikRgwDhHXwjFLrZxdoXtUikHmOWhHdvYGwaWIvR2FsYXh5IE9yYWNsZSBDcnlzdGFs'))
 	end    
 })
 
 local Tab = Window:CjLb({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('vfrkIAKUylOiQdcWDnbfHXLMCZCubIxuNGlXExZtYOLafdKYRoDcwya8J+SquW/q+mAn+WIt+mHjeeUn/Cfkqo='),
-	Icon = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('nKzfKtMaseLACUfimHmwWpOfbqjfnaAggYEGPGgfIKQyKGsRDPJUCKvcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('SlnEoQAfIDeLRPSaTeKXLUhWxnhipJHokPnbiXNuzaCBnEYgduzFekM8J+SquW/q+mAn+WIt+mHjeeUn/Cfkqo='),
+	Icon = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('mJXmWhUVaUroelCJyUIiVJmTuOlgRnrKbghqCBrteuOGlOvxKvwYEQBcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
 	PremiumOnly = false
 })
 
@@ -211,7 +211,7 @@ function qzcs()
 end
 
 Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('eCoDLcLaCoycaAEvPjGiXieXEzQQoTabulTDBXBwCUxOlpQgqFaFHzf6Ieq5Yqo5Lyg6YCB5Yiw6IKM6IKJ5LmL546L'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('FPPLujSMuzaYjRvEWJkgNBdTZrcunqLzmFuUoRNCipjTJNPYsntZowq6Ieq5Yqo5Lyg6YCB5Yiw6IKM6IKJ5LmL546L'),
 	Default = false,
 	Callback = function(Value)
 		_G.qzcs = Value
@@ -222,23 +222,23 @@ Tab:TianJiaToggle({
 yldll = false
 
 Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('TxeTasDUXcPKptowAGvrtrNWohDmLDwafWZrOXxIQINJNpJqtrJsCtS6Ieq5Yqo6ZS754K8'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('YdOrUFCLkdhWeybpnMxPNbBcNegEgHxNObittISKLCcwvaogBtKObwY6Ieq5Yqo6ZS754K8'),
 	Default = false,
 	Callback = function(Value)
 	yldll = Value
-		game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('DZwmySUtnlJzvxWTYHbKRjEjrYOmRbSrHPBlpbILpROCDLXCKOSUrwlUnVuU2VydmljZQ==')).Stepped:connect(
+		game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ekwYJEBfDvmYDNKRTAWXrXvLXNMZzkdzvzkYpROihvWhBYknSOiaAqEUnVuU2VydmljZQ==')).Stepped:connect(
 		function()
 			pcall(
 				function()
 					if yldll then
 					local args = {
-    [1] = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ZVvZsULrlTRkdkgPkwaDXovvdjiuKqtIzrOWPGpICGPmJOdzBDoRrNacmVw')
+    [1] = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('HAiAbLTWPUWVsnZBGwDwBemEohSvSVTTlvSLztoJNJgyvRGnsHUWaibcmVw')
 }
 
-game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('dOGTkhPZoHuviFtKkWpQJqogFDiDFgDLjJRKsvWaFlvsOQMXIZZHeOdUGxheWVycw==')).LocalPlayer.muscleEvent:FireServer(unpack(args))
+game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ouBXrXfyrAGpbSkBaSPXzRowACnMuuzenqUgXYtuvnovuoKPoctHmmzUGxheWVycw==')).LocalPlayer.muscleEvent:FireServer(unpack(args))
 						if yldll then
 							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
-								game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('KuNjhIOxoLmJsapwxuXdFPkVkDFUtZoOyuWPRbImniGWBramCWdxwnWUGxheWVycw==')).LocalPlayer.Backpack.Weight
+								game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('HJTYWXgdzsSCnMYjCohWOzgeVHVONtxytHgGdnDmFLiirXTLMVeCMFGUGxheWVycw==')).LocalPlayer.Backpack.Weight
 							)
 						end
 					end
@@ -255,17 +255,17 @@ function sd()
 	while _G.sd == true do
 	wait(3)
    local args = {
-    [1] = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('vqrAlvXytgzagMpXTqJOVIVZJSFyZTKXoYecBIufirhJrrEwmchgkycY2hhbmdlU2l6ZQ=='),
+    [1] = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('RFRjpIBmRLKzBxqvSikUxsEaWusdmhbZpdWaBtkyTgiicGxPZZCMnmZY2hhbmdlU2l6ZQ=='),
     [2] = 2
 }
 
-game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ZGxftnzYCLujsddvhKubLSdwNeeqLnzIhOHFevrbTLajhcHcXdDClKLUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.changeSpeedSizeRemote:InvokeServer(unpack(args))
+game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('MfFzaGuTeaXMVOsFNnUMfpeIOGPyYCCAQqvOXXouhrOUrRjcNLDBagdUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.changeSpeedSizeRemote:InvokeServer(unpack(args))
 
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('uljSrhOTkPyXmwvetkJeeymAPDwpkMylBvTqsVTPxhhGlSDajMNTzsE6Ieq5Yqo6K6+572u5aSn5bCP5Li6Mg=='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('hRsoqkOTnRhPxMLxgrphOHBGjnOeVjbEacFTCskudHaelFqDlHwqzDP6Ieq5Yqo6K6+572u5aSn5bCP5Li6Mg=='),
 	Default = false,
 	Callback = function(Value)
 		_G.sd = Value
@@ -274,8 +274,8 @@ Tab:TianJiaToggle({
 })
 
 local Tab = Window:CjLb({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('mwBeYnTTlNiEsCrxWTQQgbgrxLdISazqOxNNYiPObqAFCVQsWYkXWxo8J+UhOmHjeeUn+WKn+iDvfCflIQ='),
-	Icon = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('AFneTjaVqUtIMJlNsVvjcWJdHvJfgllGpksbZocpRHXWmsaOOzIvCsYcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('HNfzzBsDLhcjyhcMMUFNSuZUTHDPYUuSJjzLOJVKCwAVwJmZMKSMgNb8J+UhOmHjeeUn+WKn+iDvfCflIQ='),
+	Icon = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('mHSjlmTVQDxGDrQBKbukkpIzXVTcmuOrtweHjVAyujYaOMDGFYsaFTFcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
 	PremiumOnly = false
 })
 
@@ -284,12 +284,12 @@ _G.llzdcs = true
 function llzdcs()
 	while _G.llzdcs == true do
 	wait()
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ioBwMXvdEkmjgdscyvRKQCFcJkciwzYTLBeSZzSEWrlVJtIJknMtOrIUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('PeqOclStWeXWQXLKQegGZNVqjPnNGlWrnxWTnQLJAIgAOoWkoHsmiyJcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ZIETkPjigVizYkvtryTLgFhCziAPBVjaNtFpZcfdbZECuEZilxUefuaUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('yGeIWOGHpuniwPDUuKNiPUUcTYLbTSwdPyxrpEJPJTKmrnHjBsruRxzcmViaXJ0aFJlcXVlc3Q='))
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('uytjwwrozdMZdfgIrPpbkADFVnnNdhfWZfVvutzfdBCWXmLfhYregpb6Ieq5Yqo6YeN55SfKOS4jeaYr+WumuWItik='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('QSZqrQtserviRPjdzobzMGMFIkJOMEyvbUmIvhrVzcWBCcXHlsACzes6Ieq5Yqo6YeN55SfKOS4jeaYr+WumuWItik='),
 	Default = false,
 	Callback = function(Value)
 		_G.llzdcs = Value
@@ -298,8 +298,8 @@ Tab:TianJiaToggle({
 })
 
 local Tab = Window:CjLb({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('IkHxpCvFpJbKAHvNVGiPUDxzytdJIJanloUXZDWjKSfizuOGWsrJPwO8J+UhOe7v+efs+WktOWumuWItumHjeeUn/CflIQ='),
-	Icon = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('SSBbuKQZjwQimQntHcwsTCwhLbWxeNBsRwPhwUXyLOQnXmxNxIDOHcxcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('lXCabcgRvuWViqHCDBGluOZCaVzmlzNXFxjEHNoHNVpppWECiLJedPw8J+UhOe7v+efs+WktOWumuWItumHjeeUn/CflIQ='),
+	Icon = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ERyPkdClKMKBXOChZhbAOEQnYqtOeyoatifstvEAhfDDOhynUfRtWcvcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
 	PremiumOnly = false
 })
 
@@ -308,16 +308,16 @@ _G.c280 = true
 function c280()
 	while _G.c280 == true do
 	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('pfqcOzzoAqCCKlNGMaTudkDsnlCEDBOnxWBtEOHOXrpjpGzySLRRFvLUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 280 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('AkUeGGDIORdYmWXpdQberUDKlnZlZrlfTmxFOlRVrjoHjpsChCJssLS5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('RldVCsijfcAiJLWeVXGLXIIqhvLONgBtbFnJIiFasxAShHVTHEiHZkyUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 280 then
+    game.Players.LocalPlayer:Kick(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('NTLbRbwLfnJZkwovgDHrkTLaJoKelirHpeDCBVpnbzJngyjdZFelwKa5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
 else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('MNWdWJrDqMWiBHlGZLdLVomTMPQJWzgAQDAEOJmjCMJhSXCUGBHKXaiUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('oODnQonPmikNvQcDsAZvaxsOZvbVOuxjWgWFAYcYMxmSjKrmZFZDKJmcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('OxlbWBjILnzIUamLpnnKrndsExxVCNXmtrdVQzulncDNXSQgaIAzqGcUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('kVXItzOxsuxKfDiVouSkVPCcPTyQgCprtSnLupPuUCkJddBSUHzvERScmViaXJ0aFJlcXVlc3Q='))
 end			
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('LCMjFtfwHqruRkgqvXddvUDIbsLojWuVupfeZapIqewjtlNWzLxMoSw6YeN55Sf5YiwMjgw'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('KzXJEObcuWnVAyCeHjDqHMdGFWOhewqQGtZkNWoCJztiAisaoliMhMm6YeN55Sf5YiwMjgw'),
 	Default = false,
 	Callback = function(Value)
 		_G.c280 = Value
@@ -325,23 +325,23 @@ Tab:TianJiaToggle({
 	end    
 })
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ALKTCxYBGYBTRqVInozJccCCJHANpELwUYRwTKFujHgZqtjAcUEPFBi6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('PegNqxjqexJvVnQbSxvIPuAVndOgKSwtWffYYmWGhNibPCgWPhQsQTT6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('zJLssWtOyjrMMWKlqlJaDjJyeKAUrqDuUuaaUWQcZpzeOzwJTdbNetA6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('GvyErSzvhOFTcRAHrVPDCcmPEEddlUsAFYbxuWczgSnZaJIUkDTIPjH6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
 
 _G.c580 = true
 
 function c580()
 	while _G.c580 == true do
 	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ovFrENIEfrWzLbidibmPesCnCdOffIUfvQuJJMxIkusEcfFwRSsafHBUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 580 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('IhmOuEDLkhuQAyergfIYrficBSPlGqdqgAavKELaGgcUfrsMTrnIybT5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('WUeumzNwMcOYSwTrkgrSViJXzWPlZqURgQktiQHFZieoxvnNkvKiPDMUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 580 then
+    game.Players.LocalPlayer:Kick(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('UMUxrwGKPIDBFJvZxLDgFLiAzTNxxpRXgnwFInzWyooYffxKkekttuH5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
 else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('kGTzJnAhnRWmXNXCwbIAzwXyTYmTlFxRrJQeqOMxwvVwCBAFRvCsNhGUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ALuHOXHRtiAOEMHdMulvABsiBeaObEKLXSZzCuhgYpbRLimieMHRBMVcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('HQrpwDTilqLJmdbWIntvwcuZqWrMrBMQuSEqokFgncoykKfQLCNcjIPUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('MJIWQmYmpOXHgBhpfSQYPLxyNkhCbsxwIIXHKdNEQNuokliqskQzguTcmViaXJ0aFJlcXVlc3Q='))
 end			
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('soddjPugOKhgKqdATLzIucDIjprLFjrscGFXxButShDqjNbFbSLgjCa6YeN55Sf5YiwNTgw'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('iSoPGNdudQVwNYfjoGPDKVXBZEtiXlTpwYbLQAeXnAmtjVMliMncYym6YeN55Sf5YiwNTgw'),
 	Default = false,
 	Callback = function(Value)
 		_G.c580 = Value
@@ -349,23 +349,23 @@ Tab:TianJiaToggle({
 	end    
 })
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('vVFrRgvLcHspbzKmNIMURUmzaKHBMxTdYXrMvKCzIMrTIuBasrRaegm6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('vNvNTzkRxPHTPZIuHZEhLuRKkXwNqmNZFiUFnHIUNaMZsTCZIybOMMk6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('sGHqYJKGTWeGBzNYEPJHNTRowQxSDqygEwpQZsKtbmwgHlfKGGcQzsF6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('lvQHxNHkGYnsZSQrWeJxBtrEthyeTvFEWOqoIupMgpcVrAWCZCIIgXu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
 
 _G.c980 = true
 
 function c980()
 	while _G.c980 == true do
 	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ZIkAxYTUVSmptgpUyXaYTCcrWpurzYUQvWOnLBXndgYnXHuYGyFdfNLUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 980 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qsefQtFbMhCvNZusHSdFdeShaMMcaFuYpQUhZXvwZGXPeWDlKGStSLI5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('KNDzsngdSLBrneqNYcxiuGaLmUjpMztJigTCAtxRkstZOmHzpQLTeVQUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 980 then
+    game.Players.LocalPlayer:Kick(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('hqIHyiPywqFzfvBicuDFyoRIaiEPhZfsBGxwVLmYXcXfAxmwpTKKfCV5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
 else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('NWvsfPuNxQRvXaCUnkpOpwEjPHnKvZwFeSWJHKavoBxWGexwTHerYBxUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('VRrzLeBeoHhUZOnqmaPsQWAxUbiXriWLHfoOehwMmIJxGDgSEmsOgZUcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('VlYvZEBmvQhvgHYPGZgdBHxkbLiGSzZrijMYIAQrznIHSrKQrIupoIJUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('zOqVWLCEUJNftEIopZbIkDMItZfjvNSAgEMmMybsvkKOwNmSTKKCEvVcmViaXJ0aFJlcXVlc3Q='))
 end			
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('rKVISpvkGcABsRFBEikfycRJYknJNpeRcrtzAXgoXWpxJosEcdmPuKj6YeN55Sf5YiwOTgw'),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('VAOvtwgtnbUZotwrEjXDZcWQCCFBkaVaUVoujbDkGRlWuaaWTzUvEXk6YeN55Sf5YiwOTgw'),
 	Default = false,
 	Callback = function(Value)
 		_G.c980 = Value
@@ -373,23 +373,23 @@ Tab:TianJiaToggle({
 	end    
 })
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('GDKkndidPENswFMpcVzIiHkszSJAonRoxCsgqpHOiCRFkIhFSbhYEfR6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('vylDrXFcnsfkkumRBbxoSBiUsNAwqLjEyIZbtjitKmFJAlpGVeIdfyW6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('ugcFvFvKGtyctCfjrTNuatTOeAIZLZmBHHmxhjWmTcCgNXpwSFqBKAc6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('VuUOPrwdKDGcThTEcZAutFMJHHZShGWEBuDDLcErQuVusJDwdOxXaPY6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
 
 _G.c1480 = true
 
 function c1480()
 	while _G.c1480 == true do
 	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('xefwDCTkdOlHCSVmtzBSzaIjxHXbsDnvqreqbqHBrHyVoqmkNdeBhgnUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 1480 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('tqRfkylgkuWHfcUyDwQooqZcQEKddmMIWRiGYDDZfMfMrLiYHkBaFoi5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
+		if game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('OYBCdDqxYRMdqfXOpCdMeaCpvBrqcrVEgvrwUnzOLkxUtigJykULCriUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 1480 then
+    game.Players.LocalPlayer:Kick(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('rkOBrQPayagcrnvSNceOashQFaVdIYwnYjiRtCASBzopwCykHZOAHKU5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
 else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ocVhTmRBtwqxdQXoDyQvHMFCdQclbVuKrzTbCjNxXEBEPHwpvKpqfLsUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('cGDxExbpYviCujzvGLtNAcjnizQyUSFExtPFJnhpmXuGoBCxZieYkcmcmViaXJ0aFJlcXVlc3Q='))
+    game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('xCNSoInTCsRkidBiankIHzgODcdsBbNmsZNDIDDRcEayVragzZgMMdZUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('zpmuJazYjqpoRpgVWXbcTeZBuNkQrvUiLDAqcIxMcrNtSMdXNuwQfikcmViaXJ0aFJlcXVlc3Q='))
 end			
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('RWqffdCYxJGnbISmQaxpyjeBtqGbWtoetgImXBXAOZUOhAvSIXOmBAj6YeN55Sf5YiwMTQ4MA=='),
+	Name = YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('prcIkRQuzschBTpfANivkAQWhPgzEnIZoJKVXdroUwJvMIKGCjDyBYd6YeN55Sf5YiwMTQ4MA=='),
 	Default = false,
 	Callback = function(Value)
 		_G.c1480 = Value
@@ -397,244 +397,12 @@ Tab:TianJiaToggle({
 	end    
 })
 
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('uwaQyDlhmyWaOsrRdYxoYLgnnUhfBLTKoGDedCNsIWJVuiGvZICgKqJ6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ApRTuKWESxcuVXrrTCSbqWSfyWkEFkemqNCAfDwkvxGnwMFiMtWzcta6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
+Tab:TS(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('mHMSsgfExmnxytNuZizrrtsTPBxNgsrhwhvHXMdxkYsMBqqwlVFMsye6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('NnjQsNIhyJdurNfFeOEduTpzeaksnJxkqpoHEHOUSNlGqQoCOKPELZN6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
 
 _G.c2080 = true
 
 function c2080()
 	while _G.c2080 == true do
 	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qHHToqwIsneqcvbnjoOqbOLApjmcxkoSIxYNJrSvSEIbVhsnSxmZCgnUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 2080 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('JQZEUYLlPTMJlXyHKUxftOhPBMCUcVGDTuqvKuUVjQQwQdjdxHdFVIb5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('WeChqQEBnshyXveaOWrikfdmOJetQdsFAWiKpYbIrRLQAeLcvwYdFTuUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('reFUzeHdVRRImUgvLYELcVnXDZqsDuaXdagsJKGvWxzlXGbslOSSqgecmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('WoeQdHYHoipehXftfbSqbpqQmkTMBHBRDTxNFmYyJEznYcCCQGzoDaI6YeN55Sf5YiwMjA4MA=='),
-	Default = false,
-	Callback = function(Value)
-		_G.c2080 = Value
-		    c2080()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('OuPgQsWJbNWgbapuhJTKvePNuitCKURKNdKSSJIqMImKiDMjTtpPyjD6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('FzBhUOEmAzVmCSGcVwqXrlFmHBfclHfArvfsxbdxeVOnWFOeJVwCUsE6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
-
-_G.c2780 = true
-
-function c2780()
-	while _G.c2780 == true do
-	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('DcTIDsZfOcGrKchMWELXPkZZqsSHTsXVSXTkKdFohJeCGMwzByYjKgcUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 2780 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('COaLuMMMmXEnsXJVFmWyQchCmGRKyvbPEpgmvHtHaRPFzvkvSSicgZJ5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('jCppMoOhVHLawqYUZHVbspsXiSCTDZJSiPSSLYsgFCcgzBYJrUlSyVRUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('DcMKWXaciubEjvkDZhJhdVZOYQOqebHEUWYZTcARBparVzRsDUVMovYcmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('FXQxCpTRAZKXjjbVgtWLbfMLvPcbGKRIuAZusUxSpIWZMaWqCZqwJwJ6YeN55Sf5YiwMjc4MA=='),
-	Default = false,
-	Callback = function(Value)
-		_G.c2780 = Value
-		    c2780()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('phKofZELPbuEmOXPVwGQabifvdfFWdfNzCLDslqDRlLbLxlrhCedDhS6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('WzZeptGqSXVzNUJSVUrupvuvmqZTtLsoROMgtJIHGZpIgmRDrHYdIfW6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
-
-_G.c3580 = true
-
-function c3580()
-	while _G.c3580 == true do
-	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('rPScPrJbyIWzsucGInOwAAcOmGRkkhpOaCPhRCKODdghuOkTiGAsrfpUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 3580 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('oUempumYdmPfAXdPEKLItebGwMzekcCSQPlrbmnaNuUdTrNjwHLVHmj5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('TodLdQdBcuciGvRGIikGuSThuQVAqEgSitDUXcAAdEXzzZcUktkRHoRUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('EPDdqcbiNLoStqichIDxJJzQEmjLmeiZEVMnhJtvGEgMVfENXsnuMqScmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('UfBRVPKLphCOupCneSIxiJCIKefPCiZnWZxnZsrrNAomKGjDqPpBfVw6YeN55Sf5YiwMzU4MA=='),
-	Default = false,
-	Callback = function(Value)
-		_G.c3580 = Value
-		    c3580()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('hpHaYkEwkEDQjyKbIUGXHxcMjIKpUrZTRPtCqclztCfQLKDsEnBuged6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('NYzPNFIyldftuZplHBIarMNNchYszEHpsPnTsqeIIZFVQMXmuVqxFxX6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
-
-_G.c4480 = true
-
-function c4480()
-	while _G.c4480 == true do
-	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('jsNmdMAsuJAWTFkleljxvZxdCgLtNDTwbHkhFOhZGQqcOXejZLTIfRsUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 4480 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qfbNxWDpfNuYUiTFsIJBgkSXsjfTglEjeaowsZptTCfaMQWdIUIVivs5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('eAHTktiQkbMaTSvQHBzwPZOsnqMFOaSfWMIeXwfDVjBNUVbgXVUNtglUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('owQvjPleXdOOtkatTfuYoCnZMoJiMEPdYnplHlgZvHMEOGYMMYxCyaQcmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('LdevAJVGmvgDkAKLzkSIrAXhXmOrWZIzZvpJOjewudrjRRtRReXqLmT6YeN55Sf5YiwNDQ4MA=='),
-	Default = false,
-	Callback = function(Value)
-		_G.c4480 = Value
-		    c4480()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qsxMFYOxOeYtXQCRwsVhZfcWpCCMQwHsxWdAqWjOyNaLbUXgZOPHvCE6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('fzRippyCGviwYeXdLthkbxjEzNLemQXnhYDgHQTjJAFczvrdQrJOSWA6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
-
-_G.c5480 = true
-
-function c5480()
-	while _G.c5480 == true do
-	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('gZREHWsaZRiuJOxyfxlNKPwWNXoExZYSmXBDsSdsqugWIuXxwMPoLNoUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 5480 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('gbKnDGwtWOKFGYqpXFptEClkLugMJmPdKVWgdYHgXmbyXVfpdJUnqpY5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('lXsZlNekVhFgrCSuextAmjlRTwcGJcPplXEkleHzbbJtwJLkeNYlUTqUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('cHMAeLtfdUQMGglTwBcHPupfhsoYqDGiaUFUkVAASKBQDBOUIMGDgZWcmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('cjhPgUByOKmwXpmnMuSCEGWUAdVavkynyVIsgFYPCIhhpHeaclEgXFx6YeN55Sf5YiwNTQ4MA=='),
-	Default = false,
-	Callback = function(Value)
-		_G.c5480 = Value
-		    c5480()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('fHNVqggPpsbxIKiIAyDOcafDqaXtvMepTQAlXHCakupvktJUlsfeaax6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('DliXYUbepwvNJinXEwPlMyjYVKrDhPlJWfknumLHQDdlwcxEBXiudbp6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
-
-_G.c6580 = true
-
-function c6580()
-	while _G.c6580 == true do
-	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('tUtqVGpPehHgvjxDXmtBKyLRZLvnJTKxsTUWSOEemSKGbQkjfGArMTEUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 6580 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('hEApwkGTNECplHlGrawfTWRUEsnRRbcMLzZyqrKSuVXhjBRuMbtTNkF5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('uFbptspRZiYujsWGhkFOjtCokHMTAKBphCRLqEWjSAaVEqTvqVGDsIWUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('TbqyzRcdatXuSAIbZEqyZPiDDbbWNbfNrMmHRycxcOSOgQZGKRCWIzqcmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('rtiXnEZvhWPbZDgUOhZTgWMnfBzCNCGokDjrjmUPqnOtJzVqMNecySc6YeN55Sf5YiwNjU4MA=='),
-	Default = false,
-	Callback = function(Value)
-		_G.c6580 = Value
-		    c6580()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('AekELZTEgoeasZNYpFdkQWgZSYdrVxAmBhUEUrWeNpRqOjDGthHWcfG6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('bGqdHKFuZWjmejLkyUhJSPollnecDdfBZiNCVDdKeMCdaWZGJtDszKm6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
-
-_G.c7780 = true
-
-function c7780()
-	while _G.c7780 == true do
-	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ruGMdyIAbbHBxOpIGLuLjEkRMmZbldijFlqjzJVBcmcPWOwUrSuEmVEUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 7780 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('aDYnbEGcXxrGFrJkZywBRMXyImtqcAkyzaZCYCagFhhHgoGAzNMVwYa5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('CKTdelbjmeHIdhdEbbBWygLVYpoLSmHsnthcrQEeHJyVLbKOrrAPytTUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('NYLNTQLyPUyTbyjqKXsDzzflLXDfuUFLJJfdYNkLnPTfEAaCljcvNtGcmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('HmTJvWQBKyJiKKJepaLDUFZEDXgwgxCzmdgVgocEdGVQGTcqqbxWQZw6YeN55Sf5YiwNzc4MA=='),
-	Default = false,
-	Callback = function(Value)
-		_G.c7780 = Value
-		    c7780()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('RXTIifoxVbGwQHRyatnYahpNpIPpoGsdWxjGPngUpAuKTUBjttRZWrk6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('tJiWhqDbuMiRoikkmTAwJFVfzFHFSJFKgWWXWOBCcTDNWwNphRmCZTc6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
-
-_G.c9080 = true
-
-function c9080()
-	while _G.c9080 == true do
-	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('ykPmJtkRbGOBZicSVKsilabhDYhLZVBRelWWUuuivCGvQgVqNzLyyLCUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 9080 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('mHgRiNcddNKAKoBlIKyFlXFMsNgkmtOIZnSHczURyyOYAbEadpTOepD5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('pAjQHwuDhQRlAIBgQHYqrDyBvLbxOreSfoPahlbWBJCFzKTeHTPhAyBUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('FAPdkPLxHpaEhbWZIawJqpzRiCqRsTuMCsKADynKqPTleDEgpXdSyoHcmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('xSCNXfStNxquKIeSowktMRevjhjmIPcjhAiUQBospigWCCPbywvejsN6YeN55Sf5YiwOTA4MA=='),
-	Default = false,
-	Callback = function(Value)
-		_G.c9080 = Value
-		    c9080()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('XtfHnefoyLxzIAbBMWxsAQvjPybDhNYoKlPKBBLfSNrJqNondiZVXFS6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('qWyhPFhxOtKYkYisQgiiAZoFMVXvgifOXvPGVRWegsstIunPEYZlJmw6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
-
-_G.c10480 = true
-
-function c10480()
-	while _G.c10480 == true do
-	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('seSxMizOhCesOTFuOBhOjuRKACFjoOCsGFNXCpahjKhVmSSlQtzsvKTUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 10480 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('RiDwbjSNbmaNfhHoWNSYtlaikOKyIJNsaciQHGqDRSajHnIrlXOlEqt5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('zdKRClQzaNltJTdnWMJbpZHrFGtrFHbGDNqzqsdpuEdncVHzidyJjSJUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('jMgRHEyQazEjdQHIlDvANZpQNaLJcXHJFokWXJDKoRdQMHdZkFjVDQdcmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('dBIBxZStqGdDxRVrafsTQtZQuBubcgnWdSqIRyMTyRPstaAJTLTDJFg6YeN55Sf5YiwMTA0ODA='),
-	Default = false,
-	Callback = function(Value)
-		_G.c10480 = Value
-		    c10480()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('lKsLDwfXzbYvBmaaNkmhqDPAHbaFRHyPckHElrXAXZDkLTwoHkLaeMw6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('YlBqhKwTVNqSOuGeCTjyFcevIHUpNaKhtbBkXVJyVsXkIaBCSUxFHva6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6ZcbumYsuivr+inplxu6Ziy6K+v6KemXG7pmLLor6/op6Zcbg=='))
-
-_G.c11980 = true
-
-function c11980()
-	while _G.c11980 == true do
-	wait()
-		if game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('UMoHOOwTOMqWCzCEWxCkgxmceDUgKRwgVTLNMYKqjQnuDCusiJCtNSHUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 11980 then
-    game.Players.LocalPlayer:Kick(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('KtPYgcTCyqcPlkEsOnFrhVOrFgbLWMWyubivUTwvrPIZucIHQFDRlFu5bey6Ieq5Yqo6YeN55Sf5Yiw5L2g5oOz6YeN55Sf5Yiw55qE5qyh5pWw77yM5bey6Ieq5Yqo5Li65L2g6Lii5Ye6'))
-else
-    game:GetService(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('SXOcBidmfESbwVPYtQHMBNnUVmYhTpMcuNEDJRwVXwIwxBSOBlnTHOzUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.rebirthRemote:InvokeServer(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('VCkneorHpIWtnjGtsdbDYHqmhNvEnMyACHCgMvSHIywrEJsLkQYkZbxcmViaXJ0aFJlcXVlc3Q='))
-end			
-	end
-end
-
-Tab:TianJiaToggle({
-	Name = nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('UpreRHabmFbclEhhyNJevRLtzbgjWTRhwQcIvIDNnAskRztfipLKiie6YeN55Sf5YiwMTE5ODA='),
-	Default = false,
-	Callback = function(Value)
-		_G.c11980 = Value
-		    c11980()
-	end    
-})
-
-Tab:TS(nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('tFNckpdsGuRwOAfyxWieUEMXOOUUudLMvuQKoeHWoCEEfaCMIgbzVZC6Ziy6K+v6Kem77yM6K+35Zyo6L+Z6YeM5ouW5Yqo'),nEtoNCODXlGRNdayBcvYEIzkWGtPyVrNqpeIrHNKxUBVSbUMUOzsOkvFQHutSSFbtB('WmDsjZynR
+		if game:GetService(YDiWQHnzhxVWCNHlZkQntBsXctGOzKtRKBaRuWdDGQYyhevBarUtkTwKf('XUPLMcFFSKwiSHIhrnqOHrzKAXSewOMrepTqfKqQntVuHuxGbxFDUDpUGxheWVycw==')).LocalPlayer.leaderstats.Rebirths.Value >= 2080 then
+    game.Players.LocalPla
