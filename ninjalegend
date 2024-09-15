@@ -1,5 +1,5 @@
 local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+function hWDfYkUGlyOih(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
 
 data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
 
@@ -7,20 +7,20 @@ data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) i
  
 
 
-local OrionLib = loadstring(game:HttpGet((tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('GeoxwhOTHIUmrAREraePSiDyfTeDUJXhBFXzuCSpOQCwwscqwJYIZMtaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS93YW5nemhhbi9tYWluL3hpYmE='))))()
-local Window = OrionLib:CH({Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('mahMdeUBxrSaRugJAubJbpGDaFFyxJngnAejRDMbjwSjVxwpDKvkDDL5a6J4oCi5b+N6ICF5Lyg5aWH'), HidePremium = false, SaveConfig = true, ConfigFolder = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('JaRZHTWxjRAFLtNntOpFuzjkmmAjmhFPkuLQJEkVIBdcWqBCiajhKIBT3Jpb25UZXN0')})
+local OrionLib = loadstring(game:HttpGet((hWDfYkUGlyOih('cMpwMhbtDfjoOHEwfSvokHepyLNjSLbkyAPPReBsiwXByIdJUrRtpyuaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS93YW5nemhhbi9tYWluL3hpYmE='))))()
+local Window = OrionLib:CH({Name = hWDfYkUGlyOih('fokfmfQAntATdmDwJroEMdlwWklNdHIuPppNaoHpfMpupdGkVocjsNG5a6J4oCi5b+N6ICF5Lyg5aWH'), HidePremium = false, SaveConfig = true, ConfigFolder = hWDfYkUGlyOih('daEEYZiQjxfFsBNAaPXacCSaPbzLPKEwOltkgwrbdiEebpwOqINXUGVT3Jpb25UZXN0')})
 
-local ScreenGui = Instance.new(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('YTvRwTlexVwTQxfFqYTaunUyEDzKvuFPYmmGLalDwaeySLJIVAKhroZU2NyZWVuR3Vp'))
-local frame = Instance.new(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ygWGRtsAWVIRhKeIqGvVnhwrwVlBDnOnqXAKgQuyqMCFzuhrWvCPIpuRnJhbWU='))
-local LBLG = Instance.new(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('uXPfdFuOLSeRkAtyiCFLWXinVNJzATWXEncslqZRwGFvOluJCsRjuKaU2NyZWVuR3Vp'), getParent)
-local LBL = Instance.new(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('pakXFdvCavCkaGXoQcfaCkfVCEZxHUXLeqWOCyOcBcagpityfVCPvgzVGV4dExhYmVs'), getParent)
+local ScreenGui = Instance.new(hWDfYkUGlyOih('WeWZbDURCtVcJoVUTXEDpfjoIYazNSCHoEiwZBcUBnKbIXIbrDlIXyiU2NyZWVuR3Vp'))
+local frame = Instance.new(hWDfYkUGlyOih('LdVJghPHuscHoglMSsTqYfQuOYuBXeoCHfkAyGQIailYRXQvDzJFoyoRnJhbWU='))
+local LBLG = Instance.new(hWDfYkUGlyOih('UGBrGXCVmmpxlNjYcSOEWtTefKzFqgxOUFMqTuPTNLSguZDuzArfKbfU2NyZWVuR3Vp'), getParent)
+local LBL = Instance.new(hWDfYkUGlyOih('IjSIZtRIhvMGQJHwOCEppLTNFHzpMmqLnfbcsgdLgETFIAvpatRbziiVGV4dExhYmVs'), getParent)
 local player = game.Players.LocalPlayer
 
-LBLG.Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('WGtsdctcRxoRxVeOIMdTTDavegOVzjBvNjRgiJmPZligKXcRaLYyeeKTEJMRw==')
+LBLG.Name = hWDfYkUGlyOih('AzSfnzGjTWuvTkhYHEmZQiqRkwTkNlBVSQgofrzjuoDIZoUlEzPSYuFTEJMRw==')
 LBLG.Parent = game.CoreGui
 LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 LBLG.Enabled = true
-LBL.Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('nuWBnDIbwncHhnXKMCCBTWpTnNydwDoecmbTsUchEFcBLwvjfvDxtYgTEJM')
+LBL.Name = hWDfYkUGlyOih('bxvMHCuEyrGNVoVMvNkhPdkSpEcNUYndgXYzYqPaIxxSmIfAyGGWdnJTEJM')
 LBL.Parent = LBLG
 LBL.BackgroundColor3 = Color3.new(1, 1, 1)
 LBL.BackgroundTransparency = 1
@@ -28,7 +28,7 @@ LBL.BorderColor3 = Color3.new(0, 0, 0)
 LBL.Position = UDim2.new(0.75,0,0.010,0)
 LBL.Size = UDim2.new(0, 133, 0, 30)
 LBL.Font = Enum.Font.GothamSemibold
-LBL.Text = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('OdghMHqhxUqQnuiotWHgLPElQlvrxentFGBNhVkzedfmyuTKLhFcsynVGV4dExhYmVs')
+LBL.Text = hWDfYkUGlyOih('ZvIYNQRQhRATPAwTvgDbItJQHiUBFduAphBrWDXHjZZveoKinhUfKSWVGV4dExhYmVs')
 LBL.TextColor3 = Color3.new(1, 1, 1)
 LBL.TextScaled = true
 LBL.TextSize = 25
@@ -37,7 +37,7 @@ LBL.Visible = true
 LBL.Draggable = true
 
 local FpsLabel = LBL
-local Heartbeat = game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('WHOZqalNZDvSawtTgcdRnJzOEaHzIzklZEXUwvwXPuszGObGiHMEriKUnVuU2VydmljZQ==')).Heartbeat
+local Heartbeat = game:GetService(hWDfYkUGlyOih('rGVpYMhlUnLnfbzfFeGPiuWsXWhbVGtkTsSsxcYtwTtZBYLfFJSngNfUnVuU2VydmljZQ==')).Heartbeat
 local LastIteration, Start
 local FrameUpdateTable = { }
 local function HeartbeatUpdate()
@@ -48,23 +48,23 @@ local function HeartbeatUpdate()
 	FrameUpdateTable[1] = LastIteration
 	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
 	CurrentFPS = CurrentFPS - CurrentFPS % 1
-	FpsLabel.Text = (tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('hiAbgJPcjmgnElsFKRmjfLZxgwEyfnSLDowiiTEjzXpMqPWmEQDrLpQ8J+HqPCfh7PljJfkuqzml7bpl7Q6')..os.date(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bqJfgvmrNWjQkBimRraaSXEaYsczsElRENRfgRSjidSDlnfSThRRnbJJUg='))..tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('CHUZLaDjdUFFASbJwcxYmzbsGsCYEdcsxcqSBkdNzYvBxkgCplaEPsb5pe2')..os.date(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('TirDJPTChPrGYTYmTiltMbsHqxDQfgvqttfJMCwRMADqFOCUTxaPChPJU0='))..tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('GXbIbUDFAHaWQrcCTaryXoziepCgOiIODWlvgFCNSFnJHWuFvxLcrzr5YiG')..os.date(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('YsWpgqTokclgUBZeoZKGmBqpgQdOGRuFCcnRCyWMIzBvrCTsGWAEflfJVM=')))..tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('WrXWIEBkwDbdLmAVdZwbxspGFxSdqPAggNLpjfwicGLwZNXQcMxnIsc56eS')
+	FpsLabel.Text = (hWDfYkUGlyOih('kGLJNKItfJuAfVQoCfpDwwiyejKAfBGBFRgmlAjIIMJcuUITyEcnTci8J+HqPCfh7PljJfkuqzml7bpl7Q6')..os.date(hWDfYkUGlyOih('PeIZkwpyVemNhibsLmsNpMVxXlpbIyLdVqlSYPkwfUpCpBbjMmqiUnYJUg='))..hWDfYkUGlyOih('MRlkxyNaxvgLzVaNPglKLxLnOqBrnlTeIjOIsvWtDwYRsPLSaToTGwZ5pe2')..os.date(hWDfYkUGlyOih('NHFLXIBhjujvTTphcKFLwvHHghOTQeBQrPwzBsvZwzvKBXavTkKFEMnJU0='))..hWDfYkUGlyOih('utwrwMAwgVItTXkgLABRgNiRgzKeFBpOVNPbMiyVdSFlsmdOdAXvfAp5YiG')..os.date(hWDfYkUGlyOih('MVfHCAdjeeiQWkhbaOSniOcYXQzkjjRRnUtGyYfAAUvcLDiUQSQyriEJVM=')))..hWDfYkUGlyOih('vdIZniHLiByglEbHrplQlcYHNuEDEYNYrzCjDuTSbBeanTeRunkMKmG56eS')
 end
 Start = tick()
 Heartbeat:Connect(HeartbeatUpdate)
 
-local ScreenGui = Instance.new(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('vKiNzbxfcupPyMkyhpRhLHsGeYQveVoWrQWZVpxnFizQYIQhJvYFuggU2NyZWVuR3Vp'))
-local FpsLabel = Instance.new(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('dMRCXyVPhQVtZFlPObddSCGCwbmbAKPAxCpdRazJSOhVvKkfjZfAMBbVGV4dExhYmVs'))
+local ScreenGui = Instance.new(hWDfYkUGlyOih('FVmfTbMFrqFXLbGIROvUIAWHUHLBTOXkhztaNNUntTRvtirjuOSkdKiU2NyZWVuR3Vp'))
+local FpsLabel = Instance.new(hWDfYkUGlyOih('MuIbwsTZChYSbrOpoNkOfhhKEIVgnbumxfWTjyMMeiLGqoOgTeKcvUjVGV4dExhYmVs'))
 
-ScreenGui.Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('LXPBRcvNkwreuDgWJlztWUHkXOiOnvCjUNqrFQPsEJutSzJSMTbmsknRlBTR3Vp')
+ScreenGui.Name = hWDfYkUGlyOih('xhuQcLxhjHnxDKEyPwgdKQQahXozXFwDnAFvaIIlmokwAUmHDRsamsxRlBTR3Vp')
 ScreenGui.ResetOnSpawn = false
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-FpsLabel.Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('OJomLKkQvpBOsEXPLWtihJukDKLehvWHKOzjLVyRdUMlMbcIqcPWwlVRlBTTGFiZWw=')
+FpsLabel.Name = hWDfYkUGlyOih('JuvckSYlKXxfIZcMCAqDpnkOdWfXwRfVZosoxiEqVykeCLnOpIwpLrsRlBTTGFiZWw=')
 FpsLabel.Size = UDim2.new(0, 100, 0, 50)
 FpsLabel.Position = UDim2.new(0.75,20,0.075,20)
 FpsLabel.BackgroundTransparency = 1
 FpsLabel.Font = Enum.Font.SourceSansBold
-FpsLabel.Text = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bzunneQTCFlAVkanUeZerQiycJbAaMKRnYRdBlNrfGWiarJzGDrLydFRlBTOiAw')
+FpsLabel.Text = hWDfYkUGlyOih('MncqkCETYixDqQvHICNWbCYcpXbUryTBZvsjjmdRoRnXPSRmAdTKIvORlBTOiAw')
 FpsLabel.TextSize = 25
 FpsLabel.TextColor3 = Color3.fromRGB(0, 0, 255) 
 FpsLabel.Parent = ScreenGui
@@ -74,23 +74,23 @@ local frameCounter = 0
 function updateFpsLabel()
     frameCounter = frameCounter + 1
     if frameCounter >= 20 then -- 20帧
-        local fps = math.floor(1 / game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('fyyleFmdNOvkAHIdvAGOlyXgaDgGhicVhiHeZAfZzBaibCIbsZNWwrJUnVuU2VydmljZQ==')).RenderStepped:Wait())
-        FpsLabel.Text = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('OOHCvZMKHczBGKijBirVolKLmwITcYWfEDOCgyiFMJexCuxSGUOZrXDRlBTOiA=') .. fps
+        local fps = math.floor(1 / game:GetService(hWDfYkUGlyOih('gGETEReMTBRmLCWwHitgYNSpbzTFpaasmKMrdSWRicknLFuwWTuFKBzUnVuU2VydmljZQ==')).RenderStepped:Wait())
+        FpsLabel.Text = hWDfYkUGlyOih('YjScKhDHGLHUkZeeNumMnrZXapMBFSEvLtqzcmXSpHzhVypNVTQTZVeRlBTOiA=') .. fps
         frameCounter = 0
     end
 end
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NUyHTzzPrYOqqmJuDUOKObGNFWSrHWgstTauAJeIeMHiDyBYITsiHChUnVuU2VydmljZQ==')).RenderStepped:Connect(updateFpsLabel)
+game:GetService(hWDfYkUGlyOih('jCXuDHSZJHhLRPUIFrtnKGeofdytAFEFvytYQVMucyphDjaeGjpmLPkUnVuU2VydmljZQ==')).RenderStepped:Connect(updateFpsLabel)
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('HJwyOiUWSVwfNSubsGWQsmgqHSYENCJVbaWHEYbzzHLYYNHHHgmuoFUUGxheWVyR3Vp'))
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild(hWDfYkUGlyOih('wPCEclklWSUIONUuizfBOdvapykXRqykACeYcndjrkjkFIMoHDLYYZSUGxheWVyR3Vp'))
 
 _G.autose = true
 
 function autose()
 	while _G.autose == true do
-if game.Players.LocalPlayer.Character:WaitForChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('qedhpmlwqYzKLGqwVAHBGaYGyYdtFBbxOirylJrNFbVVBDVwQiYQLTRSHVtYW5vaWRSb290UGFydA==')) then
-game.workspace.sellAreaCircles[tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ZsgNNLuLdwoaGgAolEbUlwGzlMsMGhWkybWdazOELOIkqauATVLmDNec2VsbEFyZWFDaXJjbGU3')].circleInner.CFrame = game.Players.LocalPlayer.Character:WaitForChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('wXaQivTUOaNFryZlldqGMNPzBRgmlEsulNRPvresjyHugQreoZcBYXDSHVtYW5vaWRSb290UGFydA==')).CFrame
+if game.Players.LocalPlayer.Character:WaitForChild(hWDfYkUGlyOih('qfqjiKUYHFvXYQnBCdtCTkoqLHeLhfVhPnfPwYzbQhUecyvAKsVkxJbSHVtYW5vaWRSb290UGFydA==')) then
+game.workspace.sellAreaCircles[hWDfYkUGlyOih('haFzvxWKoJPrmssiPENMRbkCyArKwiFsHrNEhuwrRYGPjBlvOclAqYzc2VsbEFyZWFDaXJjbGU3')].circleInner.CFrame = game.Players.LocalPlayer.Character:WaitForChild(hWDfYkUGlyOih('PydiXZlBzKLTGWTMzTehWIeQLsnkIuZgyAjfKjntpUnEDmVWbBEbEyISHVtYW5vaWRSb290UGFydA==')).CFrame
 wait(0.1)
-game.workspace.sellAreaCircles[tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('GfxlbLNvdmEBFghEzpjytWOjTjvSKQlnbzlCncwCMJZZFbswWuXNBDlc2VsbEFyZWFDaXJjbGU3')].circleInner.CFrame = game.Workspace.Part.CFrame
+game.workspace.sellAreaCircles[hWDfYkUGlyOih('ZvpusCsRitCEClPycoaEanJbHTIrDElXiZqMPDDmeNcbFlbGwWEjhRlc2VsbEFyZWFDaXJjbGU3')].circleInner.CFrame = game.Workspace.Part.CFrame
 end
 	end
 end
@@ -101,7 +101,7 @@ function chi()
 	while _G.chi == true do
 	wait()
 for i,v in pairs(game.Workspace.spawnedCoins.Valley:GetChildren()) do
-if v.Name == tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('qYurLkAySXfimhjBfZtTJRcuqSjPKTTpmDrRTAQNCUxHKanFbRQLwYjQmx1ZSBDaGkgQ3JhdGU=') then 
+if v.Name == hWDfYkUGlyOih('wYmiuoYoasNgZTruJKQVOuvwnljUjlFoZhldmhbgUfPOQvOZEkorFGeQmx1ZSBDaGkgQ3JhdGU=') then 
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
 wait(.16)
 end
@@ -110,77 +110,77 @@ end
 end
 
 local Tab = Window:CjLb({
-        Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('PEMCMYncSZbhZNuewtOAocLOKmHbMjYpbkoRabLVndUOIghwJqQwzkn5YWs5ZGK4oCi6ZSA5q+BVUk='),
-        Icon = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('XCieEzDVkUsrixTonaPAokKbyzxHZRlmskbTZMTKQBUETRoyzeBjKItcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
+        Name = hWDfYkUGlyOih('gpAXOimaHdnGIgPqCLEtRpRQkbgvPxMrRhEXhZbEnDfiuilQUOwTHIe5YWs5ZGK4oCi6ZSA5q+BVUk='),
+        Icon = hWDfYkUGlyOih('zuKDXaPASbevLnaCMheCEfdLHvvclvtzpTyKRfnskEyVvvRELubHGAmcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
         PremiumOnly = false
 })
-Tab:Lab(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NOQKVfbkwnQUWjEXcEKYbKWLTspeRKCxNaIojwwhBGtkRSpcokgvUbJ6ISa5pys5rC45LmF5YWN6LS577yM6K+35Yu/55u45L+h5YCS5Y2W77yM5pyJ5pe25YCZ6YOo5YiG5oyJ6ZKu5oiW5Yu+6YCJ5qGG5Y+v6IO95oyJ5LiN5Yiw77yM5ruR5Yqo5LiA5LiL5Y2z5Y+v'))
+Tab:Lab(hWDfYkUGlyOih('NbNZFzxholAzPDldzLQPvierQHZydcqFdDkGFuBSACBPEGSiaqiqnfU6ISa5pys5rC45LmF5YWN6LS577yM6K+35Yu/55u45L+h5YCS5Y2W77yM5pyJ5pe25YCZ6YOo5YiG5oyJ6ZKu5oiW5Yu+6YCJ5qGG5Y+v6IO95oyJ5LiN5Yiw77yM5ruR5Yqo5LiA5LiL5Y2z5Y+v'))
 Tab:TianJiaButton({
-        Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('VldLllZACPrdPdoHmTYTrIsERMGWYQMuOXBLfiMdeCkkTnxsCROzTNr5aSN5Yi25L2c6ICFUVHlj7fwn5Cn'),
+        Name = hWDfYkUGlyOih('AaXgaGUpnBJJJcFTEvKcKkRMqmeByQyCHpGXjMkAqIMekLInIrEFCAq5aSN5Yi25L2c6ICFUVHlj7fwn5Cn'),
         Callback = function()
-        setclipboard(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('nAzwbVedpbdfmcjQADmSJCYKLNkHrJhQHTQuedjILmVMpMXTKldPyZmMjEzNDcwMjQzOA=='))
+        setclipboard(hWDfYkUGlyOih('WnnrMCOGAcQNoIuFlbMQbZhpenMFfNgIAXKqGcYHkVbGbyZwlaYNLRPMjEzNDcwMjQzOA=='))
           end    
 })
 Tab:TianJiaButton({
-        Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('qRtUBFEcqEntFhwqWIZUwBuAMbkBVzYdUYZOLOQQKKdZgBmrSGJoEVT6ZSA5q+BdWk='),
+        Name = hWDfYkUGlyOih('wcQgpFsHPdHWkoMAjXOCngXJWpchIXJyIUFRnfMHxGaQLqaoqihMXEV6ZSA5q+BdWk='),
         Callback = function()
         OrionLib:Destroy()
           end    
 })
 local Tab = Window:CjLb({
-        Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('aJQXGVYVtPYqdftRgQQufgBKkynBushRSIkCCUbItWleqkxkWqmwqjX4pqq77iP5p2C6aG54pqq77iP'),
-        Icon = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('uvKQVXWkiATEkjUQrJDPsNQaBkxXmJtbEuynGxgDRkLPwWaGsKnZPfLcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
+        Name = hWDfYkUGlyOih('fTouODcnJcjavkEtfArCtblQSTlvfasieGxtGfVemVuoxZcZpkJHXsd4pqq77iP5p2C6aG54pqq77iP'),
+        Icon = hWDfYkUGlyOih('wEIhGVQXsvPuaCLMWguwAOjvrNvVfkFvAvoRSPmaeNKJJauVYntQgqCcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
         PremiumOnly = false
 })
 Tab:TianJiaButton({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('MfVZzrQMysqdIQaYgOYjGyCKQNPrqMQwOCRkfTVtBTqJtPlwhzGuBeo6Ieq5Yqo5ruh5YWD57Sg'),
+	Name = hWDfYkUGlyOih('jGsQhfoyQfLHVzuALcTpnWsgfJWcQhaADAemakfroWcITPFizVPWESo6Ieq5Yqo5ruh5YWD57Sg'),
 	Callback = function()
      local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('REPEJjNdLbDuxQREIZomJqHryfVmxjCLQIhyuiCcIIWEeSDWPLPosQKSW5mZXJubw==')
+    [1] = hWDfYkUGlyOih('UjhbGiAVKVZNizjRJFbWWgjJPeRnHSBcNCyLnlTxzeIutetvoXoHOzGSW5mZXJubw==')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('UTWnaFNdaGpiizuByGMPSMkwddkuQAxSsXcPRVGLFMFoLFjkQCNUDciUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
+game:GetService(hWDfYkUGlyOih('YQtPLlFmbefaZqpLIuFjonhCmArrolJuNZWRcTNlItiBnUBTqknSWCFUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
 local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('xksvCpmOAxxtuNymQAdGxbcWJhksqmujcaXmmNRMPhSNiaTgNsmrwoZRnJvc3Q=')
+    [1] = hWDfYkUGlyOih('ZuAgRwJaUUJhEXkNamRPHXbEaMLuohdIZfbbSAnJnFJtkpuGlZBlnQtRnJvc3Q=')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('MZnnDXNVHzIKVVDcwtqpqtdSDxOwiguflUuDRZssFGBOFgBCDiGBzmoUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
+game:GetService(hWDfYkUGlyOih('ZIqYUNBAVLyoTKJbWzFTfiRgzmPrXxETlDPWJyFgKhmhCuAqeGRkkNnUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
 local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('kYtFrFrDyTorqdzUvlCLKRBJSDacmtEKFCHBcXfOfimNTUJevTXbdeaRWxlY3RyYWwgQ2hhb3M=')
+    [1] = hWDfYkUGlyOih('CxtmsikGYMhwxwzCXszZQEohIBOIoOjHptNQRUGDUSueqnnCMjORAaTRWxlY3RyYWwgQ2hhb3M=')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('cCdsAvMEQsXvWotPRPhCuiTISUUYebtfoCYsFoewxYzNYtNDOsQqvBkUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
+game:GetService(hWDfYkUGlyOih('VQAZWeEygnFBeZBprctLVmyVVeOtYFKSMVXeYTmxBbvoQTYvbfoRCENUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
 local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('xtgfQHuUYfBlBvNMFvyfTpnfWVjLTSVCcoZTMHbLKhpJMeNoizNqgADTGlnaHRuaW5n')
+    [1] = hWDfYkUGlyOih('NWXLyRSmeCaMzsWSqniLAvweQKShTTmRTyIekTVaMXnqYkPgZcOHdGgTGlnaHRuaW5n')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('eedhBfzlmxOoERvpcJAmlmGqfdXCsQWoLFdzuNrZVJGXsaFrymsrXNUUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
+game:GetService(hWDfYkUGlyOih('JyKFUyrkrMANqpXglqLkQzYnNyaUOMraEdZHbuEkoVnaaWIBAIflYUqUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
 local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('GysIbKKVvoXziIvnQYhxJULjlbvTYYYmXMohUfLSJWXjNlCuioEcYDUU2hhZG93IENoYXJnZQ==')
+    [1] = hWDfYkUGlyOih('pqynprhvojBaUixEtltCBiRtNtZdmKovFlWyFumLfiTXThRusfxWtGgU2hhZG93IENoYXJnZQ==')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('utLbeCVITbQIKLFPNpoeJIzROvePGuieaCxmJHpafnhNaApaPlssPzaUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
+game:GetService(hWDfYkUGlyOih('jQOtotlqagJUeYYshqcRwmBNPrzBjESFDSGsEjbAWZKhmfcIbmhBQceUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
 local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('RjHyJNLBCkcOxOgleNipnVXowPJsPWCdtFaWjrSuLGBSDmLMXWTbYntTWFzdGVyZnVsIFdyYXRo')
+    [1] = hWDfYkUGlyOih('GtvhBTTgqsNlIaQkpQMlXTwJwwFMeigVlqyOQnzpyfyoTsXoxKtBETqTWFzdGVyZnVsIFdyYXRo')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('wmRIwuoJTdEiUpHBQHpqtDkKamheKErqXhLdDJuWmPBhSsbPimzCvAZUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
+game:GetService(hWDfYkUGlyOih('pqMzfzivkLbMhFGlyhspUaLbqIALOazfuYIsNroBhKpwoJilFSRynCgUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
 local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('tjbIixZlsWRCrmefDjokvOjrtKHnCHXRXPGbWnDKtOyEKhZnMJXqUGpRXRlcm5pdHkgU3Rvcm0=')
+    [1] = hWDfYkUGlyOih('KQeUgtLgOQncQZmwNcXkusteQfNZerMJEeyjPURkQCAcIdPOOPmZBnjRXRlcm5pdHkgU3Rvcm0=')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NtxobhLgBAhFZQNGoVGAtHqjfsvxmlhclFeKwBZyMEZJLRuAhWtxWGHUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
+game:GetService(hWDfYkUGlyOih('ipKLqLDQcmrraNoDKCTapBWaCxWrHxJpBdnMdLIOpCpRMwVBgkBTSuwUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
 local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('OQzXNaamiVbxOijRuGESMDVmqxhwArKpUUEWutnIKAXVXvtqECUGLEAU2hhZG93ZmlyZQ==')
+    [1] = hWDfYkUGlyOih('SzzTsFWOSUGYrrWcCbMkNpYsqSzkcWgfEAyjAEGxyEWXFhpSeDmBkxGU2hhZG93ZmlyZQ==')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ELupOoRlfCnbZBNIWDTlVoNeuROHMBjrSrFnhfCUupPFCoEbSrfmbLkUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
+game:GetService(hWDfYkUGlyOih('qAPEWwGlpfrTjzjXFVmTZFwMtXFmwfhZeaEYoBpBudKRukpcCPtRsrJUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args))
 local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('PtDTRmQuJOZxJaxSHKWWezgRSFxQIyhTBDKUHXTiNKUbWActnnSXYBlQmxhemluZyBFbnRpdHk=')
+    [1] = hWDfYkUGlyOih('zOeDHfNcueauPNbUUoUJkNtwEFEecbRqrALGjsMzTLgfuEaHlBboexKQmxhemluZyBFbnRpdHk=')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('oIdKfGugupepEpApECXQiqewYYXLktudYZzWzCnvpsxftlZJPzJJxyEUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args)) 		
+game:GetService(hWDfYkUGlyOih('jnWCDWpEvJgvOyaArEfZhFtEwaOYraFepMVIzdyAyMIEnnrTxLFubaUUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.elementMasteryEvent:FireServer(unpack(args)) 		
   	end    
 })
 Tab:TianJiaButton({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NtUFFcraTTVoBEeiQwvMUBzrmrcHbAIGPcbuuQBYhfCDjOHXALfVQPK5pyA5aSn6Lez6LeD5qyh5pWw'),
+	Name = hWDfYkUGlyOih('MxbOyZAeMegCnzBcFRWoJRPTjLYyojZVMouukqFiWZlDreqYKlacSJB5pyA5aSn6Lez6LeD5qyh5pWw'),
 	Callback = function()
-      		game.Players.LocalPlayer.multiJumpCount.Value = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('WAGtlGXSKecpSOUglOQrdEgIWRMwmmcKlxONYIPSFaYTDyggnQuKrSLNTA=')
+      		game.Players.LocalPlayer.multiJumpCount.Value = hWDfYkUGlyOih('EWdUpKtiPcipAEKksvQbFFAzYgHRBnCzzwjxhMDHSSjKCfPPjhPgsggNTA=')
   	end    
 })
 Tab:TianJiaButton({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bWWuFDtErOdesitksfwVXmxropzfwCcjJLOCMpmvIFUUnPUlZvnWoNd6Kej6ZSB5omA5pyJ5bKb5bG/'),
+	Name = hWDfYkUGlyOih('guupmINNMkJXgmyrrzjAIhbiSBAwqlIXxeMhStHcAGzIpiPrSLktsYG6Kej6ZSB5omA5pyJ5bKb5bG/'),
 	Callback = function()
       		for i,v in next, game.workspace.islandUnlockParts:GetChildren() do 
         if v then 
@@ -191,37 +191,71 @@ Tab:TianJiaButton({
   	end    
 })
 Tab:TianJiaButton({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('YoruMCsGKjIthlaBZkzOveDPHQWqnVXRFMUgtFibRjEMCDgCbebUcLs5pS26ZuG5omA5pyJ5a6d566x'),
+	Name = hWDfYkUGlyOih('YxdhfDacBpNvBZFhajADtZOmOVKQgcdbCYpoHvCPdzQBvsarSFKiZib5pS26ZuG5omA5pyJ5a6d566x'),
 	Callback = function()
-      		loadstring(game:HttpGet((tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('lachtjKrhyGsGgZEDKnBbuttzwrQzjfywpxWxYmEdIJcYIdIZUTcSimaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS91aS9tYWluL25pbmphc2hvdWppYWxsY2hlc3Q='))))()
+      		loadstring(game:HttpGet((hWDfYkUGlyOih('TfZewBdgBJdMokVBnZTykwYxTTXlTWCFAZrOVeYAqtUxKJkQPLsNOIcaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS91aS9tYWluL25pbmphc2hvdWppYWxsY2hlc3Q='))))()
   	end    
 })
+
 local Tab = Window:CjLb({
-        Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('owUXSijDRYzEmVHWNbQPtVZhFgvEfbZthAWyQgmEllnYyBuGbPcFHzD4pqh6Ieq5Yqo5Yqf6IO94pqh77iP'),
-        Icon = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('FJaAdXerCyVfexTGlllmrfzGsYigSFzEGvPPRnlqUGIcvvGoVFRCYRhcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
+        Name = hWDfYkUGlyOih('UzKpoHCAJyEPfyvYkAhkWGSxAFSrMNkMjAgyDsodsymmtqxSoyqRPCE4pqr77iP5Liq5Lq65L+h5oGv4pqr77iP'),
+        Icon = hWDfYkUGlyOih('raTZhkdYKMNfBpPuUXHMZUUZZlJFsLhSXUQXyKZPrgtRFfPOOUygJjtcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
+        PremiumOnly = false
+})
+
+local nin = Tab:TS(hWDfYkUGlyOih('LBLtqHHINJJHBGhxAEWnxiSSgguHhkkslUZCbWZXEPVdFOLjxBJwWLG5b+N5pyv'))
+spawn(function()
+while wait() do
+pcall(function()
+nin:Set(hWDfYkUGlyOih('keudADktFtjxamTkwWayaAcYCkHaGEWRGlTBnhewmkPbfuPNgbYcuyn')..game:GetService(hWDfYkUGlyOih('ngOFoJYthkitwZXSpxqbazhxsVYPkkdqfJEcRyMzmhOUFqrtQATtNRKUGxheWVycw==')).LocalPlayer.leaderstats.Ninjitsu.Value)
+end)
+end
+end)
+
+local coin = Tab:TS(hWDfYkUGlyOih('amwLjdsdchHOQGuWGizlXnazNMkQIpQxYcbQBawZhfRNLrSPZcoUKAb6YeR5biB'))
+spawn(function()
+while wait() do
+pcall(function()
+coin:Set(hWDfYkUGlyOih('lOnPHiGmaKwQUmksyqHAGylYWepefFADTiKnfnnuXrwvvcSRhZUEOBY')..game:GetService(hWDfYkUGlyOih('iLoDchuovKLuUeyirlosLZLSLBCFnmnQeHCOQrQdunEaQvOdXvJvqNPUGxheWVycw==')).LocalPlayer.Coins.Value)
+end)
+end
+end)
+
+local rzyb = Tab:TS(hWDfYkUGlyOih('NiUDTJOMEIzRVPKEglRKJPTyoFhkUwsoMMwGyTVjwzkWwDvDEEvEUOT5Lia5oql'))
+spawn(function()
+while wait() do
+pcall(function()
+rzyb:Set(hWDfYkUGlyOih('TzHjaCDXmliEPkjiJaJUQppRFwmsPRjVHXFDhmZIaGzKeylQjLRFiPQ')..game:GetService(hWDfYkUGlyOih('caLJuXGpWFgCHGaJniYQCFhdDRYcAsqogwKzlqtWnpwBnmymBmNTDVCUGxheWVycw==')).LocalPlayer.leaderstats.Kills.Value)
+end)
+end
+end)
+
+local Tab = Window:CjLb({
+        Name = hWDfYkUGlyOih('bQsDtoYgcnvcXTyTJRyJwgkCAFmBknDzQSGQIxRjoLEvZTMvPIFWHTe4pqh6Ieq5Yqo5Yqf6IO94pqh77iP'),
+        Icon = hWDfYkUGlyOih('KJvBgQdMBwsuoukbcJCpNMUuICsuIDLLDJxrhICNMQYuyGcwxUddHvEcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
         PremiumOnly = false
 })
 rzzdhj = false
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('hOlMApnwmzQjiJToHsDmDjZhJlLqUUCuyHZQNYVIOjJXPWTXOoFDJQa6Ieq5Yqo5oyl5YmR'),
+	Name = hWDfYkUGlyOih('MjYRHYnIBTvHoMIdkwSLyatDeReEdqMesfbtlahzGKsocSXdanlySTd6Ieq5Yqo5oyl5YmR'),
 	Default = false,
 	Callback = function(Value)
 		rzzdhj = Value
-		game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('TlPQWmuqxqWdgaapGkqFBQUsUxQXlauenbiGbIYnipMOxIWZkYTtwbvUnVuU2VydmljZQ==')).Stepped:connect(
+		game:GetService(hWDfYkUGlyOih('vjGTQLQuYzisWOgCxAtZsyCFepVfgbfYdcnCreddPTxvmsJiMEUKOhXUnVuU2VydmljZQ==')).Stepped:connect(
 		function()
 			pcall(
 				function()
 					if rzzdhj then
 					local args = {
-    [1] = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('xIOCZvigFjPTWIOtOFitEcZIYbsetrXvosfdxvYHFdeXDfXcuTKBrpgc3dpbmdLYXRhbmE=')
+    [1] = hWDfYkUGlyOih('HJadXfNrdxrEggZbTnFfWULmHHYzgkkiqFVrQwXVqrcIJCsIRlBHPsbc3dpbmdLYXRhbmE=')
 }
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('pTaBpjKQNWPxMxmlOLPIfdxlUcgzbGPfpJmERkeMpnmykaAEeihpxVJUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(unpack(args))
+game:GetService(hWDfYkUGlyOih('tqYCuFwMHYLtKSisPRzLsrmSkFlMpSFZwlxFwwUOIdnRyhQYQmZQadYUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(unpack(args))
 						if rzzdhj then
 						for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do 
-                    if v.ClassName == tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('OqjlcKErZLCRvpzvvRVziVvKgmjkYFabINFCSjqqiaXfxooQMZexDKHVG9vbA==') and v:FindFirstChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ahxDmLdSYjOGqYBlAKnyvueBDhAEFjwgGyXCnOebsqLvCuHDrJXkgmpYXR0YWNrS2F0YW5hU2NyaXB0')) then 
+                    if v.ClassName == hWDfYkUGlyOih('mjWXrPueJKxpGSgObLXfCJGaQtqyIKFXUZVZSIcwwvvGKJSjtHycpGeVG9vbA==') and v:FindFirstChild(hWDfYkUGlyOih('ffDpAWWRVIqGqEsQpHHzBhJkirhdpMunRTYrPbSJWSAlITWkMvVqdfoYXR0YWNrS2F0YW5hU2NyaXB0')) then 
                         game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)
 					end
-                        if v.ClassName == tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('jHoLkOEMcthnHIFFPwhvIAUxsgruGUuGprIZPsVqBanjjaSIUGFcwDMVG9vbA==') and v:FindFirstChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('HoMpPEdOTXvUPItbCguuwBKxAnLiydeGDvKREHgBDSViPmQjyiTHhayYXR0YWNrS2F0YW5hU2NyaXB0')) then 
+                        if v.ClassName == hWDfYkUGlyOih('VicojCABIEglMFQdTKRMRKyHrYmJHutmElSGuRVDkkkryisHcfGffULVG9vbA==') and v:FindFirstChild(hWDfYkUGlyOih('GpoghzfdYUsdQNpczjaTjszhfFJsYhlNKZpMDnUAJEDnSFmdzmlSgLbYXR0YWNrS2F0YW5hU2NyaXB0')) then 
                             game.Players.LocalPlayer.Character.Humanoid:EquipTool(v)                            
                         end
                 end
@@ -234,7 +268,7 @@ game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZ
 	end    
 })
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('JFPpkOufLGmktBydGzKyGmBLMuQWQbRgjmlgaeLRUlRfXHMScDETLDI6Ieq5Yqo5Ye65ZSu'),
+	Name = hWDfYkUGlyOih('qMxRBQhaYkQWHiBlCaBEwdSTZdkbBrGKtglumOMcgrvsIfZMIfLYaeW6Ieq5Yqo5Ye65ZSu'),
 	Default = false,
 	Callback = function(Value)
 		_G.autose = Value
@@ -249,7 +283,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(80.84947
 	end
 end
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('HWeNRbFTcgPerpHmnFgPYyFbdiaHRkOdfmZEnUDFtFLkUlBbNNUbUrv6Ieq5YqoMzXlgI3lh7rllK4='),
+	Name = hWDfYkUGlyOih('lgOrtjxYFMHIRVNXMWxsLKitjcBXyomlLqwjwnwyLrypmKuQPFWhJeI6Ieq5YqoMzXlgI3lh7rllK4='),
 	Default = false,
 	Callback = function(Value)
 		_G.rzzd35cs = Value
@@ -260,17 +294,17 @@ _G.rzzdmj = true
 function rzzdmj()
 	while _G.rzzdmj == true do
 	wait(0.5)
-if game.Players.LocalPlayer.Character:WaitForChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('MgjvByzOqkrjAqjsnVXYtzZvCcUpdFiawiPLJpRWGnnUwjLyDDYFQneSHVtYW5vaWRSb290UGFydA==')) then
-local oh1 = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('XHrzYiLkXHnJlceZyYhyKJkmpHZlyubetYaSHraXQMLAQEKVurddpmXYnV5QWxsU3dvcmRz')
-local oh2 = {tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('iqaQtJdqxwnKTKZBCBKUOFMhsSFOUUjbOSYSWezYSCGTJtmjftwhxnIR3JvdW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ScztdngfXRWWCFSIYdXZBVfWoXwzvDfjcqgURXVnMTUUgQlIvEbjHLtQXN0cmFsIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('FIUPsfybbycHEujYvtvPvMspNsnoLVzPRIQkmYMlcJqDQQYGnKTHOUpU3BhY2UgSXNsYW5k'),tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('VOQIatTSsrJKEdNbEJZCFZRzTvIycTkjCysyoLHDwGkVAfnkWtQzDrNVHVuZHJhIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('GaIEDroVguQlWmZAMHfbmTstWLhXhlmRrShLxSgcJbCwgdiPrkYIZQvRXRlcm5hbCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('gExfbZRgtNXuPuXfBPOWnLlcwlcatYIcdwAxOyvFUQaDhrMjNIahhjuU2FuZHN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('MZYKcnliLNskvbKvfyTDpetpBkwWcwvgYEblAygQNiVBFviLzIBtrvTVGh1bmRlcnN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('MvWkypUdmUXvLaLkevsLjyNzXvaTMBOWGPfvAmlsACqqivXNuDsWXRSQW5jaWVudCBJbmZlcm5vIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('PdCJexHkrjIToEysONgoyOGexumBjPRSquigoVGwiOccatPeuDHMzryTWlkbmlnaHQgU2hhZG93IElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('PDMDKyzxRUHeocLBisktDfcpzuoZhGmdgYHRjThnDaLAdSaDOywKEENTXl0aGljYWwgU291bHMgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('xwAmQFybjcnYrsdFDcSNWWolqOpTmaVVBRiLCdJhDFTawIfvNAtMPUmV2ludGVyIFdvbmRlciBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('YoxIBFZoCzEJCBhtdmshpCeGpxhyzbKLsFDhixrCllTiDWxlQhVwFGRTXlzdGljYWwgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('PUImbFEeBLapCEPiCXxkXpIXUvZiskonEKJiSlLssGUSwGHzbxidjbwTXl0aGljYWwgU291bHMgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('maNCkZXFBlwbrMFHaXglsiobIglCYUDNJfgHlEHamMNzYjdUQyrOFYhU2FuZHN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('fUjaTeuiESYkKpehTbWZpyKMtPDNabTxwLEepieytnIswmWTEClyexEU2t5c3Rvcm0gVWx0cmF1cyBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('LNPjhXoOSpqzNriAhOfuJJttbHfeWMROhUheBNfmaCvmjNgYFYcryjYU291bEZ1c2lvbiBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('BJnIbhGSIWHjorHYSPDOwOzJTobzZmUrpNfmzPcwkEJBDBGOAazqftRU3BhY2UgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('iHUtBZcfKUKyphczRmtcCPSsTWQKlVUYtotGLchCgWqhJtKijdjQWWXVGh1bmRlcnN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('IDwHwuvDHKZgjcJOtSjCmKEKbFmDEYgvoyZBotPyMcCJQSVFIeHrlmIRGFyayBFbGVtZW50cyBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('avCRSgUHvjTTBXYCKBQgmFMOzbEipAFpgvjrZvAmtoziDlXydhAByDNRGFyZ29uIExlZ2VuZCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bQrNuvlkvUGjrmVoSLNDdJoENtZisLjpcJXdfBGMXrtRNErnVZahdusRW5jaGFudGVkIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('QsTzZQJeiSvPVokWwuEkWyPLtWZktJssReMWXmfGiPZEPnEIRDYdHXBRXRlcm5hbCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('SkscdRwLwgZEXLMeQfNazyfdYHCWtRUvDzpKwDKyUaZFonHOxVNGtLkR29sZGVuIE1hc3RlciBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('CtSPRrpXaFQsoEUAHGkxHlBhFsVgkqnQUxJGCJJovAgfLlaIqaooObSSW5uZXIgUGVhY2UgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bDTnxfQUokzZQpOrSwPcxMwzEwBTxHCuBfOHYnUbqkRhiuckRsgzVZeTWlkbmlnaHQgU2hhZG93IElzbGFuZA==')}
+if game.Players.LocalPlayer.Character:WaitForChild(hWDfYkUGlyOih('hrGsXyrqwXMkzQFtUSyJVDtmujqnkHEcfUQMvfpPBvpMlcDifodYRROSHVtYW5vaWRSb290UGFydA==')) then
+local oh1 = hWDfYkUGlyOih('yqHYJVIfqskFzOuovZExVGtwytJJcQFPiUAzXUshfkRRPjlMDMAnImsYnV5QWxsU3dvcmRz')
+local oh2 = {hWDfYkUGlyOih('NVRoFvwKdetaJDwVRZhbJHIZFuFHHLyUgFewHpgwfCWCSiIQvxoFMSCR3JvdW5k'), hWDfYkUGlyOih('rIegADHIzkhGbeWMbifktMkaEUTxGqqkxHXGidCqdynRMpdQLhbNYpmQXN0cmFsIElzbGFuZA=='), hWDfYkUGlyOih('XYmaRCNBzfxMzUcMZDSGFXoTJBiXbQMjrEkXCETpLdCbdBlPDZFnftIU3BhY2UgSXNsYW5k'),hWDfYkUGlyOih('taejuSjFlXqPjfWtbEnMYoNtvpGRuTNBjHAdAsaNPTfZNoCgPRjwXaOVHVuZHJhIElzbGFuZA=='), hWDfYkUGlyOih('dFtswxnCZhYyhhhBvVzkunUbEvDlocoiZgKmnhmigeixVyWuLeKIyjqRXRlcm5hbCBJc2xhbmQ='), hWDfYkUGlyOih('gEKFSCQlCFVUgtJfmhIaebjMysfXZcEAYuPdOtkWTtTODEgQgweIFfXU2FuZHN0b3Jt'), hWDfYkUGlyOih('mKLHekAvFdOvHsjieUwFvyqzeThMijeqRakUVDkFwlusgRlhFHFmkhaVGh1bmRlcnN0b3Jt'), hWDfYkUGlyOih('iSvDzeHOZdpbDTAOoeSBdrjzqegeLiUtTakTwIFQnsXqWVfpTzhoKTGQW5jaWVudCBJbmZlcm5vIElzbGFuZA=='), hWDfYkUGlyOih('lWgEsCaxuyANXInxlzexHUqNneYCJwcHRNxEaigFjstJtvVUuGoFVCFTWlkbmlnaHQgU2hhZG93IElzbGFuZA=='), hWDfYkUGlyOih('PFkuXCPXLyqbnJKgtELDaRxyhSJXvPGeRMbqktbJPkcyJyhgWgIihdWTXl0aGljYWwgU291bHMgSXNsYW5k'), hWDfYkUGlyOih('ssqwKgfxIWmLiubDpGioosUGxhqBQrqvGTLCWTzjeAhmeTBuramlLmfV2ludGVyIFdvbmRlciBJc2xhbmQ='), hWDfYkUGlyOih('WLsqhUWniAnBxXeBKboGRUavGDmJDwrsJvfeJouKLrhVOrJpgvmLdyBTXlzdGljYWwgSXNsYW5k'), hWDfYkUGlyOih('eOnPUUffYtIkZedBXXNerhWbaFMewNAHgzUgOWTpSAHsEuDWjQBgtgnTXl0aGljYWwgU291bHMgSXNsYW5k'), hWDfYkUGlyOih('mcaBQWABAbODXdkAZDxMrmehUtehtdPDvZoYCErKuNwHRTCtOUPKKwyU2FuZHN0b3Jt'), hWDfYkUGlyOih('DHJiyOYlWAtHtTbovQGMyMbwQtSEbUNhnKDTjMAkLlwUbapPYCRLdweU2t5c3Rvcm0gVWx0cmF1cyBJc2xhbmQ='), hWDfYkUGlyOih('lnfPkyVkzhUtkmjmgucBezJAiCopVpegnspmpUjBgRPeIlmuGSoyXbCU291bEZ1c2lvbiBJc2xhbmQ='), hWDfYkUGlyOih('YuxglyhVllmGtvbGPMrEoatbqAueNhjyPGHhAjDCWRSYEHXKLyIGXQcU3BhY2UgSXNsYW5k'), hWDfYkUGlyOih('JJUGWQFnGBhIUKEWefxwPkBpDjmSVABYJvhqgrAsJeYlPotwOIFQrVCVGh1bmRlcnN0b3Jt'), hWDfYkUGlyOih('leSdpblycgljmiwPDKPFqGhGrxLWPTNNVHcvsPSjDxGkNQtRjTgogcWRGFyayBFbGVtZW50cyBJc2xhbmQ='), hWDfYkUGlyOih('HmIfnUmZrzsiDxaIFzooVJOtaPNdfTJpZeLSFaTnrTKZheIESuRuHAmRGFyZ29uIExlZ2VuZCBJc2xhbmQ='), hWDfYkUGlyOih('imlXLHgDWiXHppnyVyrEdWrCqZJtTzmzucBUVtbbjMMyfplvujmMaetRW5jaGFudGVkIElzbGFuZA=='), hWDfYkUGlyOih('ylLJMfuGfTYzdzdCNIpAyWrermWuNxAvQXhupRPDZXxGSjuuTJfYXGTRXRlcm5hbCBJc2xhbmQ='), hWDfYkUGlyOih('FLEkxbOGkEVNaGBkyaucxoQaEofjersLsHzkuysQhjZGAsOCrNdWsGoR29sZGVuIE1hc3RlciBJc2xhbmQ='), hWDfYkUGlyOih('BFYyttuuWGKHNiKmthDPzeKleNsgIysRXavQvCvqcSgOsPrybWQogsRSW5uZXIgUGVhY2UgSXNsYW5k'), hWDfYkUGlyOih('WMKDwTEgZeSdMaGrZOrVkOGWOiHaEsFgROyzVqyhCQSKYXgWqXdGEnnTWlkbmlnaHQgU2hhZG93IElzbGFuZA==')}
 for i = 1,#oh2 do
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('IcSfnDLQVQQQKvckhXcCCUjwxjbyYabPErQBpvYSzgaVGhZsOUrejldUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+game:GetService(hWDfYkUGlyOih('NcVJtGpGewriiMafPvoLVyYqSZrLsYRzQBSyfxpnnIUaWwMTBBaqsGjUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
 end
 end
 	end
 end
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('AQupXUuvXWIeLFiDVGUPZkfWLYcwbKzgssGtCKIxKgerpuKLWzuLaHp6Ieq5Yqo5Lmw5YmR'),
+	Name = hWDfYkUGlyOih('PORnDSfRfDnGFiMEegoVLxgetNFdkgPhjFMxwehPnAlNwpuzXSEWJou6Ieq5Yqo5Lmw5YmR'),
 	Default = false,
 	Callback = function(Value)
 		_G.rzzdmj = Value
@@ -281,17 +315,17 @@ _G.rzzdmbe = true
 function rzzdmbe()
 	while _G.rzzdmbe == true do
 	wait()
-if game.Players.LocalPlayer.Character:WaitForChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('AAPaMaVhThfQcFWcaRjLttqzxizTryFhQhfPKmzMrbmcaYCiaLMImwFSHVtYW5vaWRSb290UGFydA==')) then
-local oh1 = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('cqAIVQlgDhCjcmUAJdFsnKnkBtDNHqvTnixkbjIHTKSHKxlyTfdzqzCYnV5QWxsQmVsdHM=')
-local oh2 = {tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('FZlWoplEvBQPoXxxEqBGizjVDeTaztkfhMyEbTwHoYPvQtatbbhUzPQR3JvdW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('jRQmxnLmxcLaMoYFkCtfntStdpJxfQqgzCYWjREmozinFqDxXgyEUxKQXN0cmFsIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('uwMBJcwsaVSJOUqAygGIUqsoGxMOByCmHoalFoOyEnTmpGHmmApveycU3BhY2UgSXNsYW5k'),tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('aiWXltJpHIFDaFrKjpdPtCCmeWIfPVCgMqGRWFvCXpyEYxiRgZtBviNVHVuZHJhIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('mqGbchguygSKrIxqRAoAGXdbZBSwYYainVJESoewuhurXHljQlvakCDRXRlcm5hbCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('lWcmSVxfxhEHJmWRvbVDodYscdxlnRFSHvLJVzuJXkcuzSAQiQSzLcHU2FuZHN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('visTFOeqmemHghUWIBAGnkYeZcAJMEpNyQmJlhYwiSNpeyrVIajKtQgVGh1bmRlcnN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NSIzvAfOuKkbIpgthSvdtfAZbiSlwxZiyopnoVVNmEkFdjKpiTqWLPFQW5jaWVudCBJbmZlcm5vIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('etTCmollxUtGKsFzEvnBAYIAfUgncOxZWaKofRMsbGqStiUVqCjgLxUTWlkbmlnaHQgU2hhZG93IElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NLFCvbrIEkjqsLveQWOayliIFoYrONQHtXkIBdEKyuuWFWGEZwyKdAeTXl0aGljYWwgU291bHMgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bgpYvIbfCWIGFxYimjwiSGMZphHEgXEkwtDaBmEZZZNociuAgnnQilFV2ludGVyIFdvbmRlciBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('BcIJNDvqVLeDiRPqJXpxcTKdAHZdBflCZkMXDHLuGNwXlHIdwOJjisjTXlzdGljYWwgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('YjOmrsRbbQesgmgoPtldmrnsNpOIcvxdZSJRfIJgzzWubDtcLHVKqIoTXl0aGljYWwgU291bHMgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('RkFyCBOMfbYfifkdUXyruQoCDcSBkZiSLUhizRLZhrYoyKDYgMSnlXBU2FuZHN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NavxpyfHEkGAywDBLOLwkchLJNoftXCLViTWdqtEmQIeiOovEqfPMEjU2t5c3Rvcm0gVWx0cmF1cyBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('FDojjcVHwHvEkNysJHYEymmmRSiTJTctLWSDUoWWCBEHvUJPfSikGxLU291bEZ1c2lvbiBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('WyfdZEjjbcYZvfBPraVhzCsyammICeunngCZZrdmLbHvNbbKkluvuBJU3BhY2UgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ZfwJJhzclZPCKXsehDvapMqojySQVrwsGTkCpgCUWOYnKkHhUVvNIAJVGh1bmRlcnN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ArCIdVhejfAHVnNkxUFztWjghJIxXaQHisRrXejTghzYPrjnascGxqwRGFyayBFbGVtZW50cyBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ulOFNNnhicAbhUrUppjBMRItxawNpAnftJHjqHCdthaMfftFsOnxQssRGFyZ29uIExlZ2VuZCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NKYNhPLvMfrfwjwwTyJLkuYSGtwkwueoTADwWDTWhvZqcLzbxVzWwCoRW5jaGFudGVkIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('oNxFImwLIZRGvuYnjWjRaRnlcdIJYggbnXaCdGgckDDBYtXyDLgoiyVRXRlcm5hbCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('DWFbfhdXKKvVIXCjMTwVYqDFFjKSJvNYCvUMDuZDtQbcaqPGRzyjfykR29sZGVuIE1hc3RlciBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('FjzFxICGSSyVHegLLLDCctmjzzAKOWVlKRlZuEHqkMzNcYIGIHylQpESW5uZXIgUGVhY2UgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bDevUVNnUcxjpvoHUSFdhgXMuGBPpuLMzwASFkqtrshvPbpMxQScgqZTWlkbmlnaHQgU2hhZG93IElzbGFuZA==')}
+if game.Players.LocalPlayer.Character:WaitForChild(hWDfYkUGlyOih('rAhBOYLEmhNPFcEpkIktUfobBFOHkqfvPWGnhGYPcbVmRIPCrLKVxEoSHVtYW5vaWRSb290UGFydA==')) then
+local oh1 = hWDfYkUGlyOih('QCUdBGZfeYCCVmXIXrEQBgrYKcxBugwcAiSwRTbjRzUstcQEOSXqbsXYnV5QWxsQmVsdHM=')
+local oh2 = {hWDfYkUGlyOih('IEFrRoKdMumRlKGAPbNkfYmRBaEFKdLpteGrctPHlmKnilucEUUwkzGR3JvdW5k'), hWDfYkUGlyOih('grakeOjCjyUQQWPXRQxpPoNFwpawcKpAJNOimnqxzCQvwpFuAAmnKlTQXN0cmFsIElzbGFuZA=='), hWDfYkUGlyOih('BqRIWSIbXpshjqHWKhytUVFqHZgewbwNSeqVnVhiKgeylQlzzmZfHZgU3BhY2UgSXNsYW5k'),hWDfYkUGlyOih('IQFGXlbLcgsSNjVZJaWHVvRiDPetcrMrTNOHZIIhuFfXJfMCejmpqgkVHVuZHJhIElzbGFuZA=='), hWDfYkUGlyOih('eduNNobrIkPsqRpcWsKrPoFKpUPeXnPbgahXjGLzOsJIwtOHsveBcICRXRlcm5hbCBJc2xhbmQ='), hWDfYkUGlyOih('ILmjyhbRdRFPsPovyAiiyFFYYVuJfTQjlGHEYRSZRspJWQCZjyUixjeU2FuZHN0b3Jt'), hWDfYkUGlyOih('PIwvFkhtHTKByeDREzVpziFwjjbHGziUvklrEIeNNySpZRUpIbcFUSSVGh1bmRlcnN0b3Jt'), hWDfYkUGlyOih('TOhxVisLlKLQcffBvCUxKViCsERhuDIMyqEvHFilwrtWYOJmfWEgqzHQW5jaWVudCBJbmZlcm5vIElzbGFuZA=='), hWDfYkUGlyOih('LVhlzBsYcHbhsBsulkZxvOLuGcYjLtnHneXctbDNGYnVTqYkRdWULZZTWlkbmlnaHQgU2hhZG93IElzbGFuZA=='), hWDfYkUGlyOih('jvTbCkoeUdKcddbypPNuRPJiKkTluuqAVpViISclwJRkrTACZIIDDGDTXl0aGljYWwgU291bHMgSXNsYW5k'), hWDfYkUGlyOih('umNlebojSEVSTwowgihwfVwRXfzykmxBuRmHdddIlBLEMTwXMuvSNHQV2ludGVyIFdvbmRlciBJc2xhbmQ='), hWDfYkUGlyOih('ogsqrZUZNJHYaNKwZiVmyVQWGtPcynlppAsMVsWPyhcERvHmIALFuVxTXlzdGljYWwgSXNsYW5k'), hWDfYkUGlyOih('fybQpdOcYrqZKTdZeNlovGPrTpCXGwcKmaBiclmIsPrncFKkIekBIJVTXl0aGljYWwgU291bHMgSXNsYW5k'), hWDfYkUGlyOih('uxndvAkPqncafsKmchysFDJVlojimskqpZGzAhyNenuCQzndbZBqPMPU2FuZHN0b3Jt'), hWDfYkUGlyOih('cfsZXPcJZwnYdOhKpQHsBVUhOZqrLNAXWrzNcAUtxaVGXOWmsYzQhOrU2t5c3Rvcm0gVWx0cmF1cyBJc2xhbmQ='), hWDfYkUGlyOih('MBTtNvZjgPCcqCDvgMeESbjxjjeOQodiXKQDgxjtZOSUSbkdcypqRNuU291bEZ1c2lvbiBJc2xhbmQ='), hWDfYkUGlyOih('uGKgBhrCwifRWetlzFtsHHNIVmObMxmXqDndFbaTezhfOYOpwrJYXIDU3BhY2UgSXNsYW5k'), hWDfYkUGlyOih('oUBrlYskAvCucijlNRYIIzGoXtRQaDwOEcSGYpFPtAkZxFeSiyqOCExVGh1bmRlcnN0b3Jt'), hWDfYkUGlyOih('SFJRgWzAPqrFHbHmirFClOBGNoSOKVdpZruUqksMYLaPVuOifKCxkrIRGFyayBFbGVtZW50cyBJc2xhbmQ='), hWDfYkUGlyOih('MrQdtXbqoIazkIlwrAEGsYwwNMFnRsoqWbMwNelwXtSGPwVIfziWIyURGFyZ29uIExlZ2VuZCBJc2xhbmQ='), hWDfYkUGlyOih('FKdvLERVqMPRiBCgtcHfdvQXpeAvAXEvJVpYvYotTaEXShfyPYZdVgYRW5jaGFudGVkIElzbGFuZA=='), hWDfYkUGlyOih('XYJWjHgPjVLDCUffiebnOrzmuoVhFoBAcygthaTiQIlIgykZJckIbvpRXRlcm5hbCBJc2xhbmQ='), hWDfYkUGlyOih('OFPIULBzwGamSyzHxpZbusmdrXhYnDiqlzwNybOSbLScmVpocyCzNUmR29sZGVuIE1hc3RlciBJc2xhbmQ='), hWDfYkUGlyOih('IyitVVAtEhRaCGLnixIWVoRyyKtuiJsrDaBVHJdmOLlHOgrNaXORGgQSW5uZXIgUGVhY2UgSXNsYW5k'), hWDfYkUGlyOih('hIYNVNRzQPEHzKWGisfJYEBNuFHdGPZaHoefAjXdSXBBIBKPPdglkTcTWlkbmlnaHQgU2hhZG93IElzbGFuZA==')}
 for i = 1,#oh2 do
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('gasgWWbUTwkflisixToJygodQWADpJCKgLDqfcxwVIgTOJRIfKdcCgCUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+game:GetService(hWDfYkUGlyOih('sUpkkQjbxbSEXRiAUDFBsIwMCvkEKwgmuwmAhvpTXKPqUJFsQtNTqaqUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
 end
 end
 	end
 end
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bGKeALFHFxZeIDwTWDCFuhICQnDSuupcNmmgOwrkZkIxWOeWltwaHNC6Ieq5Yqo5Lmw6IWw5bim'),
+	Name = hWDfYkUGlyOih('roMyPTUbRkhZJMTerGqOjRpAHzMAPstVmgTsfYfNcrFvHRsadjVGxjB6Ieq5Yqo5Lmw6IWw5bim'),
 	Default = false,
 	Callback = function(Value)
 		_G.rzzdmbe = Value
@@ -302,17 +336,17 @@ _G.rzzdmjj = true
 function rzzdmjj()
 	while _G.rzzdmjj == true do
 	wait()
-if game.Players.LocalPlayer.Character:WaitForChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('RBqlMOijyJvhaqfXdipYFMFgyEcnZhJArYPNqcASehdjvQXLlOCtzrnSHVtYW5vaWRSb290UGFydA==')) then
-local oh1 = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('EFxWYnXdvoHCLWTcsCGbIAyDmaSZFEjpFsPKsutpVilUpxxFPlUeaIzYnV5UmFuaw==')
-local oh2 = game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ztPRjWRYJIrDgBjaLuaCcSRvmQmTAhphWJyRZxvEQDsdNovXSmlFaYgUmVwbGljYXRlZFN0b3JhZ2U=')).Ranks.Ground:GetChildren()
+if game.Players.LocalPlayer.Character:WaitForChild(hWDfYkUGlyOih('XlhthSjjRRrjvVBdGEfDBrhcOTNyFjXFrHKHJwNOIvrxvnSgmyHuVTMSHVtYW5vaWRSb290UGFydA==')) then
+local oh1 = hWDfYkUGlyOih('widxWAbUwuEwlWVlitxyjfQTBbfwEcJvLdAXkpZHiWFywTzMooVLkJwYnV5UmFuaw==')
+local oh2 = game:GetService(hWDfYkUGlyOih('sbkioCHjnIlzlJAgMQktgetwCxmOMQDHGszvBauNuuyQfJFGeQOKqNaUmVwbGljYXRlZFN0b3JhZ2U=')).Ranks.Ground:GetChildren()
 for i = 1,#oh2 do
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('mECXrgIwxhfRndglKNDoWpyKZmKhNVxUHGLqwyNaqhVqWPfxmzRWlBRUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i].Name)
+game:GetService(hWDfYkUGlyOih('qdgyoVVyoxCwDYIuqSVWYIGRpgEbrNJoKLbKeoUodydGCZziazpgKerUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i].Name)
 end
 end
 	end
 end
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('qhBXylmpCCCgLJvTuNYrnkqgfuOGFbZjHaYdXEwxQjnDOcblJeaFgHr6Ieq5Yqo5Lmw6Zi257qn'),
+	Name = hWDfYkUGlyOih('QOPKgdnuRFTlSvMwpDNsifIHBPyeQRpMYWrDwXWrqPmjvfeDIWtARaP6Ieq5Yqo5Lmw6Zi257qn'),
 	Default = false,
 	Callback = function(Value)
 		_G.rzzdmjj = Value
@@ -323,17 +357,17 @@ _G.rzzdmjn = true
 function rzzdmjn()
 	while _G.rzzdmjn == true do
 	wait()
-if game.Players.LocalPlayer.Character:WaitForChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('EOkXxWznqQoRZyOsXMRMbmkWtEWBekhLNDRrZGoPZNjoxZcDqNNEAnYSHVtYW5vaWRSb290UGFydA==')) then
-local oh1 = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('YeKnZISyhnoJhkWLLEgKWIhTcScJXulDSznsqghhWZbKMEvZgodsbDDYnV5QWxsU2tpbGxz')
-local oh2 = {tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('LcJoIyzJuNsSHUuWodyZKChCbnNamIcaKjYlOCHmoteVhCfpObKmUByR3JvdW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('mrubrPUwOEznRuQRcJujIuxmDEhDssTGlXRULJqVesNCUHRQpGmujfNQXN0cmFsIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('peYwIpanvkxKXWulDgLuPRBsgRHhyxRpifaOpPAUutCekkqLFucOLBAU3BhY2UgSXNsYW5k'),tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('DOAzzUmUYDJxTAxBMAwLjDMIrqASuTAistZvLkoHhodirAOxVYgQVmeVHVuZHJhIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('OymsHbJaUhecehyfjwzLTUbpCKOilaKTnudQwCWoiXCDcjHUGTFtKwcRXRlcm5hbCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('rLaSBWsVQOXLNjfuiGFSICZBIpLuqoKcRpsrYMNxOVscalZkAwrVRiNU2FuZHN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('hJpIukKGEPOFctpsDzOInYBbxMTvHowkuYeKPzAYpfXFIilLdaCcjFgVGh1bmRlcnN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bQJJOnWQoQgxFOcCZmYbaQhqVXBWEoMCisWVEjltJcSdnhHLXgpwwcnQW5jaWVudCBJbmZlcm5vIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('OwTxmNtQVyAbsbNvCyILYXZjJULUeKdUooDZmSBsqdhIjRfSjZeYdfTTWlkbmlnaHQgU2hhZG93IElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('qBeXCbWPWLnXhmKThhCEOOLDZsDPQfcHgliTLxtKOZypmWnQXNXRSFKTXl0aGljYWwgU291bHMgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NCGMgnVvohmKmMxuYcftNJUAJcQejOCQiipIZoJjXwmMCSKdSfVoxqHV2ludGVyIFdvbmRlciBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NlhjilVRqNspYqFlZjscZqSouZGjtEnlwPuXADdCSiaeRhJCFFheWcgTXlzdGljYWwgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('uGqKopCeeKFCjepUBdebAwfvdHMJMUHoUJmqZWrslsvIiqDXYCuhkATTXl0aGljYWwgU291bHMgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('aBQLyeSVUBImqwuUZiQmCUExRKUkbjOiOpBcHqYJHTllhHXfkJPimXPU2FuZHN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('HpIfPmpMfTIhyVBvLGTpPbkJPELaDYfHDVXQevJNgNEGuNfZGdpPnzuU2t5c3Rvcm0gVWx0cmF1cyBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('CqIKXzDAMykjKlEcHbBWmNTgjrzSpFyDLWidYnYjEAMnUmazjKjwedmU291bEZ1c2lvbiBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('tWSxwRRzBrwFWQFzzYlLtuNaLcWwXOMAeuFRyWbpiUVNuJnxAMXmVOPU3BhY2UgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('qruZkfwzLmcCRvlKszTvilpyuAqVLIMIJmiTgYJBTLHSUbUYKMgnWGdVGh1bmRlcnN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ZhfjbORFFJZKPEaBXfonLiznMMMHMtbkeLzuTjngZcLAHGTvxaLrCohRGFyayBFbGVtZW50cyBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('nxrMyBCPHmosTNrcYpWpwNiGAUExSUApVUVWvPFewIHOSUiqDgmzfqMRGFyZ29uIExlZ2VuZCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('VLWDdedtEiGfnPliDWnSzADsfOsSTcaGgRPXodowmiYRjNfpyyOkivmRW5jaGFudGVkIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('fIcBCdcLoBGNqrUZucWwRSZbtBLYmMmYmfjMWOyeMwTwbDmDZOQzlLrRXRlcm5hbCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('SVxwebvVJoJchSoJaQRNXpndmrihkntXycBtndKQFWijHhlVDcshXPHR29sZGVuIE1hc3RlciBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('DQbICWYwZsvgEPXwOwtPkMzhidTejKCDpTMoXbsJZulElRGvmCqWRlJSW5uZXIgUGVhY2UgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('oIJdXRvryppmWstMDZBVwZwbkOzNVbwXNsRgEszKhCPIVBMItcAmRIhTWlkbmlnaHQgU2hhZG93IElzbGFuZA==')}
+if game.Players.LocalPlayer.Character:WaitForChild(hWDfYkUGlyOih('oMjLConwmNZgVVXeLElgLMbYRAqyeaqZCbjNRPOWQYgVytMOPBjOjhzSHVtYW5vaWRSb290UGFydA==')) then
+local oh1 = hWDfYkUGlyOih('GnGfUvIQjboralZIxYeVFwVYVdxURsDALOuLSGfAHmXLGpGIlycnWLMYnV5QWxsU2tpbGxz')
+local oh2 = {hWDfYkUGlyOih('xIModMCAxyVydTWPsNjTJvrLhqUcCFoXSOACElDJoadbcTusUpwsTxfR3JvdW5k'), hWDfYkUGlyOih('MQKgkoUazAnkqxAhyjogVBLgmjtvsOpMeJGbeEWmLyhgFPmTpaxDSzDQXN0cmFsIElzbGFuZA=='), hWDfYkUGlyOih('tQBOsIuioEGGgORmvafDScVJqhExckmHWRKuxKNenXGtiBehxTDKUtTU3BhY2UgSXNsYW5k'),hWDfYkUGlyOih('YDohuGejooVxtXYbshsnqfzzzhnywoXSNlsrJHRwVKwDjBpIYKyHtuBVHVuZHJhIElzbGFuZA=='), hWDfYkUGlyOih('JgzNgqoYQPKNOJUPhcKgZqjnQyqlTxnChoGGCKjCVVCwsRJNEzaDSNKRXRlcm5hbCBJc2xhbmQ='), hWDfYkUGlyOih('FlYwVTCPHrZzDLFuIbNjbvrhCaXTivagYfwUEzpwIAaPPAlAZUnfobAU2FuZHN0b3Jt'), hWDfYkUGlyOih('gOTmmMZxmfIrIcNtHGAtkRjKdMMkQjgqoixFTLuXySdswkOmrnowbtYVGh1bmRlcnN0b3Jt'), hWDfYkUGlyOih('uDpPJjsNqZztCpLBGDdQMlDbosXbyKyXCRbHXkFZsFoPKTLspDuNdQNQW5jaWVudCBJbmZlcm5vIElzbGFuZA=='), hWDfYkUGlyOih('dHnRbyuRBrRsYXZvucXvsrBbJDdNqeKAKoUuYPUFVeThQZUtfKckyhdTWlkbmlnaHQgU2hhZG93IElzbGFuZA=='), hWDfYkUGlyOih('RgkavSwtTRDuDfCJuqBFoQHMrNJNaCCwnpiOOlCZWNXqHPJNpgnAcKNTXl0aGljYWwgU291bHMgSXNsYW5k'), hWDfYkUGlyOih('GZgFffQPFiYKwSsMWWcTobOLftAAmzCVjAWZmuNgPULjYxFMFcgopRbV2ludGVyIFdvbmRlciBJc2xhbmQ='), hWDfYkUGlyOih('eYOZQGIslDbWCakuQRkTyncyQqvhSzRtcCXoiVJZKwzumIwUMzyijSRTXlzdGljYWwgSXNsYW5k'), hWDfYkUGlyOih('vnAVzuObRzGZCGUVLUtFIKUVIjmnHwCQrOpflmgoamqTVNpDgQFlKqETXl0aGljYWwgU291bHMgSXNsYW5k'), hWDfYkUGlyOih('rhmVYejVUkBqDXoYrIjXTzVntiEHCHhaKknUfdJNLutmxuDJSqDqlSOU2FuZHN0b3Jt'), hWDfYkUGlyOih('JzhmifiBfvuIPMSBCIvXPqLrYViSpuWSJyFFeSStTJpOGuYyGPtcjwnU2t5c3Rvcm0gVWx0cmF1cyBJc2xhbmQ='), hWDfYkUGlyOih('GsRuTKOsPzPMRLWJtbjQbxxGsGMCIvIQYcWhDpZnEcGGyrOXdiqXFLmU291bEZ1c2lvbiBJc2xhbmQ='), hWDfYkUGlyOih('wVUwCOWsZPtCZGEtRRpkkYwUhkNybxWnILXnXPeRdZhstaGeemkXOoYU3BhY2UgSXNsYW5k'), hWDfYkUGlyOih('BKVHxjfCxDteAFUwiOHSgpSDwkZeCKGZYqlyTyrtXIkbEGMzflcdlcfVGh1bmRlcnN0b3Jt'), hWDfYkUGlyOih('oYbqsdmmkFJokkLnxCCMvXlHKRPLhtYKQwycQVtEoCjzSpHFaYlhaKjRGFyayBFbGVtZW50cyBJc2xhbmQ='), hWDfYkUGlyOih('PmgzCbZrMExHREkcSvxZbknjcbjNrcQKgtbVgwJTTTQoMtoLUKMCxvHRGFyZ29uIExlZ2VuZCBJc2xhbmQ='), hWDfYkUGlyOih('BSeSKDpZNiAAnSXiaVryCdaYHxvSvHcvfpmhkrKDZGJwLMByiXNfJiIRW5jaGFudGVkIElzbGFuZA=='), hWDfYkUGlyOih('thHyNQKLDzXsRqkzMaiwMEnZmmbVoXTugYScwjDnKOtZyZyYDmsBmlzRXRlcm5hbCBJc2xhbmQ='), hWDfYkUGlyOih('XZgPxmbvjCXTBENgVlbIsFcbJsykuIFZFjpSzZZotDPpRWszNKuTvuTR29sZGVuIE1hc3RlciBJc2xhbmQ='), hWDfYkUGlyOih('raQVMiMmqDHasNSsiXwfdyvROdUQUbdNXUEwvYmRAyJAvFXuakCyFZOSW5uZXIgUGVhY2UgSXNsYW5k'), hWDfYkUGlyOih('vDocMrWZGzJjJYklQITfRamIYXTbiaLlRjzrXOQbxdlpMqzRcmmPPeeTWlkbmlnaHQgU2hhZG93IElzbGFuZA==')}
 for i = 1,#oh2 do
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('LyQoCFtaBGehdUGJcEvjPWCzoUosiXeaLUBVqWWolvIjMvBjQCHXtXjUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+game:GetService(hWDfYkUGlyOih('MStlBAOvJgKsUmWfNbtbvlitdRvOhVCGQlcVTVHhIEGkCjtLtkPIfLUUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
 end
 end
 	end
 end
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('sjQjdvirmOaJAVihKbnwYXGgSQQcXfsQqJQZfLCVXkWVcFRfqaYwMrN6Ieq5Yqo5Lmw5oqA6IO9'),
+	Name = hWDfYkUGlyOih('AVRvteKEJPqnjceOFHnEePhThtHbiAYmkzRJVucGMBVKSEEtXXKVIja6Ieq5Yqo5Lmw5oqA6IO9'),
 	Default = false,
 	Callback = function(Value)
 		_G.rzzdmjn = Value
@@ -344,17 +378,17 @@ _G.rzzdmslj = true
 function rzzdmslj()
 	while _G.rzzdmslj == true do
 	wait()
-if game.Players.LocalPlayer.Character:WaitForChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bEBnXCmQCNAzYdLfGxjDOvOJfdUNSIMGWaFkFsttTlLYOodGysTrOZPSHVtYW5vaWRSb290UGFydA==')) then
-local oh1 = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('zbgJWgMpFRfLrhcQXnwHwVSWegXmsjLqeqZBYvcLUJHHSBSYkjPdfpRYnV5QWxsU2h1cmlrZW5z')
-local oh2 = {tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('PIFKJvQMHwCdGonFFdeifAtUlIgYmsQrkFOwRchxwfwmbzUgzmjFTCaR3JvdW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('LQsSfYxNrjKiJhYfoMuuJxOJliLhgrTfsLLtEFbTbMaHPOEScrDoLUCQXN0cmFsIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ewKfehjmRSoJOMEuxKhOJpiuKlLifKaFqMpvjJvhPFOEYhRyMtRJYXLU3BhY2UgSXNsYW5k'),tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('UAalHYPfyENuuZmfqCKglnQhINKSTAMgsDrbxDAGDdaSqYPrnqLfIqPVHVuZHJhIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('wXEQwwslaRPKLLDNnbFZOltuXcqHnhNSGRLWZeTHEGqSzWaBBiemaVaRXRlcm5hbCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('gWhXhRmjlNHYvEVnUiQmLwOBDcpgOesCeCPEPJKiPNNSVnvZBhnFnXSU2FuZHN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('xTJWaplbTygNydiRugOvFawpdWmGchJQAzgXLpVwqTRfhACdPoKVqDEVGh1bmRlcnN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('GKGaPZKWexSzRPvzuVSSiFVVwLFlCdpqjGyagEsLuqwLNflRehmPenZQW5jaWVudCBJbmZlcm5vIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('veKGtxzCvEiIJiYDgRFwrnegcMwQQrkpqtvyqmSmAcaZPvzezilfkMFTWlkbmlnaHQgU2hhZG93IElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('fyEFEgeVAZYKPFXjamJuMdzhsSyRdFfEBXGIQJoexYVrcWxjkTlnWLDTXl0aGljYWwgU291bHMgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('nXYQMMxOFXxbkzNgKhXbWoNPUwLiZorvBkikCeCVpNfjAOvbEakxFfqV2ludGVyIFdvbmRlciBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ZkjnQuvJHnjzXeaBVsXRJxHcDnUmZlMlGOoipBTeGvcOkaFPqqUNgbITXlzdGljYWwgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('DGRgbsBgTGqgyNZLWxbqlJWQjTeljPQwAkzfgEVbSLkbKABaxTIxGgYTXl0aGljYWwgU291bHMgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('PjANNKMOiXbMOowrUtGESRRpUJsvWJmucNoAMdHIPUstlapSqcsqEOvU2FuZHN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('KoMNLEraTUJrKfsTCyaKGPhryaNrNvAjobrtAeiDTuRQaGlrmtnmhARU2t5c3Rvcm0gVWx0cmF1cyBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('mNpDRpHyfjYKHEbTvFRpGycoOAsXqDHwLybWhrzwOKwWJmykKwDrKniU291bEZ1c2lvbiBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('mWjAtGwGQAbhGgcMJxeHJKMzjYsGkzczLUpjkwVEuTAGoTsaKYZSQkKU3BhY2UgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ZikxwGrkGQHMIUGwQCoKVbVrGXUQzVGYuStTKaPjJiuyonoOPxptFPQVGh1bmRlcnN0b3Jt'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('eleVpHnfuskAlbZlwnzztugXfxrCIDqMgtehCTabeIfssEjZYTsbmLYRGFyayBFbGVtZW50cyBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('KqkTKUSAjMpeCofYylKNJWWxRUWfdXamuyWIvUrKQlhsIiydqCYyNNlRGFyZ29uIExlZ2VuZCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('tclgsVyQWQhFjTIMtoQpvYdMsmSZcAgblFlrKNfmFDnOiTmnPEAKOqCRW5jaGFudGVkIElzbGFuZA=='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('CEZEPgglpRcDkFNUFVbqPgAIfIpcyDteKgQQkYyVdsEoZbYHTBjazgVRXRlcm5hbCBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('dLSPVBxhEGXFJAkjBYngrYKhinVfBBCfusIVSDFsgTniguxFaZITudKR29sZGVuIE1hc3RlciBJc2xhbmQ='), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('olFFSoCeCgmVyjxAklzeoxMBnkpADQUgLflKkLbTqfkgtVLrMDXDtthSW5uZXIgUGVhY2UgSXNsYW5k'), tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('JdpQrCsSVvjiKQTkmTjUFFlkpLKFktOtqoBWfidUEBNVGPhhPJkvpxmTWlkbmlnaHQgU2hhZG93IElzbGFuZA==')}
+if game.Players.LocalPlayer.Character:WaitForChild(hWDfYkUGlyOih('MwzxhUfWngtwctmSQkLOSoLgGjEUPWKbeZRtsRPfihkBeENCcYaBsMQSHVtYW5vaWRSb290UGFydA==')) then
+local oh1 = hWDfYkUGlyOih('NoRDHuUdFHrKuAjbJthYWFhOHLyNPKLkinWmFUCioalhRGOdRvmYRQNYnV5QWxsU2h1cmlrZW5z')
+local oh2 = {hWDfYkUGlyOih('fUmbtgaQPXoVVPcfxRtkzFOtKBZiRYVCKNdDxstLNUvCJVhGkmUDysVR3JvdW5k'), hWDfYkUGlyOih('qeFviZvhugwrJPxOcdBpeiixrXVmyJAjdEPVmRMXDDlmwSpiKuIInrFQXN0cmFsIElzbGFuZA=='), hWDfYkUGlyOih('cVEugmowGPFyZDcUTjbEqeFYxnBtvtUNatAoIUQTbMaBgGTqAvYGRExU3BhY2UgSXNsYW5k'),hWDfYkUGlyOih('WbeRgmSYjexpCFVVJPnyfccKFKJXpJXLaShmTVoIbNRjeEnlUKaMepzVHVuZHJhIElzbGFuZA=='), hWDfYkUGlyOih('vLUfkUMLEPsTPZFyHRcvKvsACVFZOBvnAiQsajGinWEhxutxsyYvcQSRXRlcm5hbCBJc2xhbmQ='), hWDfYkUGlyOih('QKUEYJRsyzqOwvkePUMCbnRQeCfeYfQGUmavUuiPpTKfUZTgARIxVkDU2FuZHN0b3Jt'), hWDfYkUGlyOih('idKJSvUidfPyifNpBsDcjWxiSEEnOmYPEVJPKKUlyaEyxvqAUGGAEtCVGh1bmRlcnN0b3Jt'), hWDfYkUGlyOih('UejIGGOQyyJFslHRJNoaUuJvNmxAeALQcGWNXOzEkhxGlNlvENnwoHWQW5jaWVudCBJbmZlcm5vIElzbGFuZA=='), hWDfYkUGlyOih('kbvihlEELYuMlTDrvtkeGiBXzssPsSvKepzyftOGHMzxpSymfPRekXPTWlkbmlnaHQgU2hhZG93IElzbGFuZA=='), hWDfYkUGlyOih('xqNCUVmOIxHHLdhshebzMOjMkXCLcJZwXcfOYtSrhsamoIjFggVTYsmTXl0aGljYWwgU291bHMgSXNsYW5k'), hWDfYkUGlyOih('oSSVGKKZKFCVEKDRERWvzIkvDukkYAkzLQiyfAOCbtXMfkhtokIdiWxV2ludGVyIFdvbmRlciBJc2xhbmQ='), hWDfYkUGlyOih('BHtzfznRsHZfBNHbOwQtpemUOZFyTJTrSJRhIKAMmxyladIVGbOiqSVTXlzdGljYWwgSXNsYW5k'), hWDfYkUGlyOih('WvFUbBTtuoGdaSvSKzwjqBpEQfTItCZTRZznIttkpWeEKeWIoChQXxOTXl0aGljYWwgU291bHMgSXNsYW5k'), hWDfYkUGlyOih('DdeDYFYqZPVlWFbcKIctNyKeFLBZJEXvEiYGakRSqMpktposccrjHrrU2FuZHN0b3Jt'), hWDfYkUGlyOih('xIrpMqCpOUDThwkdavLHbKOPMKmNLJhoxDIxfOQohqBsErnKGUMmshKU2t5c3Rvcm0gVWx0cmF1cyBJc2xhbmQ='), hWDfYkUGlyOih('zkuNruuZPRtSppptSuHbndTDkzwfxCHFAdQHoStSDRjOEIOcTXQnWkaU291bEZ1c2lvbiBJc2xhbmQ='), hWDfYkUGlyOih('zFdCnpihlhOKteSWdVrWVFxiakGNQrfQdwfKRSEclGcnCzzsJWGKOYkU3BhY2UgSXNsYW5k'), hWDfYkUGlyOih('NGfFsVHyGhYHSpYSIpJvCZKORfgHmNFpIckjVSxnEzmxZyMLNvMqoIUVGh1bmRlcnN0b3Jt'), hWDfYkUGlyOih('SugHsrDNLbIOAfERSjfUmVaUqAfaHEMdjNxqzcClhJUhFzBZkkUIZGmRGFyayBFbGVtZW50cyBJc2xhbmQ='), hWDfYkUGlyOih('GHxrQMjShJFFOrNFZUJHvpOtcWIFiSXMJUgNxJWwwMEJHjemfwCpZWgRGFyZ29uIExlZ2VuZCBJc2xhbmQ='), hWDfYkUGlyOih('BLoKPdEHEFmTAgHzMcuFPouREIJDXvAizvfTkXCSGzANbMgUHiBpbroRW5jaGFudGVkIElzbGFuZA=='), hWDfYkUGlyOih('pCqrwwAGUxHYjQgzHixWleCSffRlUDftyxljYQOZVYZugTiPCqwgozURXRlcm5hbCBJc2xhbmQ='), hWDfYkUGlyOih('dHyoAZoScFToIUWubEEudzqAnHZyOnGBoGRvnRAZOPYYGlUKXJcwjLHR29sZGVuIE1hc3RlciBJc2xhbmQ='), hWDfYkUGlyOih('fOqGGYKKqxBbnqjARxfuJoIlgCjLESGsmuLJVxSbtMDrTNgqAydsGhRSW5uZXIgUGVhY2UgSXNsYW5k'), hWDfYkUGlyOih('BbIdnWQJqOPgyhcdGJMsxNcHpAgsOyRHuypMCpIoFNhEYbIThUUVhAlTWlkbmlnaHQgU2hhZG93IElzbGFuZA==')}
 for i = 1,#oh2 do
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('revYJqYJRfSKAgzANLprvTHEJaOpFUVcjbEstfudBDnEZCRwgOrUmZrUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
+game:GetService(hWDfYkUGlyOih('cZbGrRxhfjvriPsKIlRdShUrfaUFVtyIcogMwszVYgrFMIkmZrGcdalUGxheWVycw==')).LocalPlayer.ninjaEvent:FireServer(oh1, oh2[i])
 end
 end
 	end
 end
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('wJXoiAcRwNdXrbfEtlxRKhnWkRFFXYjLitFvqBnjbzQNInkBGIFhFEW6Ieq5Yqo5Lmw5omL6YeM5YmR'),
+	Name = hWDfYkUGlyOih('MJfKBdZNpeihZobliPSwovffludFgfHaLsqCklocYnwLsNdYqZpneew6Ieq5Yqo5Lmw5omL6YeM5YmR'),
 	Default = false,
 	Callback = function(Value)
 		_G.rzzdmslj = Value
@@ -362,7 +396,7 @@ Tab:TianJiaToggle({
 	end    
 })
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('EzGUoPnrgCmioFERgvnCYTUIVyQKdwRwezCOYAQmpOwQZsdqsYOiYrU6Ieq5Yqo5ZC45rCU'),
+	Name = hWDfYkUGlyOih('gUNSXXkKrJlejokeghXYemYMECBfoRHStHTDlDKOFEMcTYJnuiwHutF6Ieq5Yqo5ZC45rCU'),
 	Default = false,
 	Callback = function(Value)
 		_G.chi = Value
@@ -370,27 +404,27 @@ Tab:TianJiaToggle({
 	end    
 })
 local Tab = Window:CjLb({
-        Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('ONATRmAeREjKHbKXVKCUaEJCrSFgkHFBIBVanIDXgvtkeFuZUrpZjvg8J+lmuWuoOeJqeWKn+iDvfCfpZo='),
-        Icon = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('OtHSKDnUxmoSvjnEPpeMpuykYJKEsiSLrekyasEVetyQVbAVVpdntHgcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
+        Name = hWDfYkUGlyOih('UxpjtuXIjbvJHZuaGmpMHIzrOfzDVubAiLYfWWncaEDoaLAChwqlxXf8J+lmuWuoOeJqeWKn+iDvfCfpZo='),
+        Icon = hWDfYkUGlyOih('sgoBMAWOpnsNDoTqpLmtsMpZOCIcVzuTMeIVCqyQgcBHZkxSyafyufCcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
         PremiumOnly = false
 })
 _G.rzzdjhcw = true
 function rzzdjhcw()
 	while _G.rzzdjhcw == true do
 	wait()
-if game.Players.LocalPlayer.Character:WaitForChild(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('SEgOCYdkAQcAKtVrNavKRLYoosydLqhGsENjgbyXWdCwikdjNygujkmSHVtYW5vaWRSb290UGFydA==')) then
-for i,v in pairs(game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('kVnEKNaZWLVVuzQVthSnkyRUIIZpVuMPJamKuoQAoqdqRqGDRoDEAbUUGxheWVycw==')).LocalPlayer.petsFolder:GetChildren()) do
+if game.Players.LocalPlayer.Character:WaitForChild(hWDfYkUGlyOih('rTeCRZbmarlEeGdcSTFyPvYyMXsPHjPbaPHMJGgIufiQQNeiIXDbTdhSHVtYW5vaWRSb290UGFydA==')) then
+for i,v in pairs(game:GetService(hWDfYkUGlyOih('gnTlrbzxeWLRdjKTYQAGmNYpaLFdFRmMwZnFxIaUQzxZdjMEwmUdheWUGxheWVycw==')).LocalPlayer.petsFolder:GetChildren()) do
 for i,x in pairs(v:GetChildren()) do
-local oh1 = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('NWkLZmdZOeuWnDmtKvWiZOpKTbAYUXuKVwgzDjZZeGMICwiWtUCztrgZXZvbHZlUGV0')
+local oh1 = hWDfYkUGlyOih('rzVkRKQYOlzaaGJWLcUZXQPqbUszzHvJLSOanNkQfoIHQTZtcmOjaeuZXZvbHZlUGV0')
 local oh2 = x.Name
-game:GetService(tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('OnoHjgXqpvEIDmqOuCpwqZITaGOgIvChSowcUVldjADPJSscBkVkhQJUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.petEvolveEvent:FireServer(oh1, oh2)
+game:GetService(hWDfYkUGlyOih('gYKqjKhCpvCsqTxvRqYudrUGJesQTuwNQByPAQEyXYQoiLQzIgsZEHCUmVwbGljYXRlZFN0b3JhZ2U=')).rEvents.petEvolveEvent:FireServer(oh1, oh2)
 end
 end
 end
 	end
 end
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('qqhKnoxnZdCZQbCaUFiIdiyBmMZooMBDxryDzgWsRCvBDszJbAztlyP6Ieq5Yqo6L+b5YyW5a6g54mp'),
+	Name = hWDfYkUGlyOih('JJPQmDFOkZsLzTXCHOxPfcylunIfPYOXxgmPzIZRJXnKussUycqBwNg6Ieq5Yqo6L+b5YyW5a6g54mp'),
 	Default = false,
 	Callback = function(Value)
 		_G.rzzdjhcw = Value
@@ -403,14 +437,14 @@ function rzzdsjcw()
 	wait()
 local plr = game.Players.LocalPlayer
 for _,v in pairs(workspace.Hoops:GetDescendants()) do
-if v.ClassName == tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('buEqkJbiCwHivURcvVLeEJncRduFPocAbFkfpcaNAWvPCtGAyBYSuIATWVzaFBhcnQ=') then
+if v.ClassName == hWDfYkUGlyOih('jreIBwkrSOMyEDzvLujqxOSAvXTvqInQPeNoWnKUJXEcYpzJQokrwUuTWVzaFBhcnQ=') then
 v.touchPart.CFrame = plr.Character.HumanoidRootPart.CFrame
 end
 end
 	end
 end
 Tab:TianJiaToggle({
-	Name = tRyIcPNPEchBtURqGrJASNBFtEwdCJEVssbapzYTImHgIndAJPrzsIzxvZyrLoVZhiqmGreLTSGJUgKbtpAgcrhPnkVgqofkG('bqmWgUoqsQYAYgPwdPhwUMUaVxbfjrerJjjyKhRmnnzIhezODVtoWbD6Ieq5Yqo5Y2H57qn5a6g54mp'),
+	Name = hWDfYkUGlyOih('eGeZZhWtNcYwXvPVnxISqQTFZTrNgFHXcRRaPZLtsOsJSfBInkpsZqN6Ieq5Yqo5Y2H57qn5a6g54mp'),
 	Default = false,
 	Callback = function(Value)
 		_G.rzzdsjcw = Value
