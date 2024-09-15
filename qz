@@ -1,5 +1,5 @@
 local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+function cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
 
 data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
 
@@ -7,112 +7,35 @@ data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) i
  
 
 
-local OrionLib = loadstring(game:HttpGet((VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('oujKgqNirQUqUSAiDbEgqZpyZjSrfxXatcLoEcPPMdbLXNVNouIVWkjaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS93YW5nemhhbi9tYWluL3hpYmE='))))()
+local OrionLib = loadstring(game:HttpGet((cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('tujfKXnWJVAFmNCXRcrIMhkTTDlouORzNQbMkIIVhNKiBqSYEBboEuvaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2F0b3lheWF5YS93YW5nemhhbi9tYWluL3hpYmE='))))()
 
-local Window = OrionLib:CH({Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('soKKWzZCALIbfnsUmaZNcgBHBUGUSNkphjaxVhFZODYCvdhZMzXhJBJ5a6J4oCi5by65aOu5Lyg5aWH6ISa5pys'), HidePremium = false, SaveConfig = true, ConfigFolder = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('oRNcFlBGMWNhUDeCPpHbJcRKSkAYvFoTwDdPuzZLpYiMIyjqcbOsfWET3Jpb25UZXN0')})
-
-local ScreenGui = Instance.new(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('OIafWxqLZrCiWsxIFrJpxkXZYnVIrwsjDefQIVMgnWBImGqAQxYvfELU2NyZWVuR3Vp'))
-local frame = Instance.new(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('YUvtMxpZsFLJywNmZlCJMlBtgmFLpEGtefhowNGcACByNJxiHUKOfDRRnJhbWU='))
-local LBLG = Instance.new(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('QDVQIsCsPNCxAFKYJnxpywCNCXcTEcFSJbTFWVMNzxkhRsldssVILEgU2NyZWVuR3Vp'), getParent)
-local LBL = Instance.new(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('QvFNQKgRnMNZJchYGhjlCDhjanBKnWqJxPvXosOkhvlTzwmDhLvrlDrVGV4dExhYmVs'), getParent)
-local player = game.Players.LocalPlayer
-
-LBLG.Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('GxKhDvmWkntphKEXPPSJbjJCNaYRrUWUCysEDNEbQLeNowcZjfXWlYqTEJMRw==')
-LBLG.Parent = game.CoreGui
-LBLG.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-LBLG.Enabled = true
-LBL.Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('VeclpcnuLxuLkYSfLEhYefOAkBAAxBPJEqrcrltfrkrzgdoGnrqEihZTEJM')
-LBL.Parent = LBLG
-LBL.BackgroundColor3 = Color3.new(1, 1, 1)
-LBL.BackgroundTransparency = 1
-LBL.BorderColor3 = Color3.new(0, 0, 0)
-LBL.Position = UDim2.new(0.75,0,0.010,0)
-LBL.Size = UDim2.new(0, 133, 0, 30)
-LBL.Font = Enum.Font.GothamSemibold
-LBL.Text = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('XOIbzdVECuNDwrugnvBRrBZOmjGYqUnPHZBIQnfrFWTpmXjKxZgVUInVGV4dExhYmVs')
-LBL.TextColor3 = Color3.new(1, 1, 1)
-LBL.TextScaled = true
-LBL.TextSize = 25
-LBL.TextWrapped = true
-LBL.Visible = true
-LBL.Draggable = true
-
-local FpsLabel = LBL
-local Heartbeat = game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('mljjqZtetJHkpAtdmJBaCpXKVDcaFVzGBUxkfeKituXpVeXAQZHUNCoUnVuU2VydmljZQ==')).Heartbeat
-local LastIteration, Start
-local FrameUpdateTable = { }
-
-local function HeartbeatUpdate()
-	LastIteration = tick()
-	for Index = #FrameUpdateTable, 1, -1 do
-		FrameUpdateTable[Index + 1] = (FrameUpdateTable[Index] >= LastIteration - 1) and FrameUpdateTable[Index] or nil
-	end
-	FrameUpdateTable[1] = LastIteration
-	local CurrentFPS = (tick() - Start >= 1 and #FrameUpdateTable) or (#FrameUpdateTable / (tick() - Start))
-	CurrentFPS = CurrentFPS - CurrentFPS % 1
-	FpsLabel.Text = (VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('TLlABtohnXUamrSfPRssZefiNIiTtXaVSsUGbXZzBFoPqYwtloIBZHX8J+HqPCfh7PljJfkuqzml7bpl7Q6')..os.date(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('STSKIHsHfKDwBcaOjhXDjJnbqbcCByuNqZwoMgfOlnPizehNZVzANwLJUg='))..VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('oYGTBDDMIEvWhysbjqvGCwvoyGQlDTKNtimWutmagiCEsNDpEDVKrSZ5pe2')..os.date(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('bvhOyVfLklQhMhboDZrFrNuBppYkdqqUfNkOillangtSabPXkiEEyIiJU0='))..VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('EnmFbPBftwPtAeWvGiXjHdznnaqzFGWzXzcGBhJpZTDPQsOYsavFeln5YiG')..os.date(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('YRtKqglSQXJSCemPscEAXRFRfjaAqbWfkCXldexiCYbinfeMluvIpeVJVM=')))..VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('XTbeqVLpGqFGrEAKYHZerHQFEPQyIzbNHoKAqqODMBNjZkhoQjcwLkd56eS')
-end
-Start = tick()
-Heartbeat:Connect(HeartbeatUpdate)
-
-local ScreenGui = Instance.new(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('BctAKHRokCeYqdFnKToHyNtRbcLzgyBwsWkepqQnLnVisTQiDcAGzDfU2NyZWVuR3Vp'))
-local FpsLabel = Instance.new(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('hALDObIgsPeGnXMFIIfChuoZUEOdowYcudCQmmhaqYPECLsAGfReOOhVGV4dExhYmVs'))
-
-ScreenGui.Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('DBfnpnmeNAglEMPYuzUeJRyNztAWbfbiXgtZjyhkYCSAMCpisxeVKPcRlBTR3Vp')
-ScreenGui.ResetOnSpawn = false
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-FpsLabel.Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('AbgbrmnCmbQhOyQzVjeqPsbHRriZDsMfRneAINHIRLJCLBFrTfhTDYeRlBTTGFiZWw=')
-FpsLabel.Size = UDim2.new(0, 100, 0, 50)
-FpsLabel.Position = UDim2.new(0.75,20,0.075,20)
-FpsLabel.BackgroundTransparency = 1
-FpsLabel.Font = Enum.Font.SourceSansBold
-FpsLabel.Text = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('ttRgzKvwNGvUXOevmbgKijXSByhjqwaREXTbFfgQmkzIWVtHcpMrHdGRlBTOiAw')
-FpsLabel.TextSize = 25
-FpsLabel.TextColor3 = Color3.fromRGB(0, 0, 255) 
-FpsLabel.Parent = ScreenGui
-FpsLabel.Draggable = true
-
-local frameCounter = 0
-
-function updateFpsLabel()
-    frameCounter = frameCounter + 1
-    if frameCounter >= 20 then -- 20帧
-        local fps = math.floor(1 / game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('VYoZBxXurUhUdVHfPfEZcerAxSkZuOecjwmkrmaSrFnmNhDGhpWDQYXUnVuU2VydmljZQ==')).RenderStepped:Wait())
-        FpsLabel.Text = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('JuRtMIhmCZMmXnwtcisgykAKpJAWdwJmGvVyUJQHmylHiOBQXkUGICuRlBTOiA=') .. fps
-        frameCounter = 0
-    end
-end
-
-game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('HiJacEdwZTgrdyQElSfZyBEIDNFxAdSXJeEsixNfYIPiUOmPFtfjRuNUnVuU2VydmljZQ==')).RenderStepped:Connect(updateFpsLabel)
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('BYFOfVqNWtejSNSAAJvDoBHIgazIgysVcGgqXbpTlbAFUqPUIZALWkmUGxheWVyR3Vp'))
+local Window = OrionLib:CH({Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('KZdwYvwRDsJIaGnDRloIbQsvqAegnfTKxBJuGhOonWBIuBrlJVzuTlr5a6J4oCi5by65aOu5Lyg5aWH'), HidePremium = false, SaveConfig = true, ConfigFolder = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('YSIvqPtRiApVDbAZJIYuVoZFojrZiwQiiLprXLtKOKxPHXMryYIFUcsT3Jpb25UZXN0')})
 
 local Tab = Window:CjLb({
-        Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('CTEinVStGTqaXEiODtScoHvAShTQaRPsHypUUJHFCxymdbgQZcsACjb5YWs5ZGK4oCi6ZSA5q+BVUk='),
-        Icon = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('aSgDttQyaIqhEJLuIdWlUecJsrInyeDGrGOPofMTSKazHgdztDdYYqlcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
+        Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('oWUHYRQryJUGkufAYnjGnFuYwrsFLNvgoEeXEFzKhjHAmBLIPyulRlr5YWs5ZGK4oCi6ZSA5q+BVUk='),
+        Icon = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('NfWmrREyOixiYWvdQXbTmQBAwxvTjncFUjqKpdlGNODGvoGGFeRhuxIcmJ4YXNzZXRpZDovLzc3MzM5NjA5ODE='),
         PremiumOnly = false
 })
 
-Tab:Lab(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('uWxszyROvuouDwrDFejJGlmKtemXFOhujKXuiQaUCQJSrNUeRvUrOyZ6ISa5pys5rC45LmF5YWN6LS577yM6K+35Yu/55u45L+h5YCS5Y2W77yM5pyJ5pe25YCZ6YOo5YiG5oyJ6ZKu5oiW5Yu+6YCJ5qGG5Y+v6IO95oyJ5LiN5Yiw77yM5ruR5Yqo5LiA5LiL5Y2z5Y+v'))
+Tab:Lab(cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('wHlxrdQtburPeByScsoJDfcQqOKoAvwSytymyhARcPMiFfzMxJkHnwD6ISa5pys5rC45LmF5YWN6LS577yM6K+35Yu/55u45L+h5YCS5Y2W77yM5pyJ5pe25YCZ6YOo5YiG5oyJ6ZKu5oiW5Yu+6YCJ5qGG5Y+v6IO95oyJ5LiN5Yiw77yM5ruR5Yqo5LiA5LiL5Y2z5Y+v'))
 
 Tab:TianJiaButton({
-        Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('wcdqTvdskQidkdlCLSImRvMoGfhDGVbTIhTWmtpVXEnJGlRYVfxnZBX5aSN5Yi25L2c6ICFUVHlj7fwn5Cn'),
+        Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('OSjpHMJolWvrVWIYCKGirEciOBKZChbfzlQmuZowbiDXdVVtLAfpnrT5aSN5Yi25L2c6ICFUVHlj7fwn5Cn'),
         Callback = function()
-        setclipboard(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('BfGLGpGAgEHdVpdClIfEfqdnlVRQJcUaBNnYfwSSEnqIImsqVcqCdguMjEzNDcwMjQzOA=='))
+        setclipboard(cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('QJiJlkRrgMwpGWfYkyjzYmTMITUXoKtDkAfGaEqqRNoPhmptBnicugSMjEzNDcwMjQzOA=='))
           end    
 })
 
 Tab:TianJiaButton({
-        Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('hVWfzJPweicbVRBhkhXORQfrWWJWrtBEnTHWWNSYMMWbqPeCPDMolFw6ZSA5q+BdWk='),
+        Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('TwaJMiUqozaOBsthAIRpWvlNeqkuztIcjgjqSPOHeyVdKpYRJYPFzwr6ZSA5q+BdWk='),
         Callback = function()
         OrionLib:Destroy()
           end    
 })
 
 local Tab = Window:CjLb({
-	Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('hnSLHcobndoUsUnuRewveotybpBUaCqZHrQakCWmXFbGxPQdxhFryHD4pqh6Ieq5Yqo5Yqf6IO94pqh77iP'),
-	Icon = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('EXLgzPTIDzIhwAHMsmapmQUNjGZBHCpNXoDvNgwHQeucAkvpSyHbTlncmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('KROhwvnxNuMGwWcbsOrpgQIUPavndNYShoTvxxTplhPjlzcpfSznLjA4pqh6Ieq5Yqo5Yqf6IO94pqh77iP'),
+	Icon = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('sDkAtmzinDGQBMvOOhWgQKKcdOHDvyRXlxTwENxvUBdDjfHeiuiAYrmcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
 	PremiumOnly = false
 })
 
@@ -122,16 +45,16 @@ function qzcs()
 	while _G.qzcs == true do
 	wait()
 local args = {
-    [1] = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('OylQmmbaMZevcqUSRvugAVrACDEuAsnLRbrERdgMFXbikqKzzyRNnoARm9vZA==')
+    [1] = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('wVvGyIHMvcmdGltvYewjuohlINLmtxQwZmqEnuQVjhMUwzCeHKfUAXURm9vZA==')
 }
 
-game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('DStBVIFwNQsGXcXptlCYuXJshlGnLtmlzbbaOusuBfyCfWbVAAaYAplUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.UseTool:FireServer(unpack(args))
+game:GetService(cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('ztaMfGiCMasNdjHtbGVNtNIOhyGIHZLtAPVNrfvUTSYBMoaDtQmNgrbUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.UseTool:FireServer(unpack(args))
 
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('nlAdFjfQEKhuCeHKlsZPeormlDevXAuXLjLiMuAsMXkGeExzekOlCwp6Ieq5Yqo5ZCD6aOf54mp'),
+	Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('MzEZRnqihCZsgkGLKzaianvvUGNuglfKcndMAiAaLdzSwztNTJWabKO6Ieq5Yqo5ZCD6aOf54mp'),
 	Default = false,
 	Callback = function(Value)
 		_G.qzcs = Value
@@ -145,16 +68,16 @@ function qzdq()
 	while _G.qzdq == true do
 	wait()
 local args = {
-    [1] = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('xEZfCViToYiiwNBzuAUWUnLuSFctbCDxKIRcauYQzTVrHVAQgQyHEFkUHVuY2g=')
+    [1] = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('UUsOhHqFcrsggjVRabRFGlYFKYvTDTXNnuiUEtFGQNVzDiJOQOvnWKIUHVuY2g=')
 }
 
-game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('zqiNwVDJkXrxerExdjsgXtuwfAcfqvYHCnCLEGwRGZTsbahRmxDWAmTUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.UseTool:FireServer(unpack(args))
+game:GetService(cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('YzSSqAXhhuUoUggfepLeKOvNLMPTyhmSDxwHnceOQJowUiyDjPgnLbhUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.UseTool:FireServer(unpack(args))
 
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('WmyJyrOoevkVJcdJmMncHsMgZoTBSBZQVBUsKGWsneNlBvDaHrXsafF6Ieq5Yqo5omT5ouz5Ye7'),
+	Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('HQPNLMVZSRrVFSiBsCqqfbJWLtmhcYLXBawicWrfKMukDlbpznPMvYL6Ieq5Yqo5omT5ouz5Ye7'),
 	Default = false,
 	Callback = function(Value)
 		_G.qzdq = Value
@@ -163,8 +86,8 @@ Tab:TianJiaToggle({
 })
 
 local Tab = Window:CjLb({
-	Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('ZwwvnUdCAFUmJfbDipsMZjWaIwlfoZOMOltdiDGcRWJldfqqtnCXhgL8J+SteiHquWKqOi0reS5sPCfkrU='),
-	Icon = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('VBuyRRghLdoXnINrFyxRoVhsazBXXfhuSlNWxCCtzqYDcAWpZnYqpCCcmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
+	Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('cAKwepstAntyhWAgOlweVeaKEuCeBArOENkCZzEzuHtDshPLFVsayMC8J+SteiHquWKqOi0reS5sPCfkrU='),
+	Icon = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('DVahbSJHtzuDaRtNocFYtgyfPrVzrSguFbcUogEEpgiLANLjbIItImccmJ4YXNzZXRpZDovLzQ0ODMzNDU5OTg='),
 	PremiumOnly = false
 })
 
@@ -174,16 +97,16 @@ function ato()
 	while _G.ato == true do
 	wait()
 local args = {
-    [1] = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('nYzhxekMoSHEEDSpZKNYDUwJoXlyIPEtQWPkTqiaGpmRokoLaaxTOUmRmlzdA==')
+    [1] = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('SqynBAdvKODcvaWVSjQIhlAUhLvvUwopuGqCuaqjVcjlFGevtLNtiqgRmlzdA==')
 }
 
-game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('EjSndYCazRurkpTdmJBaWUSTqIrnAXfhlJKkEfAggyOsDeGaOtjuiOKUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
+game:GetService(cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('JVrPfAhbHiRMMSmaVHPsiwXhpBQluPSSfgceGiWDhXCueMEqWhviFEKUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
 
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('QCmSkZPRFTRwnWwnAEacqMUQGTGtFiRnPJaXuPgbCedKRjoaNLmtOyn6Ieq5Yqo5Lmw5ouz5aS0'),
+	Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('faRShDreTCtEFVaBtMWhPthEmyxgNaInIlPukgxLKAZgddXkCTzINna6Ieq5Yqo5Lmw5ouz5aS0'),
 	Default = false,
 	Callback = function(Value)
 	_G.ato = Value
@@ -197,16 +120,16 @@ function ato1()
 	while _G.ato1 == true do
 	wait()
 local args = {
-    [1] = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('NUIXAIHTabVKtEkogEJzWfDBIMIPrFOcIWUKakhNYamIZtglrwFZwHIRm9vZA==')
+    [1] = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('yyNDNNnBAjhMFKDelOkytxAaErcYoFFsUtgmLRMvtOWXTDEgSYihrHERm9vZA==')
 }
 
-game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('WuoPWJjszpCxEjWnvvXosnpTCwQVKzjjeNzoxDYuzPwXkXqtmEwRmAAUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
+game:GetService(cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('XaoKZutcdpDcZeyjodftHczDSyCSxdxqRCBytWAYgfjbxFBWWZMoNIvUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
 
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('iGvKlBhmHsCjLknjcJzEdzUbZVpLSbENoMnfRWmcprYsqeeSOZDqdBM6Ieq5Yqo5Lmw6aOf54mp'),
+	Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('afYcwoVlVSARdcPAifgJlCuifUcbMaJywMhaAPQdYLxeiRtFstzhMny6Ieq5Yqo5Lmw6aOf54mp'),
 	Default = false,
 	Callback = function(Value)
 	_G.ato1 = Value
@@ -220,16 +143,16 @@ function ato2()
 	while _G.ato2 == true do
 	wait()
 local args = {
-    [1] = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('MyPrgJeQNragTLgoSsEblzpLUmNRzgDMVQZxAAnvssSBGDAKmcdilMwU3RvbWFjaA==')
+    [1] = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('rBFRcIhYTaPlRySzqDiMdCFRYETZYjUXOlsXVMqEiniCoBijpCvCRHQU3RvbWFjaA==')
 }
 
-game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('jeUEHGCcvNaGhTesryhZWnjRPYJIVAdcoknxIArDzjPPTFnsELACIJPUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
+game:GetService(cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('xQsMMrojaSDEgCTOhRlbuRTtddrWNMcFVcYRoXyiuWbDqSgbpWtLHhqUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
 
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('dXdlvKhDDTlsycMlrWYTgytqgzweBOSTEhrVvvpxDriXKamClYtLiYv6Ieq5Yqo5Lmw6IKa5a2Q'),
+	Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('INFIzQpEjDInELSGUrsPrBIfMWbtHzwUBoMxEiyvfsAwSdZRSgIkPSx6Ieq5Yqo5Lmw6IKa5a2Q'),
 	Default = false,
 	Callback = function(Value)
 	_G.ato2 = Value
@@ -243,16 +166,16 @@ function ato3()
 	while _G.ato3 == true do
 	wait()
 local args = {
-    [1] = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('VaGUdRidfUdBGyUjCfFWRPEazBeGlnMcBAMCwXDokrQansWwmEOlmjzUmViaXJ0aA==')
+    [1] = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('ShrigoshCQSgQoYDesYHtTuBHaixzKYxBhlkHFIxhuenBXfYAybmFKyUmViaXJ0aA==')
 }
 
-game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('eSewFGhNwXDCjEVEaQsyOhoCsCmKtMjnafgsDHqTwIXyyNzhLsMXeEDUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
+game:GetService(cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('dZPjLHMVCXACtAAhYpVJZpVzQZcptVtGkopiEnoxHXnZlcPdCPSNKAeUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
 
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('IYKTRJFLcTbLpsJBeBLAfnyJTPpmnxtiimKhgwUFENLiRsKbXPSiyyr6Ieq5Yqo5Lmw6YeN55Sf'),
+	Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('ocKQDkDexXOWdbXodaFHhNCNltAQafDECPTCOaWFFsebkCmTougpPAC6Ieq5Yqo5Lmw6YeN55Sf'),
 	Default = false,
 	Callback = function(Value)
 	_G.ato3 = Value
@@ -266,16 +189,16 @@ function ato4()
 	while _G.ato4 == true do
 	wait()
 local args = {
-    [1] = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('RxQTZJjDviVuUCRZQVaYFBfxQuBwWPeghRFlHVuKHajSTnwDcJETbYiSnVtcA==')
+    [1] = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('XNVHNkCFlRwvxPdKVlpOjeXxOAYsWwoUSAZEuViqzYGXQXtovhBhgtrSnVtcA==')
 }
 
-game:GetService(VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('nvxxlaPlqOcZEbdmXRMArSGoUXWAgAvNBQawoBidKSrtAYJKyHQZquEUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
+game:GetService(cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('TGpbWtekMSuBEkXEBRukAgJUphUbMAzyVBaJmXmmxzFlySDtZApxKLGUmVwbGljYXRlZFN0b3JhZ2U=')).Remotes.RequestBuyAll:FireServer(unpack(args))
 
 	end
 end
 
 Tab:TianJiaToggle({
-	Name = VMxycBZqMWJArdZEYxLBwgHIVcNGBgDER('jndVQCNNQZUbGVupKKBmvfUYIFypFECrJwgAeaFUwjEYfzcNWxrOIOc6Ieq5Yqo5Lmw6Lez6LeD'),
+	Name = cqtuVNkqmNLRPJMEBGYoFAwizpYnPDoIZwJJFlDQiQu('SEPTnglACZVCVSsXnqXGxKjswpZPKMLtjYaULEomPLufiFtzKQipWZh6Ieq5Yqo5Lmw6Lez6LeD'),
 	Default = false,
 	Callback = function(Value)
 	_G.ato4 = Value
