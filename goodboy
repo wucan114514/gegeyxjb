@@ -7,8 +7,7 @@ local request = request or http_request or (identifyexecutor() == "Synapse X" an
 loadstring(request({Url="https://raw.githubusercontent.com/cypherdh/Script-Library/main/InstanceProtect",Method="GET"}).Body)()
 local UIS = game:GetService("UserInputService")
 local TS = game:GetService("TweenService")
---创建窗口
-function library:cw(name, version, icon)
+function library:CreateWindow(name, version, icon)
 	name = name or "Name"
 	version = version or "Version"
 	icon = icon or math.random()
@@ -215,8 +214,7 @@ function library:cw(name, version, icon)
 	--end
 	local tabs = {}
 
---创建列表总计名称
-	function tabs:ct(name)
+	function tabs:CreateTab(name)
 		name = name or "Section 1"
 		--Create Tab
 		local Tabs = Instance.new("Frame")
@@ -273,8 +271,7 @@ function library:cw(name, version, icon)
 		Indicator.Visible = false
 		--end
 		local mytabbuttons = {}
-		--创建列表界面
-		function mytabbuttons:cf(name)
+		function mytabbuttons:CreateFrame(name)
 			name = name or "Page 1"
 			--Creating Page
 
@@ -551,8 +548,8 @@ function library:cw(name, version, icon)
 			end)
 
 			local pagebuttons = {}
---创建按钮
-			function pagebuttons:cb(name, desc, callback)
+
+			function pagebuttons:CreateButton(name, desc, callback)
 				name = name or "Button"
 				desc = desc or "Description"
 				callback = callback or function() end
@@ -658,8 +655,8 @@ function library:cw(name, version, icon)
 				end
 				return UpdateButton
 			end
---创建标签
-			function pagebuttons:cls(name)
+
+			function pagebuttons:CreateLabel(name)
 				name = name or "Label"
 				local UpdateLabel2 = {}
 				local Label = Instance.new("Frame")
@@ -706,8 +703,8 @@ function library:cw(name, version, icon)
 				end
 				return UpdateLabel2
 			end
---创建滑动条
-			function pagebuttons:csh(name,min,max,callback)
+
+			function pagebuttons:CreateSlider(name,min,max,callback)
 				name = name or "Slider"
 				min = min or 16
 				max = max or 100
@@ -878,8 +875,8 @@ function library:cw(name, version, icon)
 				end)
 				return library4	
 			end
---创建输入框
-			function pagebuttons:cbo(name, icon, callback)
+
+			function pagebuttons:CreateBox(name, icon, callback)
 				name = name or "Input Text Here..."
 				if icon == "Default" then
 					icon = 10045753138
@@ -955,8 +952,8 @@ function library:cw(name, version, icon)
 				end
 				return UpdateBox
 			end
---创建绑定
-			function pagebuttons:cbi(name, defaultkey, callback)
+
+			function pagebuttons:CreateBind(name, defaultkey, callback)
 				local name = name or "Keybind"
 				local defaultkey = defaultkey or "Unknown"
 				local callback = callback or function() end
@@ -1085,8 +1082,8 @@ function library:cw(name, version, icon)
 				end
 				return UpdateBind
 			end
---创建勾选
-			function pagebuttons:ctt(title , desc, callback)
+
+			function pagebuttons:CreateToggle(title , desc, callback)
 				title = title or "Title"
 				desc = desc or "Description"
 				callback = callback or function() end
@@ -1486,8 +1483,8 @@ function library:cw(name, version, icon)
 
 
 
---创建通知
-			function cn(Name, Description, Callback)
+
+			function CreateNotification(Name, Description, Callback)
 				Name = Name or "Name"
 				Description = Description or "Description"
 				Callback = Callback or function() end
