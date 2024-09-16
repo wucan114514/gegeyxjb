@@ -352,7 +352,7 @@ function library:CreateWindow(name, version, icon)
 			SearchBox.Size = UDim2.new(1, -40, 1, 0)
 			SearchBox.Font = Enum.Font.Gotham
 			SearchBox.PlaceholderColor3 = Color3.fromRGB(227, 225, 228)
-			SearchBox.PlaceholderText = "在这里搜索你想要的功能名"
+			SearchBox.PlaceholderText = "在这里搜索你想要找的功能"
 			SearchBox.Text = ""
 			SearchBox.TextColor3 = Color3.fromRGB(227, 225, 228)
 			SearchBox.TextSize = 12.000
