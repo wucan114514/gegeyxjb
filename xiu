@@ -1,0 +1,1197 @@
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/goodboy'))()
+
+local Window = library:CreateWindow("安脚本", "力量传奇", 10044538000)
+
+local Tab = Window:CreateTab("功能列表")
+
+local Page = Tab:CreateFrame("修改数据")
+
+TextBox = Page:CreateBox("力量", 10044538000, function(arg)
+game:GetService("Players").LocalPlayer.leaderstats.Strength.Value = arg
+end)
+
+TextBox = Page:CreateBox("耐力", 10044538000, function(arg)
+game:GetService("Players").LocalPlayer.Durability.Value = arg
+end)
+
+TextBox = Page:CreateBox("敏捷", 10044538000, function(arg)
+game:GetService("Players").LocalPlayer.Agility.Value = arg
+end)
+
+TextBox = Page:CreateBox("重生", 10044538000, function(arg)
+game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value = arg
+end)
+
+TextBox = Page:CreateBox("宝石", 10044538000, function(arg)
+game:GetService("Players").LocalPlayer.Gems.Value = arg
+end)
+
+TextBox = Page:CreateBox("坏人业报", 10044538000, function(arg)
+game:GetService("Players").LocalPlayer.evilKarma.Value = Value
+end)
+
+TextBox = Page:CreateBox("好人业报", 10044538000, function(arg)
+game:GetService("Players").LocalPlayer.goodKarma.Value = arg
+end)
+
+TextBox = Page:CreateBox("总业报", 10044538000, function(arg)
+game:GetService("Players").LocalPlayer.leaderstats.Kills.Value = arg
+end)
+
+
+local Page = Tab:CreateFrame("个人数据")
+
+Label = Page:CreateLabel("当前力量:")
+
+local ll = Page:CreateLabel("力量")
+spawn(function()
+while wait() do
+pcall(function()
+ll:UpdateLabel(""..game:GetService("Players").LocalPlayer.leaderstats.Strength.Value)
+end)
+end
+end)
+
+Label = Page:CreateLabel("当前耐力:")
+
+local nl = Page:CreateLabel("耐力")
+spawn(function()
+while wait() do
+pcall(function()
+nl:UpdateLabel(""..game:GetService("Players").LocalPlayer.Durability.Value)
+end)
+end
+end)
+
+Label = Page:CreateLabel("当前敏捷:")
+
+local mj = Page:CreateLabel("敏捷")
+spawn(function()
+while wait() do
+pcall(function()
+mj:UpdateLabel(""..game:GetService("Players").LocalPlayer.Agility.Value)
+end)
+end
+end)
+
+Label = Page:CreateLabel("当前重生:")
+
+local cs = Page:CreateLabel("重生")
+spawn(function()
+while wait() do
+pcall(function()
+cs:UpdateLabel(""..game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value)
+end)
+end
+end)
+
+Label = Page:CreateLabel("当前宝石:")
+
+local bs = Page:CreateLabel("宝石")
+spawn(function()
+while wait() do
+pcall(function()
+bs:UpdateLabel(""..game:GetService("Players").LocalPlayer.Gems.Value)
+end)
+end
+end)
+
+Label = Page:CreateLabel("当前坏人业报:")
+
+local hr = Page:CreateLabel("坏人")
+spawn(function()
+while wait() do
+pcall(function()
+hr:UpdateLabel(""..game:GetService("Players").LocalPlayer.evilKarma.Value)
+end)
+end
+end)
+
+Label = Page:CreateLabel("当前好人业报:")
+
+local har = Page:CreateLabel("好人")
+spawn(function()
+while wait() do
+pcall(function()
+har:UpdateLabel(""..game:GetService("Players").LocalPlayer.goodKarma.Value)
+end)
+end
+end)
+
+Label = Page:CreateLabel("当前总业报:")
+
+local zu = Page:CreateLabel("总业报")
+spawn(function()
+while wait() do
+pcall(function()
+zu:UpdateLabel(""..game:GetService("Players").LocalPlayer.leaderstats.Kills.Value)
+end)
+end
+end)
+
+local Page = Tab:CreateFrame("自动锻炼")
+
+Toggle = Page:CreateToggle("自动哑铃", "自动装备哑铃并锻炼", function(arg)
+llzddl = arg
+		game:GetService("RunService").Stepped:connect(
+		function()
+			pcall(
+				function()
+					if llzddl then
+					local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+						if llzddl then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
+								game:GetService("Players").LocalPlayer.Backpack.Weight
+							)
+						end
+					end
+				end
+			)
+		end
+		)
+end)
+
+Toggle = Page:CreateToggle("自动俯卧撑", "自动装备俯卧撑并锻炼", function(arg)
+llzdfwc = arg
+		game:GetService("RunService").Stepped:connect(
+		function()
+			pcall(
+				function()
+					if llzdfwc then
+				        local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+						if llzdfwc then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
+								game:GetService("Players").LocalPlayer.Backpack.Pushups
+							)
+						end
+					end
+				end
+			)
+		end
+		)
+end)
+
+Toggle = Page:CreateToggle("自动仰卧起坐", "自动装备仰卧起坐并锻炼", function(arg)
+llzdywqz = arg
+		game:GetService("RunService").Stepped:connect(
+		function()
+			pcall(
+				function()
+					if llzdywqz then
+				        local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+						if llzdywqz then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
+								game:GetService("Players").LocalPlayer.Backpack.Situps
+							)
+						end
+					end
+				end
+			)
+		end
+		)
+end)
+
+Toggle = Page:CreateToggle("自动倒立", "自动装备倒立并锻炼", function(arg)
+	llzddl = arg
+		game:GetService("RunService").Stepped:connect(
+		function()
+			pcall(
+				function()
+					if llzddl then
+				        local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+						if llzddl then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
+								game:GetService("Players").LocalPlayer.Backpack.Handstands
+							)
+						end
+					end
+				end
+			)
+		end
+		)
+end)
+
+local Page = Tab:CreateFrame("传送功能")
+
+Button = Page:CreateButton("出生点", "点击传送到出生点", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-42.7, 3.7, 404.2)
+end)
+
+Button = Page:CreateButton("小岛", "点击传送到小岛", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-37.636775970458984, 3.86960768699646, 1879.180908203125)
+end)
+
+Button = Page:CreateButton("冰霜健身房", "点击传送到冰霜健身房", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-2623.022216796875, 3.716249465942383, -409.0733337402344)
+end)
+
+Button = Page:CreateButton("神话健身房", "点击传送到神话健身房", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2250.778076171875, 3.716248035430908, 1073.2266845703125)
+end)
+
+Button = Page:CreateButton("永恒健身房", "点击传送到永恒健身房", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-6758.9638671875, 3.71626353263855, -1284.918701171875)
+end)
+
+Button = Page:CreateButton("传奇健身房", "点击传送到传奇健身房", function()
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4603.28173828125, 987.869140625, -3897.86572265625)
+end)
+
+Button = Page:CreateButton("肌肉之王健身房", "点击传送到肌肉之王健身房", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8625.9296875, 13.566278457641602, -5730.4736328125)
+end)
+
+_G.lssj = true
+
+function lssj()
+	while _G.lssj == true do
+	wait()
+    game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Blue Crystal")	
+	end
+end
+
+Toggle = Page:CreateToggle("蓝色水晶", "开一次1k宝石", function(arg)
+    _G.lssj = Value
+		lssj()
+end)
+
+_G.lsj = true
+
+function lsj()
+	while _G.lsj == true do
+	wait()
+    game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Green Crystal")	
+	end
+end
+
+Toggle = Page:CreateToggle("绿色水晶", "开一次3k宝石", function(arg)
+    _G.lsj = Value
+		lsj()
+end)
+
+_G.bssj = true
+
+function bssj()
+	while _G.bssj == true do
+	wait()
+    game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Frost Crystal")	
+	end
+end
+
+Toggle = Page:CreateToggle("冰霜水晶", "开一次5k宝石", function(arg)
+    _G.bssj = Value
+		bssj()
+end)
+
+_G.shsj = true
+
+function shsj()
+	while _G.shsj == true do
+	wait()
+    game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Mythical Crystal")	
+	end
+end
+
+Toggle = Page:CreateToggle("神话水晶", "开一次8k宝石", function(arg)
+    _G.shsj = Value
+		shsj()
+end)
+
+_G.dysj = true
+
+function dysj()
+	while _G.dysj == true do
+	wait()
+    game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Inferno Crystal")	
+	end
+end
+
+Toggle = Page:CreateToggle("地狱水晶", "开一次15k宝石", function(arg)
+    _G.dysj = Value
+		dysj()
+end)
+
+_G.cqsj1 = true
+
+function cqsj1()
+	while _G.cqsj1 == true do
+	wait()
+    game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Legends Crystal")	
+	end
+end
+
+Toggle = Page:CreateToggle("传奇水晶1", "开一次300k宝石", function(arg)
+    _G.cqsj1 = Value
+		cqsj1()
+end)
+
+_G.cqsj2 = true
+
+function cqsj2()
+	while _G.cqsj2 == true do
+	wait()
+    game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Muscle Elite Crystal")	
+	end
+end
+
+Toggle = Page:CreateToggle("传奇水晶2", "开一次1m宝石", function(arg)
+    _G.cqsj2 = Value
+		cqsj2()
+end)
+
+_G.jrsj = true
+
+function jrsj()
+	while _G.jrsj == true do
+	wait()
+    game:GetService("ReplicatedStorage").rEvents.openCrystalRemote:InvokeServer("openCrystal", "Galaxy Oracle Crystal")	
+	end
+end
+
+Toggle = Page:CreateToggle("肌肉之王水晶", "开一次1.5m宝石", function(arg)
+    _G.jrsj = Value
+		jrsj()
+end)
+
+local Page = Tab:CreateFrame("重生功能")
+
+_G.kscscs = true
+
+function kscscs()
+	while _G.kscscs == true do
+	wait()
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")	
+	end
+end
+
+Toggle = Page:CreateToggle("自动重生", "点击即可自动重生，非定制，可选择这个不开开定制重生", function(arg)
+    _G.kscscs = Value
+		kscscs()
+end)
+
+
+_G.kscs = true
+
+function kscs()
+	while _G.kscs == true do
+	wait()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-8625.9296875, 13.566278457641602, -5730.4736328125)	
+	end
+end
+
+Toggle = Page:CreateToggle("自动传送", "自动传送到肌肉之王健身房，必开", function(arg)
+    _G.kscs = arg
+		kscs()
+end)
+
+Toggle = Page:CreateToggle("自动哑铃", "自动哑铃锻炼来刷重生，必开", function(arg)
+    	yldll = arg
+		game:GetService("RunService").Stepped:connect(
+		function()
+			pcall(
+				function()
+					if yldll then
+					local args = {
+    [1] = "rep"
+}
+
+game:GetService("Players").LocalPlayer.muscleEvent:FireServer(unpack(args))
+						if yldll then
+							game.Players.LocalPlayer.Character.Humanoid:EquipTool(
+								game:GetService("Players").LocalPlayer.Backpack.Weight
+							)
+						end
+					end
+				end
+			)
+		end
+		)
+end)
+
+_G.kscsdx = true
+
+function kscsdx()
+	while _G.kscsdx == true do
+	wait()
+       local args = {
+    [1] = "changeSize",
+    [2] = 2
+}
+
+game:GetService("ReplicatedStorage").rEvents.changeSpeedSizeRemote:InvokeServer(unpack(args))	
+	end
+end
+
+Toggle = Page:CreateToggle("设置大小", "自动设置大小，必开", function(arg)
+    _G.kscsdx = arg
+		kscsdx()
+end)
+
+local Page = Tab:CreateFrame("定制重生")
+
+local dzcs = 0
+
+Label = Page:CreateLabel("当前定制重生:")
+
+local dcs = Page:CreateLabel("定制重生")
+spawn(function()
+while wait() do
+pcall(function()
+dcs:UpdateLabel(""..dzcs)
+end)
+end
+end)
+
+_G.c280 = true
+
+function c280()
+	while _G.c280 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 280 then
+    game.Players.LocalPlayer:Kick("已自动重生到280，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("280", "重生到280自动踢出以达到自动停止的效果", function(arg)
+    _G.c280 = arg
+		c280()
+	dzcs = 280	
+end)
+
+_G.c580 = true
+
+function c580()
+	while _G.c580 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 580 then
+    game.Players.LocalPlayer:Kick("已自动重生到580，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("580", "重生到580自动踢出以达到自动停止的效果", function(arg)
+    _G.c580 = arg
+		c580()
+	dzcs = 580	
+end)
+
+_G.c980 = true
+
+function c980()
+	while _G.c980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 980 then
+    game.Players.LocalPlayer:Kick("已自动重生到980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("980", "重生到980自动踢出以达到自动停止的效果", function(arg)
+    _G.c980 = arg
+		c980()
+	dzcs = 980	
+end)
+
+_G.c1480 = true
+
+function c1480()
+	while _G.c1480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 1480 then
+    game.Players.LocalPlayer:Kick("已自动重生到1480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("1480(同白石头)", "重生到1480自动踢出以达到自动停止的效果", function(arg)
+    _G.c1480 = arg
+		c1480()
+	dzcs = 1480	
+end)
+
+_G.c2080 = true
+
+function c2080()
+	while _G.c2080 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 2080 then
+    game.Players.LocalPlayer:Kick("已自动重生到2080，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("2080", "重生到2080自动踢出以达到自动停止的效果", function(arg)
+    _G.c2080 = arg
+		c2080()
+	dzcs = 2080	
+end)
+
+_G.c2780 = true
+
+function c2780()
+	while _G.c2780 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 2780 then
+    game.Players.LocalPlayer:Kick("已自动重生到2780，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("2780", "重生到2780自动踢出以达到自动停止的效果", function(arg)
+    _G.c2780 = arg
+		c2780()
+	dzcs = 2780	
+end)
+
+_G.c3580 = true
+
+function c3580()
+	while _G.c3580 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 3580 then
+    game.Players.LocalPlayer:Kick("已自动重生到3580，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("3580", "重生到3580自动踢出以达到自动停止的效果", function(arg)
+    _G.c3580 = arg
+		c3580()
+	dzcs = 3580	
+end)
+
+_G.c4480 = true
+
+function c4480()
+	while _G.c4480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 4480 then
+    game.Players.LocalPlayer:Kick("已自动重生到4480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("4480", "重生到4480自动踢出以达到自动停止的效果", function(arg)
+    _G.c4480 = arg
+		c4480()
+	dzcs = 4480	
+end)
+
+_G.c5480 = true
+
+function c5480()
+	while _G.c5480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 5480 then
+    game.Players.LocalPlayer:Kick("已自动重生到5480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("5480", "重生到5480自动踢出以达到自动停止的效果", function(arg)
+    _G.c5480 = arg
+		c5480()
+	dzcs = 5480	
+end)
+
+_G.c6580 = true
+
+function c6580()
+	while _G.c6580 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 6580 then
+    game.Players.LocalPlayer:Kick("已自动重生到6580，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("6580", "重生到6580自动踢出以达到自动停止的效果", function(arg)
+    _G.c6580 = arg
+		c6580()
+	dzcs = 6580	
+end)
+
+_G.c7780 = true
+
+function c7780()
+	while _G.c7780 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 7780 then
+    game.Players.LocalPlayer:Kick("已自动重生到7780，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("7780", "重生到7780自动踢出以达到自动停止的效果", function(arg)
+    _G.c7780 = arg
+		c7780()
+	dzcs = 7780	
+end)
+
+_G.c9080 = true
+
+function c9080()
+	while _G.c9080 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 9080 then
+    game.Players.LocalPlayer:Kick("已自动重生到9080，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("9080", "重生到9080自动踢出以达到自动停止的效果", function(arg)
+    _G.c9080 = arg
+		c9080()
+	dzcs = 9080	
+end)
+
+_G.c10480 = true
+
+function c10480()
+	while _G.c10480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 10480 then
+    game.Players.LocalPlayer:Kick("已自动重生到10480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("10480(同百石头)", "重生到10480自动踢出以达到自动停止的效果", function(arg)
+    _G.c10480 = arg
+		c10480()
+	dzcs = 10480	
+end)
+
+_G.c11980 = true
+
+function c11980()
+	while _G.c11980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 11980 then
+    game.Players.LocalPlayer:Kick("已自动重生到11980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("11980", "重生到11980自动踢出以达到自动停止的效果", function(arg)
+    _G.c11980 = arg
+		c11980()
+	dzcs = 11980	
+end)
+
+_G.c13580 = true
+
+function c13580()
+	while _G.c13580 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 13580 then
+    game.Players.LocalPlayer:Kick("已自动重生到13580，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("13580", "重生到13580自动踢出以达到自动停止的效果", function(arg)
+    _G.c13580 = arg
+		c13580()
+	dzcs = 13580	
+end)
+
+_G.c15280 = true
+
+function c15280()
+	while _G.c15280 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 15280 then
+    game.Players.LocalPlayer:Kick("已自动重生到15280，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("15280", "重生到15280自动踢出以达到自动停止的效果", function(arg)
+    _G.c15280 = arg
+		c15280()
+	dzcs = 15280	
+end)
+
+_G.c17080 = true
+
+function c17080()
+	while _G.c17080 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 17080 then
+    game.Players.LocalPlayer:Kick("已自动重生到17080，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("17080", "重生到17080自动踢出以达到自动停止的效果", function(arg)
+    _G.c17080 = arg
+		c17080()
+	dzcs = 17080	
+end)
+
+_G.c18980 = true
+
+function c18980()
+	while _G.c18980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 18980 then
+    game.Players.LocalPlayer:Kick("已自动重生到18980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("18980", "重生到18980自动踢出以达到自动停止的效果", function(arg)
+    _G.c18980 = arg
+		c18980()
+	dzcs = 18980	
+end)
+
+Label = Page:CreateLabel("定制白石头卡宠重生")
+
+_G.c2980 = true
+
+function c2980()
+	while _G.c2980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 2980 then
+    game.Players.LocalPlayer:Kick("已自动重生到2980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("2980", "重生到2980自动踢出以达到自动停止的效果", function(arg)
+    _G.c2980 = arg
+		c2980()
+	dzcs = 2980	
+end)
+
+_G.c4980 = true
+
+function c4980()
+	while _G.c4980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 4980 then
+    game.Players.LocalPlayer:Kick("已自动重生到4980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("4980", "重生到4980自动踢出以达到自动停止的效果", function(arg)
+    _G.c4980 = arg
+		c4980()
+	dzcs = 4980	
+end)
+
+_G.c7480 = true
+
+function c7480()
+	while _G.c7480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 7480 then
+    game.Players.LocalPlayer:Kick("已自动重生到7480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("7480", "重生到7480自动踢出以达到自动停止的效果", function(arg)
+    _G.c7480 = arg
+		c7480()
+	dzcs = 7480	
+end)
+
+_G.c13980 = true
+
+function c13980()
+	while _G.c13980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 13980 then
+    game.Players.LocalPlayer:Kick("已自动重生到13980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("13980", "重生到13980自动踢出以达到自动停止的效果", function(arg)
+    _G.c13980 = arg
+		c13980()
+	dzcs = 13980	
+end)
+
+_G.c17980 = true
+
+function c17980()
+	while _G.c17980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 17980 then
+    game.Players.LocalPlayer:Kick("已自动重生到17980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("17980", "重生到17980自动踢出以达到自动停止的效果", function(arg)
+    _G.c17980 = arg
+		c17980()
+	dzcs = 17980	
+end)
+
+_G.c22480 = true
+
+function c22480()
+	while _G.c22480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 22480 then
+    game.Players.LocalPlayer:Kick("已自动重生到22480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("22480", "重生到22480自动踢出以达到自动停止的效果", function(arg)
+    _G.c22480 = arg
+		c22480()
+	dzcs = 22480	
+end)
+
+_G.c27480 = true
+
+function c27480()
+	while _G.c27480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 27480 then
+    game.Players.LocalPlayer:Kick("已自动重生到27480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("27480", "重生到27480自动踢出以达到自动停止的效果", function(arg)
+    _G.c27480 = arg
+		c27480()
+	dzcs = 27480	
+end)
+
+_G.c32980 = true
+
+function c32980()
+	while _G.c32980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 32980 then
+    game.Players.LocalPlayer:Kick("已自动重生到32980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("32980", "重生到32980自动踢出以达到自动停止的效果", function(arg)
+    _G.c32980 = arg
+		c32980()
+	dzcs = 32980	
+end)
+
+_G.c45480 = true
+
+function c45480()
+	while _G.c45480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 45480 then
+    game.Players.LocalPlayer:Kick("已自动重生到45480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("45480", "重生到45480自动踢出以达到自动停止的效果", function(arg)
+    _G.c45480 = arg
+		c45480()
+	dzcs = 45480	
+end)
+
+_G.c52480 = true
+
+function c52480()
+	while _G.c52480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 52480 then
+    game.Players.LocalPlayer:Kick("已自动重生到52480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("52480", "重生到52480自动踢出以达到自动停止的效果", function(arg)
+    _G.c52480 = arg
+		c52480()
+	dzcs = 52480	
+end)
+
+_G.c59980 = true
+
+function c59980()
+	while _G.c59980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 59980 then
+    game.Players.LocalPlayer:Kick("已自动重生到59980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("59980", "重生到59980自动踢出以达到自动停止的效果", function(arg)
+    _G.c59980 = arg
+		c59980()
+	dzcs = 59980	
+end)
+
+_G.c67980 = true
+
+function c67980()
+	while _G.c67980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 67980 then
+    game.Players.LocalPlayer:Kick("已自动重生到67980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("67980", "重生到67980自动踢出以达到自动停止的效果", function(arg)
+    _G.c67980 = arg
+		c67980()
+	dzcs = 67980	
+end)
+
+_G.c76480 = true
+
+function c76480()
+	while _G.c76480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 76480 then
+    game.Players.LocalPlayer:Kick("已自动重生到76480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("76480", "重生到76480自动踢出以达到自动停止的效果", function(arg)
+    _G.c76480 = arg
+		c76480()
+	dzcs = 76480	
+end)
+
+_G.c85480 = true
+
+function c85480()
+	while _G.c85480 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 85480 then
+    game.Players.LocalPlayer:Kick("已自动重生到85480，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("85480", "重生到85480自动踢出以达到自动停止的效果", function(arg)
+    _G.c85480 = arg
+		c85480()
+	dzcs = 85480	
+end)
+
+_G.c94980 = true
+
+function c94980()
+	while _G.c94980 == true do
+	wait()
+    if game:GetService("Players").LocalPlayer.leaderstats.Rebirths.Value >= 94980 then
+    game.Players.LocalPlayer:Kick("已自动重生到94980，已自动为你踢出")
+else
+    game:GetService("ReplicatedStorage").rEvents.rebirthRemote:InvokeServer("rebirthRequest")
+end				
+	end
+end
+
+Toggle = Page:CreateToggle("94980", "重生到94980自动踢出以达到自动停止的效果", function(arg)
+    _G.c94980 = arg
+		c94980()
+	dzcs = 94980	
+end)
+
+local Page = Tab:CreateFrame("刷业报")
+
+Button = Page:CreateButton("吸所有人", "把所有人吸到你当前位置，而你还可以自由移动", function()
+	
+end)
+
+_G.csdq = true
+
+function csdq()
+	while _G.csdq == true do
+	wait()
+local plr = game.Players
+local lplr = plr.LocalPlayer
+local lchar = lplr.Character
+local HRP = lchar.HumanoidRootPart
+ 
+HRP.CFrame = CFrame.new(-100, 10000, -10000)
+ 
+local C = Instance.new("Part")
+C.Parent = workspace
+C.CFrame = CFrame.new(-100, 9950, -10000)
+C.Size = Vector3.new(1000000, 100, 10000000)
+C.Anchored = true	
+
+wait()
+
+local L_1_ = true;
+local L_2_ = game.Players.LocalPlayer.Character.HumanoidRootPart;
+local L_3_ = L_2_.Position - Vector3.new(5, 0, 0)
+
+game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(L_4_arg1)
+	if L_4_arg1 == 'f' then
+		L_1_ = not L_1_
+	end;
+	if L_4_arg1 == 'r' then
+		L_2_ = game.Players.LocalPlayer.Character.HumanoidRootPart;
+		L_3_ = L_2_.Position - Vector3.new(5, 0, 0)
+	end
+end)
+
+for L_5_forvar1, L_6_forvar2 in pairs(game.Players:GetPlayers()) do
+	if L_6_forvar2 == game.Players.LocalPlayer then
+	else
+		local L_7_ = coroutine.create(function()
+			game:GetService('RunService').RenderStepped:Connect(function()
+				local L_8_, L_9_ = pcall(function()
+					local L_10_ = L_6_forvar2.Character;
+					if L_10_ then
+						if L_10_:FindFirstChild("HumanoidRootPart") then
+							if L_1_ then
+								L_6_forvar2.Backpack:ClearAllChildren()
+								for L_11_forvar1, L_12_forvar2 in pairs(L_10_:GetChildren()) do
+									if L_12_forvar2:IsA("Tool") then
+										L_12_forvar2:Destroy()
+									end
+								end;
+								L_10_.HumanoidRootPart.CFrame = CFrame.new(L_3_)
+							end
+						end
+					end
+				end)
+				if L_8_ then
+				else
+					warn("Unnormal error: "..L_9_)
+				end
+			end)
+		end)
+		coroutine.resume(L_7_)
+	end
+end;
+
+game.Players.PlayerAdded:Connect(function(L_13_arg1)   
+	if L_13_arg1 == game.Players.LocalPlayer then
+	else
+		local L_14_ = coroutine.create(function()
+			game:GetService('RunService').RenderStepped:Connect(function()
+				local L_15_, L_16_ = pcall(function()
+					local L_17_ = L_13_arg1.Character;
+					if L_17_ then
+						if L_17_:FindFirstChild("HumanoidRootPart") then
+							if L_1_ then
+								L_13_arg1.Backpack:ClearAllChildren()
+								for L_18_forvar1, L_19_forvar2 in pairs(L_17_:GetChildren()) do
+									if L_19_forvar2:IsA("Tool") then
+										L_19_forvar2:Destroy()
+									end
+								end;
+								L_17_.HumanoidRootPart.CFrame = CFrame.new(L_3_)
+							end
+						end
+					end
+				end)
+				if L_15_ then
+				else
+					warn("Unnormal error: "..L_16_)
+				end
+			end)
+		end)
+		coroutine.resume(L_14_)
+	end           
+end)
+	end
+end
+
+Toggle = Page:CreateToggle("刷业报", "点击即可把所有人吸到你此刻的位置，并且传送到安全区域来打，打拳需连点器", function(arg)
+    _G.csdq = arg
+		csdq()
+end)
