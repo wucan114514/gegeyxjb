@@ -1,0 +1,44 @@
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "确认身份",
+    Text = "正在验证....",
+    Duration = 5, --时间
+})
+
+local a=tostring(game:GetService("RbxAnalyticsService"):GetClientId());
+
+if a=="8fe55336-3623-4d7e-97b2-2d711f860eb2"then
+_G.ato=true
+elseif a=="5d4b101f-26cf-41a4-b7f7-0cb756bb9066"then
+_G.ato=true
+elseif a=="bdf28091-e671-4fb0-92f3-5122798220b9"then
+_G.ato=true
+elseif a=="9d15b0f1-cd51-4c11-91ed-a8b34589e8ce"then
+_G.ato=true
+elseif a=="4e29db8a-eb15-4b74-91ad-6d62e68a84c2"then
+_G.ato=true
+elseif a=="0dd0bbde-eeaf-4fc3-82c1-d3054539ebbc"then
+_G.ato=true
+end
+if _G.ato==true then
+    local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "验证结果",
+    Text = "验证身份成功",
+    Duration = 5,
+})
+  wait() 
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/wucan114514/gegeyxjb/refs/heads/main/%E7%99%BD%E5%90%8D%E5%8D%95%E5%8A%A0%E5%AF%86.lua')))()
+  else 
+setclipboard("2013892874")
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+    Title = "验证失败",
+    Text = "你并没有白名单，已复制作者qq号，请添加作者qq花30块钱购买白名单",
+    Duration = 5, --时间
+})
+end
+
