@@ -1,0 +1,70 @@
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+
+ 
+
+
+--ID系统是hoho做的——给破解我源码的人看
+
+local list = {
+--极速
+	[1119466531] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('GmIjclqMKhnSGjNRgKBnrgJNveQEyFrrzaluIwXPpfGbuwuGhKgrflxbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/an/refs/heads/main/%E6%9E%81%E9%80%9F%E4%BC%A0%E5%A5%87.luayEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('oWoGIdExXIePgNZSPclQSpPSxQbLkIOSMdrAQzwSkBvPUhsyRsfXsBCKSkpKCk='),
+--力量
+	[1268927906] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('IhRZQGeRbQUDZRGGrTuyNwOYbqXrWSXYcxrUNVhIGzFzcYcitrCdEeMbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/an/refs/heads/main/%E5%AE%89%E5%8A%A0%E5%AF%86.luayEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('zXBJQRHjoLltMuZNVMLUvfuHSagwJVWYRuYBXFSePCtAXiwtuWIbNNFKSkpKCk='),	
+	--大力士
+	[2564505263] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('xpUfGBnruVbWAlwfGnWwQZebWVRIFSMJhugaMHsMqWuSJcPHEGLdIrYbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/an/refs/heads/main/%E8%B6%85%E7%BA%A7%E5%A4%A7%E5%8A%9B%E5%A3%AB%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%84%9A%E6%9C%AC.luayEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('JAfBIWHpeyssxExaSrghuPUKWNVKytSEXFdNKQCTaYGvvqCskDiHPyeKSkpKCk='),	
+	--忍者
+	[1335695570] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('kahwIiYErSmkGvYHptbJYoUKwxGFwFiwHMCAcCJdIzSQNfnJmdudefWbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/an/refs/heads/main/%E5%BF%8D%E8%80%85%E4%BC%A0%E5%A5%87%E8%84%9A%E6%9C%AC.luayEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('anzFuFigHGeALwXVdlTDVErrdpRssoQYnUHqmjjFEfjdtXHXeHZfDLCKSkpKCk='),
+	--举重
+	[1275875292] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('kAiEfIJMFXSFYEmCZfHjibMCxYdesWhLQcGnqqKJNceqTduwjrRRkPlbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/an/refs/heads/main/%E4%B8%BE%E9%87%8D%E6%A8%A1%E6%8B%9F%E5%99%A8%E8%84%9A%E6%9C%AC.luayEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('QiCEyuTLhyoEynbXGqbzmTPLgxsHwolEdCkcHJckmShUonwGasBNraUKSkpKCk='),			
+--吃掉世界
+	[5677613211] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('UVcZXxezoBVimhmaUOJuVNliTkfHkWjSnlEDpOlCeLsySIKeHXkBgXGbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/an/refs/heads/main/%E5%90%83%E6%8E%89%E4%B8%96%E7%95%8C%E8%84%9A%E6%9C%AC.luayEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('HwAHdNveNasgxnNVJErhXcLLylLuaEhIuLBskAgJwoRsxwYYLFXCLcqKSkpKCk='),	
+	--健身联盟
+	[5972059550] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('HuczGAHRHUrZSXzmKGJJlSKdeFDMymNUvZQWFTXqCzmwFfczjVySsTGbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/GymlmyEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('VcbEQGjkgHsBPteWapyIxUJpOgSBvIPJKWwqNMvcnTRtgYBxljwbpceKSkpKCk='),	
+	--动物进化
+	[3358419523] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('yGRSOHJaOWtfApJbIPwpYHvSggccUPPuXUJCQPyNiVxgXtWmxQTFLDvbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/animalssimulatoryEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('bnjSJmhjVjdOQNVLqjAdOXLssppioViHzACVDtmnIcZqVcHbZCOjBuWKSkpKCk='),	
+	--强壮
+    [147235689] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('dYUmrjAOdzqRjDsGqsrAATLPsXClhEdRQdaxkcMeLutvxMtXfFXzBNobG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/qzyEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('GRINCnbugZJQQTQaDhxJHtzyyirUfNqBBYtxmYSzhkUZFOPSPtWFrmeKSkpKCk='),
+--超级食肉者
+    [3136631809] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('AGVWKWHqQCBHbxlSvEEdRjHoeZIZSWuGhktNzQjYXXxJrOYgFfbmUtqbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/gegeyxjb/main/srzyEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('mWfGyMTCdzJPEVkICNmRkKUSPPAWHXxScmItqVQzTyOeCgAQoBdbcIJKSkpKCk='),
+    --拔剑
+    [4795326392] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('DfesXcZWSEZgDUwZzUONWmVVKKzDcxHuackqgTwmEvvbSNzSiDdlSxQbG9hZHN0cmluZyhnYW1lOkh0dHBHZXQoKA==')https://raw.githubusercontent.com/wucan114514/an/refs/heads/main/pullaswordyEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('tbylcvyrUpZOWkWHGStfKGYHGwShEQOPxsBDHZrDSJDYKSPPGvJsWZfKSkpKCk='),
+
+}
+
+local name = {
+	[1119466531] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('KisvazJEVLoJhirZXsMjpCTrTBYwMdNJVwKjpnjssQxnKRtDpEIoxgs5p6B6YCf5Lyg5aWH'),
+	[1268927906] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('VymJYnlDopPJVonLRNwGXnNUZMUPozOHoIbFGYPhvMcMKIVnQqWEOgF5Yqb6YeP5Lyg5aWH'),
+	[2564505263] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('QnnihppRJIXyLmThYmwXYMMHJqmHMAOSyuiTbfaUaShrtFIHqhMZZgV6LaF57qn5aSn5Yqb5aOr5qih5ouf5Zmo'),
+	[1335695570] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('NfaWrHuLkcWsIrQUoRKiSRhGGfkxhDLNgGwqsUqksGyUvFrHLWHidhv5b+N6ICF5Lyg5aWH'),
+	[1275875292] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('RuqhTnmadxGPBKbyJeqcnTLKVshTQotqaBKtzjRsBHZbcqpiWLZJgdF5Li+6YeN5qih5ouf5Zmo'),
+	[5677613211] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('ZBsWfzedeBbJzovJNxoHySMZGglvsWJENWQMxoiJuAxVBMsSKTrZDmi5ZCD5o6J5LiW55WM'),
+	[5972059550] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('jTBMrqdJVWFMinwBKmnmzecQELydoATJtJsSJXvTamXkpKyxjkFydSB5YGl6Lqr6IGU55uf'),
+	[3358419523] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('jZndSVvPsknstIUIuEUbmbZZCegMweEqYmKLlZCKmYHLvfiGDhvtXNY5Yqo54mp6L+b5YyW5qih5ouf5Zmo'),
+	[147235689] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('oZrkdxixWYuZkPQpysWCjmZNSpiCNNTFgXmBZtxGEYVCkNEDUEchANk5by65aOu5Lyg5aWH'),
+	[3136631809] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('JtxNwVTUjDUCLzRlIRrtLbReVNRWgxaqUjuOLdtBFqtTTIWuOTbYGhq6LaF57qn6aOf6IKJ6ICF5qih5ouf5Zmo'),	
+	[4795326392] = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('rRXgtopfcHhFLEvdCDmDSBwLGSvWtwYVqGxsCVwaDkJgLbVKtyInZtr5ouU5Ye65LiA5oqK5YmR'),	
+}
+
+_G.HoHoLoaded = true
+if getgenv().Key and listPre[game.GameId] ~= nil then
+	getgenv().messagebox = function()end
+	loadstring(listPre[tonumber(game.GameId)])()
+elseif not getgenv().Key and list[game.GameId] ~= nil then
+    game:GetService(yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('USigkCusFtJTIhIaHkpnQsQmFaoPdydMGIUJjNBukTuNpnYKuUOEqAEU3RhcnRlckd1aQ==')):SetCore(yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('xdwDNxsiTOLmOetkaFFztnMQBXPMrkZOPnoywXJSfHUZbTMPxtbdzWUU2VuZE5vdGlmaWNhdGlvbg=='),{
+                Title = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('UglsHFxMnCUqmhvdmRGubgEnbesHjcCLhPuMTLJjlFRVrZCbvIXKBqx5b2T5YmN5ri45oiPOg==')..name[game.GameId]..yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('zovjgcTBHEXKIpgsWcOAlBTQcRXSfemCjMcvnGxGgTmtbGEFgHohtPh');
+                Text =yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('EVPxXTmLXoVSCOBqQqSMgpQgtDCXzcdNzMHfNoAuFAJlXvObCJiYMpJ5qOA5rWL5Yiw5L2g5b2T5YmN5ri4546p55qE5ri45oiP5Li6Og==')..name[game.GameId]..yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('BzbNGCNJfIOwgDSrHPIpADjIuYIPTPIcAIWwOsGxlRolLFySGQKyjSjXG7lt7Loh6rliqjkuLrkvaDmiafooYzmraTmuLjmiI/ohJrmnKw=');
+                Duration = 3;
+            })
+	loadstring(list[tonumber(game.GameId)])()
+else
+	game:GetService(yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('LhtzMKtkUONkgloNPJulgMzqrohkyHJTCXvJXYEfzYjAMIEhPKsJuFnU3RhcnRlckd1aQ==')):SetCore(yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('wcjJpofkmLkeyfIlXilcOsnYeBePZZxUqbIvHoSftwFfUiZMNndyMgfU2VuZE5vdGlmaWNhdGlvbg=='),{
+                Title = yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('kEYoniMOjuprjrDupZFxQBBLcOHZbudqzMAqpMtoIkNoCfaFhqBsnlG6ZSZ6K+v77ya5rKh5pyJ5q2k5ri45oiP6ISa5pys');
+                Text =yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('PZVfuiCAlutvIJcretYGbbnfvRVyzWHAfspOsFLrjswQzAhSqRLpUxY5a6J6ISa5pys5pqC5pe25rKh5pyJ5q2k5ri45oiP6ISa5pys77yMcXHnvqTlj7flt7Loh6rliqjlpI3liLbliLDmgqjnmoTnspjotLTmnb/ph4w=');
+                Duration = 5;
+            })
+	setclipboard(yEPTrLBGXslapHUKzZkvVxXbBNyTlYeldEkdKmHJClfpvSnhVesTsHRXlCDSEURwyaLOgsVZqF('swIdrnWXNAdzkGpkYzNLZRPZKmecavOYHwonjNjPDKtXrMiKZRemRcYOTg0NTcxODMz'))
+end    
