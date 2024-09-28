@@ -1,44 +1,54 @@
-local CoreGui = game:GetService("StarterGui")
+local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
+function HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
 
-CoreGui:SetCore("SendNotification", {
-    Title = "确认身份",
-    Text = "正在验证....",
+data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
+
+
+ 
+
+
+local CoreGui = game:GetService(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('ZJNgYFuOwgExeqwMmMVdmQFhAEcsjvmUPTcuETXJVaZRrtpaSdvgJtjU3RhcnRlckd1aQ=='))
+
+CoreGui:SetCore(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('RVoNrgtcTtOMlfHvCzuXthWwTHOsumRTsJibTgjaRsYMgQyVMWugDUKU2VuZE5vdGlmaWNhdGlvbg=='), {
+    Title = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('OaVOAfNTzWyuUACWJCTMgJwOzklxwvhITbwXhMyxFcoHQPbtsHeuFLz56Gu6K6k6Lqr5Lu9'),
+    Text = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('bVvMKOlvzQIzUvdZOKCTfLnDsLXtJVdWFGBvoDnynCuZMsYeMlBqpbe5q2j5Zyo6aqM6K+BLi4uLg=='),
     Duration = 5, --时间
 })
 
-local a=tostring(game:GetService("RbxAnalyticsService"):GetClientId());
+local a=tostring(game:GetService(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('fppgnmvenIdujEjLSlvFolLvQzdRSsXxutALhXqtFShaGOJmzVUDZLKUmJ4QW5hbHl0aWNzU2VydmljZQ==')):GetClientId());
 
-if a=="8fe55336-3623-4d7e-97b2-2d711f860eb2"then
+if a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('gyJFXTCjAfoCkgfFUaLSLbEvRyApksgDrZnzgkOGRevbkFrOCHgkUCaOGZlNTUzMzYtMzYyMy00ZDdlLTk3YjItMmQ3MTFmODYwZWIy')then
 _G.ato=true
-elseif a=="5d4b101f-26cf-41a4-b7f7-0cb756bb9066"then
+elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('YsCTztZZljdoZNcubjuBweeTfBtfbqBKOFRkCeUPxYiRqNiuGnnGiQhNWQ0YjEwMWYtMjZjZi00MWE0LWI3ZjctMGNiNzU2YmI5MDY2')then
 _G.ato=true
-elseif a=="bdf28091-e671-4fb0-92f3-5122798220b9"then
+elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('eFzOFBXhfddmwHCREDdGjLgSfNizXuGddhxHdnAsRELICuEBuucvSaSYmRmMjgwOTEtZTY3MS00ZmIwLTkyZjMtNTEyMjc5ODIyMGI5')then
 _G.ato=true
-elseif a=="9d15b0f1-cd51-4c11-91ed-a8b34589e8ce"then
+elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('BrIffbxzfLhbFlzyikIWVadsvdTDkXGhFrhQcsvfiayOQWIehgQZDCAOWQxNWIwZjEtY2Q1MS00YzExLTkxZWQtYThiMzQ1ODllOGNl')then
 _G.ato=true
-elseif a=="4e29db8a-eb15-4b74-91ad-6d62e68a84c2"then
+elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('NgIWkRyzCxtVuWFeyOCXxxpzFRXVAQjHruqAVtpsPOnWdvvItweJfRkNGUyOWRiOGEtZWIxNS00Yjc0LTkxYWQtNmQ2MmU2OGE4NGMy')then
 _G.ato=true
-elseif a=="0dd0bbde-eeaf-4fc3-82c1-d3054539ebbc"then
+elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('WvcUdlotfOBUSzhssxBJqtbsEuYDBGspeGiNuujheMAMreoDFQkBKLoMGRkMGJiZGUtZWVhZi00ZmMzLTgyYzEtZDMwNTQ1MzllYmJj')then
 _G.ato=true
 end
 if _G.ato==true then
-    local CoreGui = game:GetService("StarterGui")
+    local CoreGui = game:GetService(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('gFjNyyCHTrwuetMFoVHsqOgpaUAvKKqzcOOHJeFvEDyquctIwGIBJGoU3RhcnRlckd1aQ=='))
 
-CoreGui:SetCore("SendNotification", {
-    Title = "验证结果",
-    Text = "验证身份成功",
+CoreGui:SetCore(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('xIAuVeBDoWQquZiqVVCTcJqbYhKdtaxOEEIfgUjTOuuxtLlpXZhxhzhU2VuZE5vdGlmaWNhdGlvbg=='), {
+    Title = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('GUSJplljnOpVisyLAmwTSxXdWWODofgbXlObGAjjnXZvKIWYBRQDGAq6aqM6K+B57uT5p6c'),
+    Text = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('UpNwupwNSZARXpIiOVfNsnevpfrzIzfjHSvFTSinKzBJnxZSeUpATXt6aqM6K+B6Lqr5Lu95oiQ5Yqf'),
     Duration = 5,
 })
   wait() 
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/wucan114514/gegeyxjb/refs/heads/main/%E7%99%BD%E5%90%8D%E5%8D%95%E5%8A%A0%E5%AF%86.lua')))()
+loadstring(game:HttpGet((HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('lMEyGmmzRgqWomypSCAQHHoIIdJSrCIesTLwAWMPIwrdxQUCrWGHXtuaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3d1Y2FuMTE0NTE0L2dlZ2V5eGpiL3JlZnMvaGVhZHMvbWFpbi8lRTclOTklQkQlRTUlOTAlOEQlRTUlOEQlOTUlRTUlOEElQTAlRTUlQUYlODYubHVh'))))()
   else 
-setclipboard("2013892874")
-local CoreGui = game:GetService("StarterGui")
+setclipboard(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('PZiBajxHuRNsZViCJOfGnaGzzWbsnjfrjScLUWGWQzJYrZlseixzjjEMjAxMzg5Mjg3NA=='))
+local CoreGui = game:GetService(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('UeTGHqnguqKPdlcDWAZrSETEsKakubqHSwEWGbPFIyPnFDIsvFwQxOvU3RhcnRlckd1aQ=='))
 
-CoreGui:SetCore("SendNotification", {
-    Title = "验证失败",
-    Text = "你并没有白名单，已复制作者qq号，请添加作者qq花30块钱购买白名单",
+CoreGui:SetCore(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('FoetVHeuWtVEWSNKAfDuetlDRLucOpPEEfGZFTvviMoRhrMNGQmXiAtU2VuZE5vdGlmaWNhdGlvbg=='), {
+    Title = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('exHJRHVJVOYIFImFMYpqrzwYYKABdLSixFVYTwBMuCdIEfBQksvSvNU6aqM6K+B5aSx6LSl'),
+    Text = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('GHjTZTRPYFeeUyLhSTOgMzcLyHyhmQFmocEZmkhhRNPIxQjnFlYmqrU5L2g5bm25rKh5pyJ55m95ZCN5Y2V77yM5bey5aSN5Yi25L2c6ICFcXHlj7fvvIzor7fmt7vliqDkvZzogIVxceiKsTMw5Z2X6ZKx6LSt5Lmw55m95ZCN5Y2V'),
     Duration = 5, --时间
 })
 end
 
+    
