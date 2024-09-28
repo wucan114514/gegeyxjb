@@ -1,5 +1,5 @@
 local b='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/'
-function HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
+function jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG(data) m=string.sub(data, 0, 55) data=data:gsub(m,'')
 
 data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) if (x == '=') then return '' end local r,f='',(b:find(x)-1) for i=6,1,-1 do r=r..(f%2^i-f%2^(i-1)>0 and '1' or '0') end return r; end):gsub('%d%d%d?%d?%d?%d?%d?%d?', function(x) if (#x ~= 8) then return '' end local c=0 for i=1,8 do c=c+(x:sub(i,i)=='1' and 2^(8-i) or 0) end return string.char(c) end)) end
 
@@ -7,46 +7,46 @@ data = string.gsub(data, '[^'..b..'=]', '') return (data:gsub('.', function(x) i
  
 
 
-local CoreGui = game:GetService(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('ZJNgYFuOwgExeqwMmMVdmQFhAEcsjvmUPTcuETXJVaZRrtpaSdvgJtjU3RhcnRlckd1aQ=='))
+local CoreGui = game:GetService(jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('wTwvOhKWnSfBZWjSvlYhzuqRgdIRdfmfJPPcHmCHzrMFZDSyHLrYpJMU3RhcnRlckd1aQ=='))
 
-CoreGui:SetCore(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('RVoNrgtcTtOMlfHvCzuXthWwTHOsumRTsJibTgjaRsYMgQyVMWugDUKU2VuZE5vdGlmaWNhdGlvbg=='), {
-    Title = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('OaVOAfNTzWyuUACWJCTMgJwOzklxwvhITbwXhMyxFcoHQPbtsHeuFLz56Gu6K6k6Lqr5Lu9'),
-    Text = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('bVvMKOlvzQIzUvdZOKCTfLnDsLXtJVdWFGBvoDnynCuZMsYeMlBqpbe5q2j5Zyo6aqM6K+BLi4uLg=='),
+CoreGui:SetCore(jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('rTRfHpzNUaNDeScgARBWwgCMXiYAnVwTLFhcBaGxKCAnsqfDtFqEJBuU2VuZE5vdGlmaWNhdGlvbg=='), {
+    Title = jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('ZbcMsircFXnQhHVzEKaeaUffvSARZPQVZWMPQCzosNfIRDFEAhRhxwn56Gu6K6k6Lqr5Lu9'),
+    Text = jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('nSAYtXMOozvBqLqWVZKdwcvpALolmKlYwCrincnjkTdMZHFzWYBhKYw5q2j5Zyo6aqM6K+BLi4uLg=='),
     Duration = 5, --时间
 })
 
-local a=tostring(game:GetService(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('fppgnmvenIdujEjLSlvFolLvQzdRSsXxutALhXqtFShaGOJmzVUDZLKUmJ4QW5hbHl0aWNzU2VydmljZQ==')):GetClientId());
+local a=tostring(game:GetService(jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('oLPjdCoGEeidLeGLSwcOPPiKvwoRngSXJDacIqVWlnzsgziVQDCfICcUmJ4QW5hbHl0aWNzU2VydmljZQ==')):GetClientId());
 
-if a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('gyJFXTCjAfoCkgfFUaLSLbEvRyApksgDrZnzgkOGRevbkFrOCHgkUCaOGZlNTUzMzYtMzYyMy00ZDdlLTk3YjItMmQ3MTFmODYwZWIy')then
+if a==jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('bzenSwEwgnNjQxQpVLxfNXqwWsglHvEOZcyqBWDWrZEsaJsGAzvTVdfOGZlNTUzMzYtMzYyMy00ZDdlLTk3YjItMmQ3MTFmODYwZWIy')then
 _G.ato=true
-elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('YsCTztZZljdoZNcubjuBweeTfBtfbqBKOFRkCeUPxYiRqNiuGnnGiQhNWQ0YjEwMWYtMjZjZi00MWE0LWI3ZjctMGNiNzU2YmI5MDY2')then
+elseif a==jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('dqMtpgNYxlWvSbtSohyIVrtzXdhmsJArgcAMRjpKkKyXSERHhExuXrBNWQ0YjEwMWYtMjZjZi00MWE0LWI3ZjctMGNiNzU2YmI5MDY2')then
 _G.ato=true
-elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('eFzOFBXhfddmwHCREDdGjLgSfNizXuGddhxHdnAsRELICuEBuucvSaSYmRmMjgwOTEtZTY3MS00ZmIwLTkyZjMtNTEyMjc5ODIyMGI5')then
+elseif a==jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('zvmOSuVvvbZATmaVQWMYNXSzFCnSFdgHdVygDjQcOzwjMowepHvLlmNYmRmMjgwOTEtZTY3MS00ZmIwLTkyZjMtNTEyMjc5ODIyMGI5')then
 _G.ato=true
-elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('BrIffbxzfLhbFlzyikIWVadsvdTDkXGhFrhQcsvfiayOQWIehgQZDCAOWQxNWIwZjEtY2Q1MS00YzExLTkxZWQtYThiMzQ1ODllOGNl')then
+elseif a==jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('sBwxtrWJcRBDtjdotllHxcchfcnBbyMzVCNdHHzilXleGGINeEfWYhlOWQxNWIwZjEtY2Q1MS00YzExLTkxZWQtYThiMzQ1ODllOGNl')then
 _G.ato=true
-elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('NgIWkRyzCxtVuWFeyOCXxxpzFRXVAQjHruqAVtpsPOnWdvvItweJfRkNGUyOWRiOGEtZWIxNS00Yjc0LTkxYWQtNmQ2MmU2OGE4NGMy')then
+elseif a==jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('dDNRJgrQsMAhOZPSGwAraNOiTaayUARbnuAPyIuDAdViRwuJVtOWbjwNGUyOWRiOGEtZWIxNS00Yjc0LTkxYWQtNmQ2MmU2OGE4NGMy')then
 _G.ato=true
-elseif a==HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('WvcUdlotfOBUSzhssxBJqtbsEuYDBGspeGiNuujheMAMreoDFQkBKLoMGRkMGJiZGUtZWVhZi00ZmMzLTgyYzEtZDMwNTQ1MzllYmJj')then
+elseif a==jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('HEOPVIaqNINKKYPumcKsBykCdDIqJEcjUMXecUtmebjaZKTozSFwrvuMGRkMGJiZGUtZWVhZi00ZmMzLTgyYzEtZDMwNTQ1MzllYmJj')then
 _G.ato=true
 end
 if _G.ato==true then
-    local CoreGui = game:GetService(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('gFjNyyCHTrwuetMFoVHsqOgpaUAvKKqzcOOHJeFvEDyquctIwGIBJGoU3RhcnRlckd1aQ=='))
+    local CoreGui = game:GetService(jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('WpYFNHhpCyaGvxHipTNLUnLDlQisWVGSTnetJLPXrAmnrBnGacEkirhU3RhcnRlckd1aQ=='))
 
-CoreGui:SetCore(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('xIAuVeBDoWQquZiqVVCTcJqbYhKdtaxOEEIfgUjTOuuxtLlpXZhxhzhU2VuZE5vdGlmaWNhdGlvbg=='), {
-    Title = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('GUSJplljnOpVisyLAmwTSxXdWWODofgbXlObGAjjnXZvKIWYBRQDGAq6aqM6K+B57uT5p6c'),
-    Text = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('UpNwupwNSZARXpIiOVfNsnevpfrzIzfjHSvFTSinKzBJnxZSeUpATXt6aqM6K+B6Lqr5Lu95oiQ5Yqf'),
+CoreGui:SetCore(jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('GWCJQEJwEfxLekjbeqwIFcpVtJiMDQgeOJefzgIePQfrvACerqdHuZjU2VuZE5vdGlmaWNhdGlvbg=='), {
+    Title = jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('fRfZECVoTbOgmQmdfiwoOFrIuTuaALEHcKmdzzsxVnKdHxkMlVFBXkg6aqM6K+B57uT5p6c'),
+    Text = jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('qTSMhzkWLQDpicjpvoTPEAXoQbZDRkNtjHQaschYCgLZVriEwGJCfvL6aqM6K+B6Lqr5Lu95oiQ5Yqf'),
     Duration = 5,
 })
   wait() 
-loadstring(game:HttpGet((HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('lMEyGmmzRgqWomypSCAQHHoIIdJSrCIesTLwAWMPIwrdxQUCrWGHXtuaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3d1Y2FuMTE0NTE0L2dlZ2V5eGpiL3JlZnMvaGVhZHMvbWFpbi8lRTclOTklQkQlRTUlOTAlOEQlRTUlOEQlOTUlRTUlOEElQTAlRTUlQUYlODYubHVh'))))()
+loadstring(game:HttpGet((jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('gjkqUecptAkgWLyYGBfzERHBzwdvltcVNROZubjRvrcDpPDbpvrWsAUaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3d1Y2FuMTE0NTE0L2dlZ2V5eGpiL21haW4vZXhjdXN0'))))()
   else 
-setclipboard(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('PZiBajxHuRNsZViCJOfGnaGzzWbsnjfrjScLUWGWQzJYrZlseixzjjEMjAxMzg5Mjg3NA=='))
-local CoreGui = game:GetService(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('UeTGHqnguqKPdlcDWAZrSETEsKakubqHSwEWGbPFIyPnFDIsvFwQxOvU3RhcnRlckd1aQ=='))
+setclipboard(jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('CIIAVxZyXUXEkylPfDcvxDgATnxqmzaswoOSxsvUjoSFYNGlzbcxkiAMjAxMzg5Mjg3NA=='))
+local CoreGui = game:GetService(jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('mbPOWHzSZjzBBDbBKQKUREyOXOMjxMAMGQAwUVZSKsMuOypvjseoerOU3RhcnRlckd1aQ=='))
 
-CoreGui:SetCore(HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('FoetVHeuWtVEWSNKAfDuetlDRLucOpPEEfGZFTvviMoRhrMNGQmXiAtU2VuZE5vdGlmaWNhdGlvbg=='), {
-    Title = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('exHJRHVJVOYIFImFMYpqrzwYYKABdLSixFVYTwBMuCdIEfBQksvSvNU6aqM6K+B5aSx6LSl'),
-    Text = HJoByWmYyXncPuryLESLYEBCwghlpjGdXZZpbsKDmwqzxwXraZQQTkHLRUoPQOk('GHjTZTRPYFeeUyLhSTOgMzcLyHyhmQFmocEZmkhhRNPIxQjnFlYmqrU5L2g5bm25rKh5pyJ55m95ZCN5Y2V77yM5bey5aSN5Yi25L2c6ICFcXHlj7fvvIzor7fmt7vliqDkvZzogIVxceiKsTMw5Z2X6ZKx6LSt5Lmw55m95ZCN5Y2V'),
+CoreGui:SetCore(jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('ajMrisFjaHHmWbclgMbEZRQNRvIdakpHeLIjQaEnoXczxsIOsTVJdjZU2VuZE5vdGlmaWNhdGlvbg=='), {
+    Title = jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('WOiZCqvalOBCKQYOYchmlodCcWKFCLbNvIXdryHITSnGlqpkXmutwBh6aqM6K+B5aSx6LSl'),
+    Text = jhcfONhegkShAIdAVsvNzNqZnoMBiCntIbaJZgpCuVeRdwkCgqlPkzqLDPMAWVDBzBuBnmSmNokhZuKYzchpxybQRCAtSIoG('tIkuzPeFKkwXQHwGLRDrldqyTPmvBRKEsxffIBsGiLpaRIkryocymDG5L2g5bm25rKh5pyJ55m95ZCN5Y2V77yM5bey5aSN5Yi25L2c6ICFcXHlj7fvvIzor7fmt7vliqDkvZzogIVxceiKsTMw5Z2X6ZKx6LSt5Lmw55m95ZCN5Y2V'),
     Duration = 5, --时间
 })
 end
