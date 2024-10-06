@@ -1,0 +1,326 @@
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/wucan114514/an/refs/heads/main/lua')))()
+
+local Window = library:CreateWindow("安脚本", "极速传奇", 10044538000)
+
+local Tab = Window:CreateTab("功能列表")
+
+local Page = Tab:CreateFrame("个人数据")
+
+local ll = Page:CreateLabel("步数")
+spawn(function()
+while wait() do
+pcall(function()
+ll:UpdateLabel("fps"..math.floor(1 / game:GetService("RunService").RenderStepped:Wait()))
+end)
+end
+end)
+
+TextBox = Page:CreateBox("吸球倍数", 10044538000, function(arg)
+xqcs = arg
+end)
+
+Label = Page:CreateLabel("城市区域（需要去城市，不可直接传送)")
+
+_G.zdxlq1 = true
+
+function zdxlq1()
+	while _G.zdxlq1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Yellow Orb"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("黄球", "城市黄球", function(arg)
+    _G.zdxlq1 = arg
+		zdxlq1()
+end)
+
+_G.zdxlhq1 = true
+
+function zdxlhq1()
+	while _G.zdxlhq1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Blue Orb"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("蓝球", "城市蓝球", function(arg)
+    _G.zdxlhq1 = arg
+		zdxlhq1()
+end)
+
+_G.zdxlho1 = true
+
+function zdxlho1()
+	while _G.zdxlho1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Red Orb"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("红球", "城市红球", function(arg)
+    _G.zdxlho1 = arg
+		zdxlho1()
+end)
+
+_G.zdxlor1 = true
+
+function zdxlor1()
+	while _G.zdxlor1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Orange Orb"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("橙球", "城市橙球", function(arg)
+    _G.zdxlor1 = arg
+		zdxlor1()
+end)
+
+_G.zdxlbs1 = true
+
+function zdxlbs1()
+	while _G.zdxlbs1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Gem"
+local A_3 = "City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("宝石", "城市宝石", function(arg)
+    _G.zdxlbs1 = arg
+		zdxlbs1()
+end)
+
+Label = Page:CreateLabel("白雪城区域（需要去白雪城，不可直接传送)")
+
+_G.zdxlbb1 = true
+
+function zdxlbb1()
+	while _G.zdxlbb1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Yellow Orb"
+local A_3 = "Snow City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("黄球", "白雪城黄球", function(arg)
+    _G.zdxlbb1 = arg
+		zdxlbb1()
+end)
+
+_G.zdxlll1 = true
+
+function zdxlll1()
+	while _G.zdxlll1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Blue Orb"
+local A_3 = "Snow City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("蓝球", "白雪城蓝球", function(arg)
+    _G.zdxlll1 = arg
+		zdxlll1()
+end)
+
+_G.zdxlhh1 = true
+
+function zdxlhh1()
+	while _G.zdxlhh1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Red Orb"
+local A_3 = "Snow City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("红球", "白雪城红球", function(arg)
+    _G.zdxlhh1 = arg
+		zdxlhh1()
+end)
+
+_G.zdxlcc1 = true
+
+function zdxlcc1()
+	while _G.zdxlcc1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Orange Orb"
+local A_3 = "Snow City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("橙球", "白雪城橙球", function(arg)
+    _G.zdxlcc1 = arg
+		zdxlcc1()
+end)
+
+_G.zdxlbbs1 = true
+
+function zdxlbbs1()
+	while _G.zdxlbbs1 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Gem"
+local A_3 = "Snow City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("宝石", "白雪城宝石", function(arg)
+    _G.zdxlbbs1 = arg
+		zdxlbbs1()
+end)
+
+Label = Page:CreateLabel("熔岩城")
+
+_G.xqhq2 = true
+
+function xqhq2()
+	while _G.xqhq2 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Yellow Orb"
+local A_3 = "Magma City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("黄球", "熔岩城黄球", function(arg)
+    _G.xqhq2 = arg
+		xqhq2()
+end)
+
+_G.xqlq2 = true
+
+function xqlq2()
+	while _G.xqlq2 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Blue Orb"
+local A_3 = "Magma City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("蓝球", "熔岩城蓝球", function(arg)
+    _G.xqlq2 = arg
+		xqlq2()
+end)
+
+_G.xqreq2 = true
+
+function xqreq2()
+	while _G.xqreq2 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Reb Orb"
+local A_3 = "Magma City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("红球", "熔岩城红球", function(arg)
+    _G.xqreq2 = arg
+		xqreq2()
+end)
+
+_G.xqorq2 = true
+
+function xqorq2()
+	while _G.xqorq2 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Orange Orb"
+local A_3 = "Magma City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("橙球", "熔岩城橙球", function(arg)
+    _G.xqorq2 = arg
+		xqorq2()
+end)
+
+_G.xqobss2 = true
+
+function xqobss2()
+	while _G.xqobss2 == true do
+	wait()
+   	for i=1, (""..xqcs) do
+local A_1 = "collectOrb"
+local A_2 = "Gem"
+local A_3 = "Magma City"
+local Event = game:GetService("ReplicatedStorage").rEvents.orbEvent
+Event:FireServer(A_1, A_2, A_3)	
+end			
+	end
+end
+
+Toggle = Page:CreateToggle("宝石", "熔岩城宝石", function(arg)
+    _G.xqobss2 = arg
+		xqobss2()
+end)
