@@ -436,7 +436,7 @@ local function ButtonFrame(Instance, Title, Description, HolderSize)
 		AnchorPoint = Vector2.new(0, 0.5),
 		BackgroundTransparency = 1,
 		TextTruncate = "AtEnd",
-		TextSize = 10,
+		TextSize = 12,
 		TextXAlignment = "Left",
 		Text = "",
 		RichText = true
@@ -450,7 +450,7 @@ local function ButtonFrame(Instance, Title, Description, HolderSize)
 		Position = UDim2.new(0, 12, 0, 15),
 		BackgroundTransparency = 1,
 		TextWrapped = true,
-		TextSize = 13,
+		TextSize = 11,
 		TextXAlignment = "Left",
 		Text = "",
 		RichText = true
