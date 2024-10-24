@@ -53,8 +53,7 @@ local redzlib = {
 	Save = {
 		UISize = {550, 380},
 		TabSize = 160,
-		Theme = "Darker",
-		Toggle =  true
+		Theme = "Darker"
 	},
 	Settings = {},
 	Connection = {},
@@ -126,7 +125,7 @@ local SetProps, SetChildren, InsertTheme, Create do
 				if rawget(decode, "UISize") then redzlib.Save["UISize"] = decode["UISize"] end
 				if rawget(decode, "TabSize") then redzlib.Save["TabSize"] = decode["TabSize"] end
 				if rawget(decode, "Theme") and VerifyTheme(decode["Theme"]) then redzlib.Save["Theme"] = decode["Theme"] end
-				if rawget(decode, "Toggle") then redzlib.Save["Toggle"] = decode["Toggle"] end
+			
 			end
 		end
 	end
