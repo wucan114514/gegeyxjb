@@ -1793,7 +1793,7 @@ function redzlib:MakeWindow(Configs)
 			}), "Frame")Make("Corner", FrameHolder)
 			
 			local ImageLabel = Create("ImageLabel", FrameHolder, {
-				Size = UDim2.new(0, 50, 0, 50),
+				Size = UDim2.new(0, 30, 0, 30),
 				Position = UDim2.new(0, 7, 0, 7),
 				Image = Logo,
 				BackgroundTransparency = 1
@@ -1806,7 +1806,7 @@ function redzlib:MakeWindow(Configs)
 				TextColor3 = Theme["Color Text"],
 				TextXAlignment = "Left",
 				BackgroundTransparency = 1,
-				TextSize = 10,
+				TextSize = 12,
 				Text = Title
 			}), "Text")
 			
@@ -1819,7 +1819,7 @@ function redzlib:MakeWindow(Configs)
 				TextColor3 = Theme["Color Dark Text"],
 				TextXAlignment = "Left",
 				BackgroundTransparency = 1,
-				TextSize = 8,
+				TextSize =11,
 				Text = Desc
 			}), "DarkText")
 			
