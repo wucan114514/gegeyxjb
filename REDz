@@ -1857,7 +1857,7 @@ function redzlib:MakeWindow(Configs)
 					TextColor3 = Color3.fromRGB(150, 150, 150)
 				})task.wait(5)
 				SetProps(JoinButton, {
-					Text = "Join",
+					Text = "复制",
 					BackgroundColor3 = Color3.fromRGB(50, 150, 50),
 					TextColor3 = Color3.fromRGB(220, 220, 220)
 				})ClickDelay = false
